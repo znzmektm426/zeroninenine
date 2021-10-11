@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% block title %} 마이페이지 {% endblock %}
+{% block content %}
+
+
+<style>
+vr {
+    display: block;
+    width: 2px;
+    height: 550px;
+    background-color: darkgrey;
+    position: absolute;
+    top: 330px;
+    bottom: 0;
+    left: 50%;
+    opacity: 0.2;
+}
+
+.card-text {
+    margin-left: 10px;
+    margin-top: -10px;
+}
+
+.card {
+    float: right;
+    margin-bottom:20px;
+    width: 25rem;
+    width: 80%;
+    margin-right: 40px;
+}
+
+.cardcontainer {
+    float: right;
+    margin-right: 50px;
+    width: 450px;
+    margin-top:-20px;
+}
+
+.card-body {
+    margin-bottom: 8px;
+}
+
+@media screen and (min-width: 601px) {
+  div.container {
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+vr {
+    display: none;
+}
+
+}
+
+
+</style>
+
+<body>
+ <div class="container">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+   <form method="POST">
+     {% csrf_token %}
+    <div class="container" style="margin-left: 70px;">
+        <h3 style="margin-top:70px; color: #6E6E6E"><b><p style="color: #637B46; display: inline; clear:none;">{{ user.username }}</p>님의 마이페이지</b></h3>
+        <h5 style="margin-top:40px; margin-bottom: 30px; color: #848484; clear: none;">내 정보</h5>
+    </div>
+       <div class="cardcontainer" style="margin-top: 5px;">
+            <a href="{% url 'zeronine:mypage_joinlist' %}" style="color: black"><div class="card">
+              <div class="card-body">
+                  <h5 class="card-title"><img src="/static/img/cart.png" style="margin-bottom:2px; width:15%;"><b style="color: #424242;">참여 상품</b></h5>
+                  <p class="card-text">&nbsp;내가 참여한 공동구매 상품 보러가기</p>
+              </div>
+            </div>
+            </a>
+                        <a href="{% url 'zeronine:mypage_uploadlist' %}" style="color: black"><div class="card" style="width: 80%; margin-right: 40px;">
+              <div class="card-body">
+                  <h5 class="card-title"><img src="/static/img/register.png" style="margin-bottom:2px; width:15%; margin-left: 2px;"><b style="color: #424242;">주최한 상품</b></h5>
+                <p class="card-text">&nbsp;내가 주최한 공동구매 상품 보러가기</p>
+              </div>
+            </div>
+
+
+            <a href="{% url 'zeronine:mypage_zzimlist' %}" style="color: black"><div class="card" style="width: 80%; margin-right: 40px;">
+              <div class="card-body" style="margin-bottom: 8px;">
+                  <h5 class="card-title"><img src="/static/img/zzim.png" style="margin-bottom:2px; width:15%; margin-left: 3px;"><b style="color: #424242;">찜 목록</b></h5>
+                <p class="card-text">&nbsp;내가 찜한 상품 보러가기</p>
+              </div>
+            </div>
+            </a>
+            </a>
+           </div>
+
+<div class="content2">
+    <div id="username" style="margin-left: 85px; margin-top: 20px;">
+         <strong style="color: #848484; margin-bottom: 10px;">이름</strong><br>
+         <input style="color:#585858; margin-top: 8px; width: 350px; height: 45px; padding: 10px;" type="text" value="{{ user.name }}" name="name">
+    </div>
+
+     <div class="form-group" id="userid" style="margin-left: 85px; margin-top: 20px;">
+         <strong style="color: #848484; margin-bottom: 10px;">아이디</strong><br>
+         <input style="color:#585858; margin-top: 8px; width: 350px; height: 45px; padding: 10px;" type="text" value="{{ user.username }}" name="username" disabled>
+    </div>
+
+     <div id="userphone" style="margin-left: 85px; margin-top: 20px;">
+         <strong style="color: #848484; margin-bottom: 10px;">전화번호</strong><br>
+         <input style="color:#585858; margin-top: 8px; width: 350px; height: 45px; padding: 10px;" type="text" value="{{ user.phone }}" name="userphone">
+     </div>
+
+     <div id="useremail" style="margin-left: 85px; margin-top: 20px; margin-bottom: 30px;">
+         <strong style="color: #848484; margin-bottom: 10px;">이메일</strong><br>
+         <input style="color:#585858; margin-top: 8px; width: 350px; height: 45px; padding: 10px;" type="text" value="{{ user.email }}" name="useremail">
+     </div>
+</div>
+    <span style="margin-left: 85px;"><a href="{% url 'zeronine:mypage_pwchange' %}" style="text-decoration: none;"><b style="color: grey;">비밀번호 변경하기</b></a></span>&nbsp;&nbsp;&nbsp;
+    <span><a href="{% url 'zeronine:profile_delete' %}" style="text-decoration: none;"><b style="color: grey; text-decoration: none;">탈퇴하기</b></a></span><br>
+
+    <a onclick="alert('회원 정보가 변경되었습니다.');" style="cursor:pointer;">
+    <button type="submit" action="{% url 'zeronine:mypage_list' %}" style="margin-top:20px; margin-left:85px; background: #637B46; border-color: #637B46; border-radius: 0px; text-align: center; width: 170px; height:55px;" class="btn btn-primary"><b>변경 사항 수정하기</b></button></a>
+       <vr></vr>
+</form>
+</div>
+</body>
+{% endblock %}

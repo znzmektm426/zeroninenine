@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+<style>
+.my_search_text {
+    padding-top: 20px;
+}
+
+.paragraph--type--card-narrow-row {
+ display: flex;
+ align-items: flex-start;
+ justify-content: left;
+ flex-flow: row wrap;
+}
+
+ .card-narrow {
+  width: 300px;
+  height: 370px;
+  border: 1px solid #ccc;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  }
+
+ @media (max-width: 767px) {
+     .card-narrow {
+         margin-left: 30px;
+     }
+
+     .card-narrow-image {
+         height: 280px;
+     }
+
+     .card-narrow h3 {
+         margin: 0;
+         padding: 10px 0;
+         text-align: center;
+         line-height: 1.2;
+         font-family: "Raleway", Arial, Helvetica, sans-serif;
+         width: 100%;
+         display: inline-block;
+         vertical-align: middle;
+         cursor: pointer;
+         background-color: #eee;
+     }
+
+     .card-narrow p {
+         padding: 0 10px;
+         font-family: Arial, Helvetica, sans-serif;
+         margin-bottom: 0;
+     }
+
+     .card-narrow-content {
+         flex: 1 1 180px;
+
+     }
+
+     .card-narrow {
+         background: #fff;
+         border-radius: 2px;
+         display: inline-block;
+         position: relative;
+
+     }
+ }
+</style>
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<p class="text-center my_search_text" style="margin-top: 15px; font-size: 17px"><b>'{{query}}'에 대한 검색 결과</b></p>
+
+    {% if not products %}
+
+    <h6 class="my_search_text" style="text-align: center; margin-top: 20px;">검색 결과가 없습니다.</h6>
+
+    {% else %}
+
+        <div class="container">
+            <div class="paragraph--type--card-narrow-row" style="margin-left: 50px; margin-top: 23px;">
+            {% for product in products %}
+                <div class="card-narrow">
+                      <div class="card-narrow-image"><a href="{{product.get_absolute_url}}">
+                          <img style="margin-top:20px; width: 240px; height: 260px; margin-left:30px;" src="{{product.image.url}}" alt="상품 이미지"></a>
+                      </div>
+                        <div class="card-narrow-content" style="margin-top:20px; justify-content: center; text-align: center"> <b style="font-size: 17px;">{{ product.name }}</b>
+                             {% for designated in designated_object %}
+                              {% if designated.product_code.product_code == product.product_code %}
+                              {% load humanize %}
+                            <p style="margin-top: 4px;">{{designated.price | floatformat:'0' | intcomma }}원</p>
+                        </div>
+                   </div>
+            {% endif %}
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+</div>
+</div>
+{% endblock %}

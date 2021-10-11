@@ -1,0 +1,523 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<style>
+table {
+    border-collapse:collapse;
+    width:100%;
+}
+
+table a {
+    color:#333;
+    text-decoration:none;
+}
+
+.table-wrap table.board {
+    font-family:'Noto Sans KR';
+    text-align: center;
+}
+
+.ellipsis, .subject{
+    text-align:left;
+}
+
+.table-wrap table {
+  position: relative;
+  line-height: 1.4;
+  table-layout: fixed; }
+  .table-wrap table::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .table-wrap table thead th {
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    background-color: #f9f9f9;
+    padding: 20px;
+    color: #222;
+    font-size: .9rem;
+    font-weight: 400; }
+    .table-wrap table thead th:first-child {
+      border-left: 0; }
+    .table-wrap table thead th:last-child {
+      border-right: 0; }
+  .table-wrap table tbody th {
+    border: 1px solid #ddd;
+    background-color: #fcfcfc;
+    padding: 20px;
+    font-size: .8rem;
+    font-weight: 400;
+    color: #222; }
+    .table-wrap table tbody th:first-child {
+      border-left: 0; }
+    .table-wrap table tbody th:last-child {
+      border-right: 0; }
+    .table-wrap table tbody th .list.dash > li {
+      padding-left: 15px; }
+      .table-wrap table tbody th .list.dash > li::before {
+        left: 0; }
+  .table-wrap table tbody td {
+    border: 1px solid #ddd;
+    padding: 20px;
+    font-size: .8rem;
+    font-weight: 400;
+    background-color: #fff; }
+    .table-wrap table tbody td:first-child {
+      border-left: 0; }
+    .table-wrap table tbody td:last-child {
+      border-right: 0; }
+
+@media (max-width: 767px) {
+    .table-wrap .board colgroup,
+    .table-wrap .board thead {
+        display: none;
+    }
+
+    .table-wrap .board tbody tr {
+        border-bottom: 1px solid #dcdbdb;
+        padding: 15px;
+        display: block;
+        overflow: hidden;
+    }
+
+    .table-wrap .board tbody tr td {
+        display: none;
+        padding: 0;
+        border: 0;
+    }
+
+    .table-wrap .board tbody tr td.subject {
+        display: block;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .table-wrap .board tbody tr td.subject > a {
+        font-size: .9rem;
+    }
+
+    .table-wrap .board tbody tr {
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 5px;
+        text-align: left;
+        float: left;
+        display: inline-block;
+    }
+
+    .table-wrap .board tbody tr td.bookname > a {
+        font-size: .9rem;
+    }
+
+    .table-wrap .board tbody tr {
+        display: inline-block;
+        float: left;
+        margin-left: 10px;
+    }
+
+    .table-wrap .board tbody tr td.date, .table-wrap .board tbody tr td.hit, .table-wrap .board tbody tr td.file, .table-wrap .board tbody tr td.mission, .table-wrap .board tbody tr td.call {
+        display: block;
+        float: left;
+        text-align: left;
+        margin-right: 16px;
+    }
+
+    .table-wrap .board tbody tr td.mission {
+        height: 20px;
+        width: 70%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .table-wrap .board tbody tr td.floor {
+        display: flex;
+        float: left;
+        margin-right: 16px;
+        background: #eee;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .table-wrap .board tbody tr td.date::before {
+        content: "가격 : ";
+    }
+
+    .table-wrap .board tbody tr td.hit::before {
+        content: "목표금액 : ";
+    }
+}
+
+/* generic */
+
+
+.table_list ul:nth-child(odd) {
+  background-color:#f4f4f4
+}
+
+.table_list ul:nth-child(even) {
+  background-color:white;
+}
+
+/* big */
+@media screen and (min-width:1001px) {
+
+  .table_list {
+    display:table;
+    margin:0 auto;
+    margin-top: 30px;
+  }
+
+  .table_list  ul {
+    display:table-row;
+  }
+
+  .table_list  ul:first-child li {
+    background-color:slategray;
+    color:whitesmoke;
+  }
+
+  .table_list  ul > li {
+    display:table-cell;
+    padding:.5em 1em;
+  }
+
+}
+
+/* small */
+@media screen and (max-width:1000px) {
+
+  .table_list  ul {
+    border:solid 1px #ccc;
+    display:block;
+    list-style:none;
+    margin:1em;
+    padding:.5em 1em;
+  }
+
+  .table_list  ul:first-child {
+    display:none;
+  }
+
+  .table_list  ul > li {
+    display:block;
+    padding:.25em 0;
+  }
+
+  .table_list  ul:nth-child(odd) > li + li {
+    border-top:solid 1px #ccc;
+  }
+
+  .table_list  ul:nth-child(even) > li + li {
+    border-top:solid 1px #eee;
+  }
+
+  .table_list  ul > li:before {
+    color:#4f6185;
+    content:attr(data-label);
+    display:inline-block;
+    font-size:75%;
+    font-weight:bold;
+    text-transform:capitalize;
+    vertical-align:top;
+    width:50%;
+  }
+
+  .table_list  p {
+    margin:-1em 0 0 50%;
+  }
+
+}
+
+/* tiny */
+@media screen and (max-width:349px) {
+
+  .table_list  ul > li:before {
+    display:block;
+  }
+
+  .table_list  p {
+    margin:0;
+  }
+
+}
+
+
+</style>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=euc-kr" /></head>
+
+ <div class="container">
+     <h4 style="float:left; margin-top:20px; margin-bottom: 30px;"><b>공동구매 주최 내역</b></h4>
+      <button title="참여현황 내려받기" class="btn btn primary" data-target="#{{product.product_code}}" style="float:right; margin-top: 35px; border-color: #637B46; background-color: white; font-size: 13px;" id="btnExport" onclick="javascript:xport.toCSV('주최상품 참여자 명단');">CSV 파일로 내려받기</button>
+     <div class="table-wrap">
+  <table class="board all-open">
+    <caption></caption>
+    <colgroup>
+      <col>
+      <col style="width:15%;">
+      <col span="3">
+    </colgroup>
+    <thead>
+      <tr>
+        <th scope="col">상품번호</th>
+        <th scope="col">이미지</th>
+        <th scope="col">상품명</th>
+        <th scope="col">가격</th>
+        <th scope="col">목표금액</th>
+        <th scope="col">채팅방 <br>링크</th>
+        <th scope="col">등록일</th>
+        <th scope="col">참여현황</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+
+        {% for product in product_object %}
+        {% if user == product.username %}
+           {% for designated in designated_object %}
+           {% if designated.product_code.product_code == product.product_code %}
+        <td class="num"> {{product.product_code}} </td>
+        <td class="name"><a href="{{product.get_absolute_url}}"><img style="width: 90px" height= 90px" src="{{product.image.url}}" alt="상품 이미지"></a></td>
+        <td class="subject"> <a href="#" class="ellipsis"> </a><a href="#" title="{{product.name}}"> {{product.name}} </a></td>
+        <td class="date">{{designated.price}}</td>
+        <td class="hit">{{product.target_price}}</td>
+        <td class="date"><a href="{{ product.kakao_link }}">링크열기</a></td>
+        <td class="name">{{product.created_at|date:"Y-m-d"}}</td>
+
+        <td class="hit">
+            <button type="button" class="btn btn primary" data-toggle="modal" data-target="#{{product.product_code}}" style="border-color: #637B46; background-color: white; font-size: 13px;">명단보기</button>
+             {% for join in join_object %}
+        </td>
+
+          <div class="modal fade" id="{{product.product_code}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+             <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">공동구매 참여자 명단</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+        <br>
+
+          <div>
+            <div style="margin-top:-30px; margin-bottom: 10px;">
+
+                   <div class="table_list">
+                      <ul>
+                        <li>참여번호</li>
+                        <li>참여자ID</li>
+                        <li>상품명</li>
+                        <li>옵션</li>
+                        <li>수량</li>
+                        <li>가격</li>
+                        <li>참여일자</li>
+                      </ul>
+
+                    {% if user == product.username %}
+                    {% for join in join_object %}
+                    {% if join.product_code.product_code == product.product_code %}
+                    {% for join_detail in join_detail_objects %}
+                    {% if join.join_code == join_detail.join_code.join_code %}
+                    {% for designated in designated_object %}
+                    {% if designated.product_code.product_code == product.product_code %}
+
+                      <ul>
+                        <li data-label="참여번호">{{join.join_code}}</li>
+                        <li data-label="참여자ID">{{ join.username }}</li>
+                        <li style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap;" data-label="상품명">{{join.product_code}}</li>
+                        <li data-label="옵션">{{join_detail.value_code|default_if_none:"없음"}}</li>
+                        <li data-label="수량">{{join_detail.quantity}}</li>
+                        {% load humanize %}
+                        <li data-label="가격">{{join_detail.price | floatformat:'0' | intcomma }}원</li>
+                        <li data-label="참여일자">{{join.part_date|date:"Y-m-d"}}</li>
+                      </ul>
+
+                   {% endif %}
+                   {% endfor %}
+                   {% endif %}
+                   {% endfor %}
+                   {% endif %}
+                   {% endfor %}
+                   {% endif %}
+              </div>
+            </div>
+          </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">확인</button>
+      </div>
+    </div>
+  </div>
+</div>
+           {% endfor %}
+
+
+         <form method="POST" action="{% url 'zeronine:mypage_delete' pk=product.product_code %}">
+             {% csrf_token %}
+             <div class="form-group" style="outline:none;">
+                  <td class="name"><button type="submit" onclick="return confirm('{{product.name}} 상품을 삭제하시겠습니까?')"; class="btn btn primary" style="border-color: white; background-color: #B40404; color:white; font-size: 13px;">삭제</button></td></a>
+             </div>
+         </form>
+      </tr>
+
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+          {% endfor %}
+
+<table id="주최상품 참여자 명단" data-target="#{{product.product_code}}" rules="groups" frame="hsides" border="2" class="table table-striped" style="display: none";>
+      <thead>
+      <tr>
+        <th scope="col">참여번호</th>
+        <th scope="col">참여자 ID</th>
+        <th scope="col">상품명</th>
+        <th scope="col">옵션</th>
+        <th scope="col">수량</th>
+        <th scope="col">가격</th>
+        <th scope="col">참여일자</th>
+      </tr>
+    </thead>
+          <tbody>
+          <tr>
+
+          {% for product in product_object %}
+          {% if user == product.username %}
+          {% for join in join_object %}
+          {% if join.product_code.product_code == product.product_code %}
+          {% for join_detail in join_detail_objects %}
+          {% if join.join_code == join_detail.join_code.join_code %}
+          {% for designated in designated_object %}
+          {% if designated.product_code.product_code == product.product_code %}
+
+            <td>{{join.join_code}}</td>
+            <td>{{join.username}}</td>
+            <td>{{join.product_code}}<a href="#" class="ellipsis"></a><a href="#" title="{{product.name}}"></a></td>
+            <td>{{join_detail.value_code|default_if_none:"없음"}}</td>
+            <td>{{join_detail.quantity}}</td>
+            <td>{{join_detail.price}}</td>
+            <td>{{join.part_date|date:"Y-m-d"}}</td>
+          </tr>
+
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+          {% endfor %}
+    </tbody>
+</table>
+
+<script>
+   var xport = {
+  _fallbacktoCSV: true, toXLS: function(tableId, filename) {
+    this._filename = (typeof filename == 'undefined') ? tableId : filename;
+
+    if ((this._getMsieVersion() || this._isFirefox()) && this._fallbacktoCSV) {
+      return this.toCSV(tableId);
+    } else if (this._getMsieVersion() || this._isFirefox()) {
+      alert("Not supported browser");
+    }
+
+    var htmltable = document.getElementById(tableId);
+    var html = htmltable.outerHTML;
+
+    this._downloadAnchor("data:application/vnd.ms-excel" + encodeURIComponent(html), 'xls');
+  },
+
+  toCSV: function(tableId, filename) {
+    this._filename = (typeof filename === 'undefined') ? tableId : filename;
+
+    var csv = this._tableToCSV(document.getElementById(tableId));
+    var blob = new Blob(["\ufeff"+csv], { type: 'text/csv;charset=utf-8;' });
+
+    if (navigator.msSaveOrOpenBlob) {
+      navigator.msSaveOrOpenBlob(blob, this._filename + ".csv");
+    } else {
+      this._downloadAnchor(URL.createObjectURL(blob), 'csv');
+    }
+  },
+
+  _getMsieVersion: function() {
+    var ua = window.navigator.userAgent;
+
+    var msie = ua.indexOf("MSIE ");
+    if (msie > 0) {
+      return parseInt(ua.substring(msie + 5, ua.indexOf(".", msie)), 10);
+    }
+
+    var trident = ua.indexOf("Trident/");
+    if (trident > 0) {
+      var rv = ua.indexOf("rv:");
+      return parseInt(ua.substring(rv + 3, ua.indexOf(".", rv)), 10);
+    }
+
+    var edge = ua.indexOf("Edge/");
+    if (edge > 0) {
+      return parseInt(ua.substring(edge + 5, ua.indexOf(".", edge)), 10);
+    }
+
+    return false;
+  },
+
+  _isFirefox: function(){
+    if (navigator.userAgent.indexOf("Firefox") > 0) {
+      return 1;
+    }
+
+    return 0;
+  },
+
+  _downloadAnchor: function(content, ext) {
+      var anchor = document.createElement("a");
+      anchor.style = "display:none !important";
+      anchor.id = "downloadanchor";
+      document.body.appendChild(anchor);
+
+      if ("download" in anchor) {
+      anchor.download = this._filename + "." + ext;
+      }
+      anchor.href = content
+      anchor.click();
+      anchor.remove();
+  },
+
+  _tableToCSV: function(table) {
+    var slice = Array.prototype.slice;
+
+    return slice
+      .call(table.rows)
+      .map(function(row) {
+        return slice
+          .call(row.cells)
+          .map(function(cell) {
+            return '"t"'.replace("t", cell.textContent);
+          })
+          .join(",");
+      })
+      .join("\r\n");
+  }
+};
+    </script>
+    </tbody>
+  </table>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% if not posts %}
+
+<h5 style="text-align: center; margin-top: 50px;"><b>검색 결과가 없습니다</b></h5></div>
+        <a href="{% url 'zeronine:post' %}">
+            <div style="text-align: center;"><button style="margin-top: 20px; font-size:15px; margin-bottom: 30px; background: #cccccc; border: white; border-radius:0px;" class="btn btn-primary">이전으로</button></div></a>
+
+    {% else %}
+
+        {% for post in posts.all %}
+        <br>
+        <div class="container" style="width: 800px">
+            <div class="card">
+                <div class="card-body">
+                    <h5>{{ post.title }}</h5>
+                    <p>{{ post.pub_date | date:"Y-m-d" }}</p>
+                    <p>{{ post.summary }}<a href="{% url 'zeronine:post_detail' post.post_code %}"> ...자세히 보기</a></p>
+                </div>
+            </div>
+        </div>
+        <br>
+        {% endfor %}
+
+    {% endif %}
+
+{% endblock %}

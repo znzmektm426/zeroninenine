@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container my-4">
+    <h3 style="margin-top:40px; margin-bottom: -15px;"><b>게시글 작성</b></h3>
+    <div class="row mt-5">
+  <div class="col-12">
+    <form method="POST" action="{% url 'zeronine:post_write' %}">
+      {% csrf_token %}
+      {% for field in form %}
+      <div class="form-group">
+        <label for="{{ field.id_for_label }}"><b>{{ field.label }}</b></label>
+        {% ifequal field.name 'contents' %}
+  <textarea name="{{field.name}}" placeholder="내용을 입력하세요." class="form-control" cols="160" rows="10"></textarea>
+    {% else %}
+    <input type="{{ field.field.widget.input_type }}" class="form-control" id='{{ field.id_for_label }}'
+        placeholder="제목을 입력하세요." name='{{ field.name }}'>
+            {% endifequal %}
+          </div>
+
+      {% if field.errors %}
+      <span style="color: #637B46;">{{ field.errors }}</span>
+      {% endif %}
+      {% endfor %}
+      <button type="submit" action="{% url 'zeronine:post_write' %}" class="btn btn-primary" style="float: right; background: #637B46; border: white">업로드</button>
+        <a href="{% url 'zeronine:post' %}"><button type ="button" class = "btn btn-primary" style = "float:right; margin-right:10px; background: #848484; border: white;">이전</button></a>
+    </form>
+  </div>
+</div>
+</div>
+{% endblock %}

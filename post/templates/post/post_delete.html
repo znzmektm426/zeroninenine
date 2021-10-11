@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<div class="row justify-content-center">
+    <div class="col-md-7 panel panel-default">
+        <div class="alert alert-info" style="background-color: #f7d7da; border: none">
+            <b style="color: #721d09">게시글을 삭제하시겠습니까?</b>
+        </div>
+        <form action="" method="post">
+        {% csrf_token %}
+            <button style="background: #c43e34; border: black; float: right" class="btn btn-primary">삭제</button>
+        </form>
+        <a href="{% url 'zeronine:post' %}"><button style="background: darkgrey; border: black; float: right; margin-right: 10px;" class="btn btn-danger">취소</button></a>
+    </div>
+</div>
+{% endblock %}
+

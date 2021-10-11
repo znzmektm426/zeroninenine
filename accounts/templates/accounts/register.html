@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@200;400&family=Noto+Sans+KR&display=swap');
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: #555;
+    }
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      border: 0px solid rosybrown;
+}
+
+.footer_logo {
+    font-family: 'Questrial', sans-serif;
+    font-size: 50px;
+}
+
+@media screen and (min-width: 601px) {
+  .footer {
+        height: 280px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .footer {
+       height: 200px;
+  }
+}
+
+
+@media screen and (min-width: 601px) {
+  .footer_logo {
+        font-size: 50px;
+        margin-left: 230px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer_logo {
+      font-size: 30px;
+      margin-left: 25px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .footer_p {
+        font-size: 15px;
+        margin-left: 230px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer_p {
+      font-size: 11px;
+       margin-left: 25px;
+  }
+}
+
+button {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border: 1px solid #ccc;
+  background: white;
+  transition: 0.7s;
+}
+
+button:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+input::placeholder {
+  color: #777;
+}
+
+hr{
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.bbb button {
+  margin: 0px;
+  padding: 10px;
+  background: #849160;
+  border-color: white;
+  color: #fff;
+  margin-top: 5px;
+  height: 60px;
+  width: 500px
+
+  }
+
+  .bbb button:hover {
+    background: black;
+    border: 1px solid white;
+    color: white;
+    }
+
+.join {
+  clear: both;
+  padding: 50px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.join h3 {
+  text-align: center;
+
+}
+
+.join form input {
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  color: #4f6185;
+  margin-bottom: 10px;
+  height: 51px;
+  width: 500px;
+}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+
+    <nav class="navbar navbar-expand-sm navbar-light flex-column align-items-stretch">
+        <div class="navbar navbar-expand-md navbar-light" style="text-align: center">
+        <a class="navbar-brand" href="/" style="text-align: center; text-decoration: none;"><img class="zn_logo" src="/static/img/zeronine_logo_image.png" style="width: 170px; margin-top: -16px;"></a>
+        </div>
+    </nav>
+
+<div class="container my-3">
+
+        <div class="row">
+        <div class="col-12">
+            <hr width="100%" style="margin-top:-5px; text-align: center">
+            <br>
+        </div>
+        </div>
+
+    <article class="join">
+        <p style="margin-top: -30px;">{% include "accounts/form_errors.html" %}</p>
+    <h2 style="justify-content: center; text-align: center; margin-top: 40px; margin-bottom: 50px;"><b>회원가입</b><br>
+        <p style="font-size: 15px; margin-top: 20px; margin-bottom: -20px;">제로나인 회원가입을 환영합니다.<br>회원으로 가입하시면 다양한 혜택과 서비스를 이용하실 수 있습니다.</p></h2>
+
+         <form method="post" class="post-form">
+        {% csrf_token %}
+        <div>
+        <input type="text" class="form-control" name="name" id="name" value="{{ form.name.value|default_if_none:'' }}" placeholder="이름을 입력하세요">
+      </div>
+
+      <div>
+        <input type="text" class="form-control" name="username" id="username" value="{{ form.username.value|default_if_none:'' }}" placeholder="아이디 (4~12자 영문 대,소문자)">
+      </div>
+
+      <div>
+        <input type="password" class="form-control" name="password1" id="password1" value="{{ form.password1.value|default_if_none:'' }}" placeholder="비밀번호">
+      </div>
+
+      <div>
+        <input type="password" class="form-control" name="password2" id="password2" value="{{ form.password2.value|default_if_none:'' }}" placeholder="비밀번호 확인">
+      </div>
+
+      <div>
+        <input type="text" class="form-control" name="phone" id="phone" value="{{ form.phone.value|default_if_none:'' }}" placeholder="전화번호를 입력하세요.">
+      </div>
+
+      <div>
+       <input type="text" class="form-control" name="email" id="email" value="{{ form.email.value|default_if_none:'' }}" placeholder="이메일을 입력하세요.">
+      </div>
+             <div class="bbb" style="text-align: center">
+              <button type="submit">가입하기</button><br>
+             </div>
+
+             <div style="text-align: center; margin-top: 15px;">
+              <span class="col-8 text-right">이미 계정이 있으신가요? <a href="{% url 'zeronine:login' %}", style="color: #637B46; text-decoration: none;"><b>로그인</b></a></span>
+             </div>
+   </form>
+</article>
+</div>
+
+     <footer class="footer" style=" width: 100%; height: 280px; padding: 15px; text-align: left; background-color: #F2F2F2; margin-top: 100px;">
+         <p class="footer_logo" style="margin-top: 40px;">ZERONINE</p>
+         <p class="footer_p">ZERONINE ⓒ 2021 ALL RIGHTS RESERVED.</p>
+         <p class="footer_p" style="color: #6E6E6E;">제로나인 | 주소: 서울특별시 성동구 살곶이길 200 한양여자대학교 | 대표자명: 심혜원 <br>
+             개인정보보호책임자: 박지수 | 메일: zeronine0900@gmail.com | CALL: 02-2290-2114</p>
+     </footer>
+</div>
+</body>
+</html>

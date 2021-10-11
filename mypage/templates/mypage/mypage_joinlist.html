@@ -1,0 +1,209 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<style>
+    table {border-collapse:collapse; width:100%;}
+table a {color:#333; text-decoration:none;}
+ .table-wrap table.board {
+    font-family:'Noto Sans KR';
+    text-align: center; }
+.ellipsis, .subject{text-align:left;}
+
+.table-wrap table {
+  position: relative;
+  line-height: 1.4;
+  table-layout: fixed; }
+  .table-wrap table::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .table-wrap table thead th {
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    background-color: #f9f9f9;
+    padding: 20px;
+    color: #222;
+    font-size: .9rem;
+    font-weight: 400; }
+    .table-wrap table thead th:first-child {
+      border-left: 0; }
+    .table-wrap table thead th:last-child {
+      border-right: 0; }
+  .table-wrap table tbody th {
+    border: 1px solid #ddd;
+    background-color: #fcfcfc;
+    padding: 20px;
+    font-size: .8rem;
+    font-weight: 400;
+    color: #222; }
+    .table-wrap table tbody th:first-child {
+      border-left: 0; }
+    .table-wrap table tbody th:last-child {
+      border-right: 0; }
+    .table-wrap table tbody th .list.dash > li {
+      padding-left: 15px; }
+      .table-wrap table tbody th .list.dash > li::before {
+        left: 0; }
+  .table-wrap table tbody td {
+    border: 1px solid #ddd;
+    padding: 20px;
+    font-size: .8rem;
+    font-weight: 400;
+    background-color: #fff; }
+    .table-wrap table tbody td:first-child {
+      border-left: 0; }
+    .table-wrap table tbody td:last-child {
+      border-right: 0; }
+
+@media (max-width: 767px) {
+    .table-wrap .board colgroup,
+    .table-wrap .board thead {
+        display: none;
+    }
+
+    .table-wrap .board tbody tr {
+        border-bottom: 1px solid #dcdbdb;
+        padding: 15px;
+        display: block;
+        overflow: hidden;
+    }
+
+    .table-wrap .board tbody tr td {
+        display: none;
+        padding: 0;
+        border: 0;
+    }
+
+    .table-wrap .board tbody tr td.subject {
+        display: block;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .table-wrap .board tbody tr td.subject > a {
+        font-size: .9rem;
+    }
+
+    .table-wrap .board tbody tr {
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 5px;
+        text-align: left;
+        float: left;
+        display: inline-block;
+    }
+
+    .table-wrap .board tbody tr td.bookname > a {
+        font-size: .9rem;
+    }
+
+    .table-wrap .board tbody tr {
+        display: inline-block;
+        float: left;
+        margin-left: 10px;
+    }
+
+    .table-wrap .board tbody tr td.date, .table-wrap .board tbody tr td.hit, .table-wrap .board tbody tr td.file, .table-wrap .board tbody tr td.mission, .table-wrap .board tbody tr td.call {
+        display: block;
+        float: left;
+        text-align: left;
+        margin-right: 16px;
+    }
+
+    .table-wrap .board tbody tr td.mission {
+        height: 20px;
+        width: 70%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .table-wrap .board tbody tr td.floor {
+        display: flex;
+        float: left;
+        margin-right: 16px;
+        background: #eee;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .table-wrap .board tbody tr td.date::before {
+        content: "가격 : ";
+    }
+
+    .table-wrap .board tbody tr td.hit::before {
+        content: "목표금액 : ";
+    }
+}
+</style>
+
+ <div class="container">
+     <h4 style="margin-top:20px; margin-bottom: 30px;"><b>공동구매 참여 내역</b></h4>
+     <div class="table-wrap">
+  <table class="board all-open">
+    <caption></caption>
+    <colgroup>
+      <col>
+      <col style="width:15%;">
+      <col span="3">
+    </colgroup>
+    <thead>
+      <tr>
+        <th scope="col">상품번호</th>
+        <th scope="col">상품정보</th>
+        <th scope="col">상품명</th>
+        <th scope="col">수량</th>
+        <th scope="col">가격</th>
+        <th scope="col">옵션</th>
+        <th scope="col">참여일자</th>
+        <th scope="col">채팅방 링크</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+
+          {% for product in products %}
+          {% for join in join_objects %}
+          {% if join.product_code.product_code == product.product_code %}
+          {% for join_detail in join_detail_objects %}
+          {% if join.join_code == join_detail.join_code.join_code %}
+          {% for designated in designated_object %}
+          {% if designated.product_code.product_code == product.product_code %}
+          {% if user == join.username %}
+
+        <td class="num">{{join.join_code}}</td>
+        <td class="name"><a href="{{product.get_absolute_url}}"><img style="width: 90px" height= 90px" src="{{product.image.url}}" alt="상품 이미지"></a></a></td>
+        <td class="subject">{{join.product_code}}<a href="#" class="ellipsis"> </a><a href="#" title="{{product.name}}"></a>  </td>
+        <td class="hit">{{join_detail.quantity}}</td>
+        <td class="date">{{join_detail.price}}</td>
+        <td class="date">{{join_detail.value_code}}</td>
+        <td class="name">{{join.part_date|date:"Y-m-d"}}</td>
+        <td class="name"><a href="{{ product.kakao_link }}">링크열기</a></td>
+      </tr>
+
+      {% endif %}
+  {% endif %}
+                {% endfor %}
+      {% endif %}
+          {% endfor %}
+       {% endif %}
+    {% endfor %}
+        {% endfor %}
+
+    </tbody>
+  </table>
+</div>
+ </div>
+
+{% endblock %}

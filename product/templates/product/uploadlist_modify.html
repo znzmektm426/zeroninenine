@@ -1,0 +1,328 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+#att_zone {
+  min-height: 150px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  margin-top: 10px;
+}
+
+#att_zone:empty:before {
+  content: attr(data-placeholder);
+  color: #999;
+  font-size: .9em;
+}
+
+#thumbnail {
+  min-height: 170px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  margin-top: 10px;
+}
+
+#thumbnail:empty:before {
+  content: attr(data-placeholder);
+  color: #999;
+  font-size: .9em;
+}
+
+</style>
+
+<div class="container my-4">
+    <h3 style="margin-top:40px; margin-bottom: 60px; text-align: center"><b>공동구매 상품 등록</b></h3>
+    <div class="row mt-5">
+    <div class="col-12">
+    <form method="POST" action="{% url 'zeronine:product_upload' %}" enctype="multipart/form-data">
+      {% csrf_token %}
+      {% if field.errors %}
+            <span style="color: #637B46;">{{ field.errors }}</span>
+      {% endif %}
+        <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label"><b>상품명</b></label>
+            <div class="col-sm-10">
+            <input type="text" class="form-control" name="name" id="name"
+                   value="{{ form.name.value }}" placeholder="상품명을 입력하세요.">
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <label for="category_code" class="col-sm-2 col-form-label"><b>카테고리</b></label>
+            <div class="col-sm-10">
+                <select type="text" class="form-control" name="category_code" id="category_code" value="{{ form.category_code }}</select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="price" class="col-sm-2 col-form-label"><b>상품가격</b></label>
+            <div class="col-sm-10">
+            <input type="text" class="form-control" name="price" id="price"
+                   value="{{ form.price }}" placeholder="가격을 입력하세요.">
+            </div>
+        </div>
+
+        <div class="form-group row" style="margin-right: -100px; margin-bottom: 27px">
+            <label for="option_name" class="col-sm-2 col-form-label"><b>옵션</b></label>
+        <!-- Button trigger modal -->
+        <button type="button" style="background:#F2F2F2; color:#585858; border-color: #D8D8D8; margin-top: 10px;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" >
+          상품 옵션 지정하기
+        </button>
+            </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">상품 옵션 지정하기</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+
+        <br>
+
+
+          <div class="form-row">
+            <div class="form-group col-md-9" style="margin-left: 65px;">
+            <label for="option_name" class="col-form-label"><b>옵션명</b></label>
+            <input type="text" class="form-control text-align: center;" name="option_name" id="option_name" value="{{ form.option_name.value|default_if_none:'' }}" placeholder="옵션명을 입력하세요.">{{optionForm.option_name}}
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-4" style="margin-left: 65px;">
+              <label for="value_name" class="col-form-label"><b>옵션값</b></label>
+               <input type="text" class="form-control" name="value_name" id="value_name" value="{{ form.value_name.value|default_if_none:'' }}" placeholder="옵션값명을 입력하세요.">
+            </div>
+            <div class="form-group col-md-5">
+              <label for="option_price" class="col-form-label"><b>옵션추가가격</b></label>
+               <input type="text" class="form-control" name="option_price" id="option_price" value="{{ form.option_price.value|default_if_none:'' }}" placeholder="옵션 추가 가격을 입력하세요.">
+            </div>
+          </div>
+
+           <div class="form-row">
+            <div class="form-group col-md-4" style="margin-left: 65px;">
+              <label for="second_value" class="col-form-label"><b>옵션값2</b></label>
+               <input type="text" class="form-control" name="second_value" id="second_value" value="{{ form.second_value.value|default_if_none:'' }}" placeholder="옵션값명을 입력하세요.">
+            </div>
+            <div class="form-group col-md-5">
+              <label for="second_option_price" class="col-form-label"><b>옵션추가가격</b></label>
+               <input type="text" class="form-control" name="second_option_price" id="second_option_price" value="{{ form.second_option_price.value|default_if_none:'' }}" placeholder="옵션 추가 가격을 입력하세요.">
+            </div>
+          </div>
+
+           <div class="form-row">
+            <div class="form-group col-md-4" style="margin-left: 65px;">
+              <label for="third_value" class="col-form-label"><b>옵션값3</b></label>
+               <input type="text" class="form-control" name="third_value" id="third_value" value="{{ form.third_value.value|default_if_none:'' }}" placeholder="옵션값명을 입력하세요.">
+            </div>
+            <div class="form-group col-md-5">
+              <label for="third_option_price" class="col-form-label"><b>옵션추가가격</b></label>
+               <input type="text" class="form-control" name="third_option_price" id="third_option_price" value="{{ form.third_option_price.value|default_if_none:'' }}" placeholder="옵션 추가 가격을 입력하세요.">
+            </div>
+          </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">저장</button>
+      </div>
+    </div>
+  </div>
+</div>
+        <div class="form-group row">
+            <label for="benefit" class="col-sm-2 col-form-label"><b>공동구매 취지</b></label>
+            <div class="col-sm-10" >
+            <input type="text" class="form-control" name="benefit" id="benefit"
+                   value="{{ form.benefit.value }}" placeholder="상품명을 입력하세요.">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="detail" class="col-sm-2 col-form-label"><b>상세설명</b></label>
+            <div class="col-sm-10" >
+            <input type="text" class="form-control" name="detail" id="detail"
+                   value="{{ form.detail.value }}" placeholder="상품의 상세 설명을 입력하세요.">
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <label for="target_price"  class="col-sm-2 col-form-label"><b>목표금액</b></label>
+            <div class="col-sm-10">
+            <input type="target_price" class="form-control" name="target_price" id="target_price"
+                   value="{{ form.target_price.value|default_if_none:'' }}" placeholder="공동구매 달성을 위한 목표 금액을 입력하세요.">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="start_date" class="col-sm-2 col-form-label"><b>모집 시작일</b></label>
+            <div class="col-sm-10">
+            <input type="date" class="form-control" id="start_date" name={{form.start_date}}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="due_date" class="col-sm-2 col-form-label"><b>모집 마감일</b></label>
+            <div class="col-sm-10">
+            <input type="date" class="form-control" id="due_date"  name={{form.due_date}}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="kakao_link" class="col-sm-2 col-form-label"><b>카카오톡 링크</b></label>
+            <div class="col-sm-10">
+            <input type="text" class="form-control" name="kakao_link" id="kakao_link"
+                   value="{{ form.kakao_link.value|default_if_none:'' }}" placeholder="카카오톡 채팅방 링크를 입력하세요.">
+            </div>
+        </div>
+
+       <div class="form-group row">
+            <label for="photo" class="col-sm-2 col-form-label"><b>썸네일</b></label>
+            <div class="col-sm-10">
+            <input type="file" class="form-control" name="photo" id="photo" onchange="setThumbnail(event);" value="{{ form.photo.value|default_if_none:'' }}"/>
+                <div id="thumbnail" class="thumbnail" data-placeholder='사진을 첨부 하려면 파일 선택 버튼을 클릭하세요.'></div>
+            </div>
+        </div>
+
+<script>
+
+function setThumbnail(event) {
+    var reader = new FileReader();
+    reader.onload = function(event) {
+        var img = document.createElement("img");
+        var btn_style = 'width:140px;height:140px;display:inline-block;position:absolute;font-size:16px;'
+                  + 'z-index:none;background-color:white;border:1px solid #D8D8D8; margin-top:5px;margin-left:5px;';
+        img.setAttribute('style', btn_style);
+        img.setAttribute("src", event.target.result);
+        document.querySelector("div#thumbnail").appendChild(img);
+    };
+
+    reader.readAsDataURL(event.target.files[0]); }
+</script>
+
+
+        <div class="form-group row">
+            <label for="btnAtt" class="col-sm-2 col-form-label"><b>상세이미지</b></label>
+            <div class="col-sm-10">
+             <input type='file' class="form-control" name="image" id='btnAtt' multiple='multiple' value="{{ form.image.value|default_if_none:'' }}"/>
+             <div class='att_zone' id='att_zone' data-placeholder='사진을 첨부 하려면 파일 선택 버튼을 클릭하거나 파일을 드래그 앤 드롭 하세요.'></div>
+             </div>
+        </div>
+
+ <script>
+( /* att_zone : 이미지들이 들어갈 위치 id, btn : file tag id */
+  imageView = function imageView(att_zone, btn){
+
+    var attZone = document.getElementById(att_zone);
+    var btnAtt = document.getElementById(btn)
+    var sel_files = [];
+
+    // 이미지와 체크 박스를 감싸고 있는 div 속성
+    var div_style = 'display:inline-block;position:relative;'
+                  + 'width:140px;height:140px;margin:5px;border:1px solid #D8D8D8;z-index:1';
+    // 미리보기 이미지 속성
+    var img_style = 'width:100%;height:100%;z-index:none';
+    // 이미지안에 표시되는 체크박스의 속성
+    var chk_style = 'width:30px;height:30px;position:absolute;font-size:16px;'
+                  + 'right:0px;bottom:0px;z-index:999;background-color:white; color:#DF0101; line-height:15px; font-weight:bold;';
+    var btn_style = 'width:30px;height:30px;position:absolute;font-size:16px;'
+                  + 'right:0px;bottom:0px;z-index:999;background-color:white; border:1px solid #BDBDBD; color:#DF0101; line-height:15px; font-weight:bold;';
+
+    btnAtt.onchange = function(e){
+      var files = e.target.files;
+      var fileArr = Array.prototype.slice.call(files)
+      for(f of fileArr){
+        imageLoader(f);
+      }
+    }
+
+
+    // 탐색기에서 드래그앤 드롭 사용
+    attZone.addEventListener('dragenter', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+    }, false)
+
+    attZone.addEventListener('dragover', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+
+    }, false)
+
+    attZone.addEventListener('drop', function(e){
+      var files = {};
+      e.preventDefault();
+      e.stopPropagation();
+      var dt = e.dataTransfer;
+      files = dt.files;
+      for(f of files){
+        imageLoader(f);
+      }
+
+    }, false)
+
+
+    /*첨부된 이미지들을 배열에 넣고 미리보기 */
+    imageLoader = function(file){
+      sel_files.push(file);
+      var reader = new FileReader();
+      reader.onload = function(ee){
+        let img = document.createElement('img')
+        img.setAttribute('style', img_style)
+        img.src = ee.target.result;
+        attZone.appendChild(makeDiv(img, file));
+      }
+
+      reader.readAsDataURL(file);
+    }
+
+    /*첨부된 파일이 있는 경우 checkbox와 함께 attZone에 추가할 div를 만들어 반환 */
+    makeDiv = function(img, file){
+      var div = document.createElement('div')
+      div.setAttribute('style', div_style)
+
+      var btn = document.createElement('input')
+      btn.setAttribute('type', 'button')
+      btn.setAttribute('value', 'X')
+      btn.setAttribute('delFile', file.name);
+      btn.setAttribute('style', chk_style);
+      btn.setAttribute('style', btn_style);
+      btn.onclick = function(ev){
+        var ele = ev.srcElement;
+        var delFile = ele.getAttribute('delFile');
+        for(var i=0 ;i<sel_files.length; i++){
+          if(delFile== sel_files[i].name){
+            sel_files.splice(i, 1);
+          }
+        }
+
+        dt = new DataTransfer();
+        for(f in sel_files) {
+          var file = sel_files[f];
+          dt.items.add(file);
+        }
+        btnAtt.files = dt.files;
+        var p = ele.parentNode;
+        attZone.removeChild(p)
+      }
+      div.appendChild(img)
+      div.appendChild(btn)
+      return div
+    }
+  }
+)('att_zone', 'btnAtt')
+
+</script>
+  <button class="btn btn-primary">제출</button>
+        </a>
+        </div>
+        </form>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

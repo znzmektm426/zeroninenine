@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+@media screen and (min-width: 601px) {
+  div.container {
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.container {
+
+        font-size: 15px;
+  }
+}
+
+
+</style>
+<div class="container">
+    <div style="margin-top: 4rem !important;">
+        <div class="col-12">
+            <div class="row justify-content-center" style="margin-top:20px; margin-bottom: 50px;">
+                <div class="card" style="width: 500px;">
+                    <div class="card-body">
+                        <div class="h4">
+                            <h4 style="margin-top:12px; margin-bottom: 25px"><b><p style="color:black; display: inline; clear:none;"><img src="/static/img/message.png" alt="message" style=" margin-bottom:5px; width:4.5%;">&nbsp;회원탈퇴</b></h4>
+                        </div>
+          <hr>
+    <form method="POST" novalidate>
+        {% csrf_token %}
+        <p style="line-height: 1.6em;"><strong>{{ user.username }}</strong> 회원님의 계정이 삭제됩니다.<br>탈퇴 시, 개인정보 및 이용 정보가 삭제되며 복구할 수 없습니다. <br>비밀번호를 입력하신 후, 하단의 유의사항 동의에 체크하세요.</p>
+        <div>
+            <label name="label_password"> {{ password_form.password.label }}</label>
+            {{ password_form.password }}
+            {% if password_form.password.errors %}
+            <script type="text/javascript">
+                document.getElementsByName('password')[0].setAttribute('class', 'form-control is-invalid')
+            </script>
+            {% for error in password_form.password.errors %}
+            <div class="invalid-feedback">
+                {{ error }}
+            </div>
+            {% endfor %}
+            {% endif %}
+            <br>
+            <h7>
+                본인인증을 위해 비밀번호를 입력해주세요.
+            </h7>
+        </div>
+    <br>
+        <label>
+            <input type="checkbox" name="ck" onClick="checkDisable(this.form)">
+            <span>유의사항 동의</span>
+        </label>
+            <a onclick="return confirm('회원정보는 되돌릴 수 없습니다. 탈퇴를 진행하시겠습니까?');">
+        <button type="submit" name="bt" disabled="true" style="float: right; width: 100px; height: 40px;  border-color: white";  class="btn btn-sm"><b>탈퇴하기</b></button></a>
+    </form>
+
+    <script type="text/javascript">
+        function checkDisable(form) {
+            if (form.ck.checked == true) {
+                form.bt.disabled = false;
+            } else {
+                form.bt.disabled = true;
+            }
+        }
+    </script>
+          <br>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+{% endblock %}

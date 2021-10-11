@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+
+<style>
+
+.paragraph--type--card-narrow-row {
+ display: flex;
+ align-items: flex-start;
+ justify-content: left;
+ flex-flow: row wrap;
+}
+
+ .card-narrow {
+  width: 300px;
+  height: 360px;
+  border: 1px solid #ccc;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  }
+
+.card-narrow-image {height: 280px;}
+
+.card-narrow h3 {
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+    line-height: 1.2;
+    font-family: "Raleway",Arial,Helvetica,sans-serif;
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #eee;
+}
+
+.card-narrow p {
+  padding: 0 10px;
+  font-family: Arial,Helvetica,sans-serif;
+  margin-bottom: 0;
+}
+
+.card-narrow-content {
+  flex: 1 1 180px;
+
+}
+
+</style>
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+ <h3 style="margin-top:60px; margin-bottom:-5px; margin-left:35px; font-size: 23px;"><img src="/static/img/zzim.png" style="margin-bottom:5px; width:6%; margin-right: -8px"><b>내가 찜한 상품</b></h3>
+
+<div class="paragraph--type--card-narrow-row" style="margin-left: 50px; margin-top: 10px;">
+
+       {% for zzim in zzim %}
+               {% if user == zzim.username %}
+               {% for product in products %}
+               {% if product.product_code == zzim.product_code.product_code %}
+
+   <div class="card-narrow">
+           <div class="card-narrow-image"><a href="{{product.get_absolute_url}}"><img style="width: 250px; height: 270px; margin-left:25px;" src="{{product.image.url}}" alt="상품 이미지"></a></div>
+          <div class="card-narrow-content" style="margin-top:10px; justify-content: center; text-align: center"> <b style="font-size: 17px;">{{ zzim.product_code }}</b>
+              {% endif %}
+              {% endfor %}
+     <p style="margin-top: 5px;">    {% for designated in designated_object %}
+            {% if designated.product_code.product_code == zzim.product_code.product_code %}
+            {{designated.price}}원
+    </p>
+    {% endif %}
+    {% endfor %}
+    </div>
+</div>
+ {% endif %}
+ {% endfor %}
+</div>
+{% endblock %}

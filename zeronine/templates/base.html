@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@200;400&family=Noto+Sans+KR&display=swap');
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.footer_logo {
+    font-family: 'Questrial', sans-serif;
+    font-size: 50px;
+}
+
+@media screen and (min-width: 601px) {
+  .footer {
+        height: 280px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .footer {
+       height: 200px;
+  }
+}
+
+
+@media screen and (min-width: 601px) {
+  .footer_logo {
+        font-size: 50px;
+        margin-left: 230px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer_logo {
+      font-size: 30px;
+      margin-left: 25px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .footer_p {
+        font-size: 15px;
+        margin-left: 230px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer_p {
+      font-size: 11px;
+       margin-left: 25px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .navbar-brand {
+      width: 170px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-brand {
+      width: 120px;
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease 0.5s;
+  background: #fff;
+}
+.search .icon {
+  width: 16px;
+  cursor: pointer;
+  height: 16px;
+  margin: 16px;
+  position: relative;
+  transform: rotate(90deg) translate(-10%, -10%);
+  transition: all 0.3s ease 0.6s;
+}
+.search .icon:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #4C515E;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+.search .icon span {
+  display: block;
+  top: 35%;
+  left: 35%;
+  width: 2px;
+  height: 2px;
+  border-radius: 1px;
+  margin: -1px 0 0 -1px;
+  position: absolute;
+  transition: background 0s ease 0s;
+}
+
+.search .icon span:before {
+  right: 0;
+}
+.search .icon span:after {
+  left: 0;
+}
+.search .icon span svg {
+  display: block;
+  fill: none;
+  stroke-linecap: round;
+  stroke-width: 5px;
+  stroke: #4C515E;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  stroke-dasharray: 47;
+  stroke-dashoffset: 67;
+  transition: all 0.4s ease 0.31s, opacity 0.1s ease 0.4s, stroke 0.4s ease 0s;
+}
+.search .field {
+  position: relative;
+  width: 0;
+  transition: all 0.5s cubic-bezier(0.51, 0.92, 0.24, 1.15) 0.5s;
+}
+.search .field input {
+  font-size: inherit;
+  line-height: inherit;
+  padding: 0 24px 0 0;
+  border: 0;
+  display: block;
+  font-family: inherit;
+  position: absolute;
+  background: #fff;
+  -webkit-appearance: none;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  z-index: 1;
+  visibility: hidden;
+  transition: all 0s ease 0s;
+  margin: 0;
+  vertical-align: middle;
+  text-transform: none;
+}
+.search .field input:focus {
+  outline: none;
+}
+.search .field input::-webkit-input-placeholder {
+  color: #212533;
+}
+.search .field input:-moz-placeholder {
+  color: #212533;
+}
+.search .field input::-moz-placeholder {
+  color: #212533;
+}
+.search .field input:-ms-input-placeholder {
+  color: #212533;
+}
+.search .field > div {
+  white-space: nowrap;
+  color: #212533;
+  display: flex;
+}
+.search .field > div span {
+  opacity: 0;
+  line-height: 22px;
+  display: block;
+  visibility: hidden;
+  transform: translate(0, 12px);
+  transition: all 0.4s ease;
+}
+.search .field > div span:nth-child(1) {
+  transition-delay: 0.4s;
+}
+.search .field > div span:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.search .field > div span:nth-child(3) {
+  transition-delay: 0s;
+}
+.search.open {
+  border-radius: 8px;
+  transition-delay: 0s;
+  box-shadow: 0 10px 36px -2px rgba(0, 0, 0, 0.18);
+}
+.search.open .icon {
+  transform: rotate(0deg) translate(0, 0);
+  transition-delay: 0s;
+}
+.search.open .icon:before {
+  border-color: #212533;
+}
+.search.open .icon span svg {
+  stroke: #212533;
+  transition-delay: 0s;
+}
+.search.open .field {
+  transition-delay: 0s;
+  width: 200px;
+}
+.search.open .field > div span {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+}
+.search.open .field > div span:nth-child(1) {
+  transition-delay: 0.4s;
+}
+.search.open .field > div span:nth-child(2) {
+  transition-delay: 0.45s;
+}
+.search.open .field > div span:nth-child(3) {
+  transition-delay: 0.5s;
+}
+.search.open .field input {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.75s;
+}
+.search.loading .icon span {
+  background: #212533;
+  -webkit-animation: rotate 1s infinite ease 0.8s;
+          animation: rotate 1s infinite ease 0.8s;
+  transition-delay: 0.4s;
+}
+.search.loading .icon span svg {
+  transition-delay: 0s;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 139;
+  opacity: 0;
+  transition: all 0.4s ease 0s, opacity 0s ease 0.4s;
+}
+.search.loading .icon span:before, .search.loading .icon span:after {
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+.search.loading .icon span:before {
+  transform: translate(-4px, 0);
+}
+.search.loading .icon span:after {
+  transform: translate(4px, 0);
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+.dribbble {
+  position: fixed;
+  display: block;
+  right: 20px;
+  bottom: 20px;
+  opacity: 0.5;
+  transition: all 0.4s ease;
+}
+.dribbble:hover {
+  opacity: 1;
+}
+.dribbble img {
+  display: block;
+  height: 36px;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- 로고 폰트 url -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+
+    {% block script %}
+    {% endblock %}
+
+    {% block style %}
+    {% endblock %}
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+
+        {% if not user.is_authenticated %}
+        <div class="notice" style="width: 100%; height: 40px; background-color: #283c16; text-align: center">
+            <a href="{% url 'zeronine:ai_check' %}" style="text-decoration:none; justify-content:center; color: white; text-align: center; line-height: 35px;">지금 가입하고 저렴하게 구입하세요!&nbsp;&nbsp;&nbsp;&nbsp;➜</a>
+        </div>
+        {% else %}
+         <div style="width: 100%; height: 40px; background-color: #283c16; text-align: center">
+             <a href="{% url 'zeronine:logout' %}" style="text-decoration:none; justify-content:center; color: white; text-align: center; line-height: 35px;"><b>{{user.username}}</b>님, 환영합니다.</a>
+        </div>
+        {% endif %}
+
+    <div class="navbar navbar-expand-md navbar-light" style="text-align: center">
+        <a class="navbar-brand" href="/" style="text-align: center; text-decoration: none;"><img class="zn_logo" src="/static/img/zeronine_logo_image.png" style="width: 170px; margin-top: -25px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+
+    <nav class="navbar navbar-expand-lg">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="navbar-nav mr-auto" style="margin: auto; margin-top: -30px;">
+
+        <li class="nav-item">
+          <a class="nav-link" href="/" class="nav-link">전체상품</a>
+        </li>
+
+        {% for c in categories %}
+        <li class="nav-item">
+            <a class="nav-link"  href="{{c.get_absolute_url}}" class="nav-link {% if current_category.slug == c.slug %} active {% endif %}" >{{c.name}}</a></a>
+        </li>
+        {% endfor %}
+
+        <li class="nav-item"><a href="{% url 'zeronine:post' %}" class="nav-link">자유게시판</a></li>
+            {% csrf_token %}
+        <li class="nav-item">
+            {% if user.is_authenticated %}
+        <li class="nav-item">
+            <!--로그인 후 검색기능-->
+            <form action="{% url 'zeronine:product_search' %}" autocomplete="on" method="get">
+            {% csrf_token %}
+            <div class="search">
+                <div class="icon" >
+                    <span>
+                        <svg viewBox="0 0 40 40">
+                            <path d="M3,3 L37,37"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div class="field">
+                    <input type="text" placeholder="상품을 입력하세요..." name="q" value="{{q}}">
+                </div>
+            </div>
+              </form>
+        <li class="nav-item"><a href="{% url 'zeronine:mypage_list' %}" class="nav-link"><img src="/static/img/mypage2.png" style="width: 20px;"></a></li>
+            {% else %}
+        <li class="nav-item">
+            <!--로그인 전 검색기능-->
+            <form action="{% url 'zeronine:product_search' %}" autocomplete="on" method="get">
+            {% csrf_token %}
+            <div class="search">
+                <div class="icon">
+                    <span>
+                        <svg viewBox="0 0 40 40">
+                            <path d="M3,3 L37,37"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div class="field">
+                    <input type="text" placeholder="상품을 입력하세요..." name="q" value="{{q}}">
+                </div>
+            </div>
+              </form>
+        <li class="nav-item"><a href="{% url 'zeronine:login' %}" class="nav-link" style="color: black;"><img src="/static/img/mypage2.png" style="width: 20px;"></a></li>
+            {% endif %}
+      </li>
+    </ul>
+  </div>
+</nav>
+<script>
+    $(document).ready(function() {
+
+    $('.search').each(function() {
+        var self = $(this);
+        var div = self.children('.field');
+        var placeholder = div.children('input').attr('placeholder');
+        var placeholderArr = placeholder.split(/ +/);
+        if(placeholderArr.length) {
+            var spans = $('<div />');
+            $.each(placeholderArr, function(index, value) {
+                spans.append($('<span />').html(value + '&nbsp;'));
+            });
+            div.append(spans);
+        }
+        self.click(function() {
+            self.addClass('open');
+            setTimeout(function() {
+                self.find('input').focus();
+                self.find('input').on('keyup', function() {
+                    self.toggleClass('loading', (self.find('input').val().toString().length > 3));
+                });
+            }, 750);
+        });
+        $(document).click(function(e) {
+            if(!$(e.target).is(self) && !jQuery.contains(self[0], e.target)) {
+                self.removeClass('open loading');
+                setTimeout(function() {
+                    self.find('input').val('');
+                }, 400);
+            }
+        });
+    });
+
+});
+
+</script>
+        {% block content %}
+        {% endblock %}
+
+</head>
+     <footer class="footer" style=" width: 100%; height: 280px; padding: 15px; text-align: left; background-color: #F2F2F2; margin-top: 100px;">
+         <p class="footer_logo" style="margin-top: 40px;">ZERONINE</p>
+         <p class="footer_p">ZERONINE ⓒ 2021 ALL RIGHTS RESERVED.</p>
+         <p class="footer_p" style="color: #6E6E6E;">제로나인 | 주소: 서울특별시 성동구 살곶이길 200 한양여자대학교 <br>
+             메일: zeronine0900@gmail.com | CALL: 010-6352-4046</p>
+     </footer>
+</html>

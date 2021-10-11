@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+<style>
+    .button1{
+        background:none;
+        border: none;
+
+    }
+    .search-icon{
+        width: 30px;
+        margin-left: -65px;
+        color: #cccccc;
+        margin-bottom: 1px;
+    }
+    .plus{
+        margin-bottom: 30px;
+    }
+
+    .inputbox {
+        border: solid 1px;
+        border-color: gainsboro;
+        height: 35px;
+    }
+
+.inputbox:focus {outline:1px solid #D8D8D8; padding:10px;}
+
+.button1:focus {outline:none;}
+</style>
+<div class="container my-4">
+<h3 style="margin-top:40px;"><b>자유게시판</b></h3>
+
+    <a href="{% url 'zeronine:post_write' %}"><button class="btn btn-primary" style="float:right; background: #849160; border: white; border-radius:0px; font-size: 16px;">글쓰기</button></a>
+
+    <form  style="float:right; margin-right: 6px;" action="{% url 'zeronine:search' %}" method="post">
+      {% csrf_token %}
+        <div class="plus">
+        <input class="inputbox" type="search" style="width: 180px;" aria-label="Search" name="q" value="{{q}}">
+        <button class="button1" style="text-decoration: none;" type="submit"><img class="search-icon" style="margin-top: -2px;" src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-512.png"></button>
+            </div>
+      </form>
+
+  <div class="row">
+  <div class="col-12">
+  </div>
+  </div>
+
+<div class="row mt-5" style="clear:both;">
+  <div class="col-12">
+    <table class="table">
+      <thead class="thead" style="background: #F2F2F2">
+        <tr>
+          <th scope="col">번호</th>
+          <th scope="col">제목</th>
+          <th scope="col">작성자</th>
+          <th scope="col">작성일</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for post in posts %}
+        <tr>
+          <th scope="row"><a style="text-decoration: none; color: #111111" href="{% url 'zeronine:post_detail' pk=post.post_code %}">{{ post.post_code }}</a></th>
+          <td><a style="text-decoration: none; color: #111111" href="{% url 'zeronine:post_detail' pk=post.post_code %}">{{ post.title }}</a></td>
+          <td>{{ post.username }}</td>
+          <td>{{ post.register_date }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+                <br><ul class="paging justify-content-center">
+                    {% if posts.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ posts.previous_page_number }}">이전으로</a>
+                    </li>
+                    {% endif %}
+                    {% if posts.number > page_size|add:"1" %}
+                      <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
+                      <li class="page-item"><span class="page-link">...</span></li>
+                    {% endif %}
+                  {% for page_number in page_range %}
+                  {% if page_number == posts.number %}
+                    <li class="page-item active" aria-current="page">
+                      <a class="page-link" href="?page={{page_number}}">{{page_number}}</a>
+                    </li>
+                    {% else %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{page_number}}">{{page_number}}</a>
+                    </li>
+                    {% endif %}
+                  {% endfor %}
+                  {% if posts.number|add:page_size < max_index %}
+                    <li class="page-item"><span class="page-link">...</span></li>
+                    <li class="page-item"><a class="page-link" href="?page={{max_index}}">{{max_index}}</a></li>
+                  {% endif %}
+
+                  {% if posts.has_next %}
+                  <li class="page-item">
+                    <a class="page-link" href="?page={{posts.next_page_number}}">다음으로</a>
+                  </li>
+                  {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

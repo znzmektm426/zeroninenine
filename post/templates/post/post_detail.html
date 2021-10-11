@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card container my-3 justify-content-center" style="border: white">
+    <!--제목,분류,작성일-->
+    <div class="card-header">
+        <strong>{{ post.title }}</strong><span></span>&nbsp;
+        <span style="font-size: 14px;">{{ post.register_date|date:'Y.m.d. H:i' }}</span>
+        {% if user == post.username %}
+            <a href="{% url 'zeronine:post_delete' pk=post.post_code %}"><button style="background:#f7f7f7; border: none; color:black; float:right;" class="btn btn-primary"><b>삭제</b></button></a>
+            <a href="{% url 'zeronine:post_modify' pk=post.post_code %}"><button style="background:#f7f7f7; border: none; color:black; float: right; margin-right: 0px;" class="btn btn-primary"><b>수정</b></button></a>
+        {% endif %}
+    </div>
+    <div class="card-body">
+        <div>
+            <span>작성자 : {{ post.username }}</span>
+        </div><hr>
+        <div>
+            {{ post.content }}
+        </div>
+    </div>
+<br>
+<br>
+    <br>
+
+<br>
+<div class = "container" style="margin-top: 50px;">
+<div class = "row">
+    <div class = "col-md-12 comment-bg">
+        <!--댓글 목록-->
+    <div class = "comments-list">
+        <h5 style="margin-bottom: 15px;"><b>댓글</b></h5>
+            {% for comment in comments %}
+            <div class = "media">
+                <div class = "media-body">
+                    <div class="name" style="font-size: 15px; margin-left: 1px;"><b> {{comment.username}}</b></div>
+                    <div class="date" style="font-size: 12px; margin-bottom: 5px;">{{ comment.register_date }}</div>
+                    <div class="content" style="font-size: 14px; margin-bottom: 5px;">{{comment.content}}</div>
+
+                    <hr>
+                </div>
+                <hr>
+
+                 <form method="POST" action ="{% url 'zeronine:comment_delete' comment_pk=comment.pk %}">
+                  {% csrf_token %}
+                     {% if user == comment.username %}
+                     <div class="form-group">
+                    <button type = "submit" class = "btn btn-primary " style="background: #F2F2F2; border: none; color:black; font-size: 12px; border: white; float: right; margin-top: 25px;">삭제</button>
+                     </div>
+                     {% endif %}
+                 </form>
+
+            </div>
+             {% empty %}
+       <h6 style="font-size:15px;"><b>아직 댓글이 없습니다.</b></h6><br><br>
+            {% endfor %}
+    </div>
+         <!--댓글 작성-->
+        <div class="row" style="margin-left: -2px;">
+                    {% if errors %}
+                <ul>
+                    {% for error in errors %}
+                    <li><div class = "alert alert-primary">{{error}}</div></li>
+                    {% endfor %}
+             </ul>
+            {% endif %}
+            <form method = "POST" action = "{% url 'zeronine:comment_create' article_pk=post.pk %}" class = "col-md-20 mx-auto">
+               {% csrf_token %}
+                <div class="form-group">
+                    <p style="font-size: 14px;"><b>댓글 작성</b></p>
+                    <textarea name="contents" placeholder="내용을 입력하세요." class="form-control" cols="160"></textarea>
+                    <button type = "submit" class = "btn btn-primary " style="background: #637B46; border: white; float: right; margin-top: 20px;">등록</button>
+                </div>
+           </form>
+                   <a href="{% url 'zeronine:post' %}"><button style="background: darkgrey; border: white; float: right; margin-top: -35.5px;" class="btn btn-primary">이전</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

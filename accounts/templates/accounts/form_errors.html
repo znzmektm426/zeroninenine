@@ -1,0 +1,15 @@
+{% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}  <!-- 필드 오류를 출력한다. -->
+            <div class="alert alert-danger" style="background: white; border-color: white">
+                <img src="/static/img/error.png" style="width:15px; margin-bottom: 3px"><strong style="color: red">&nbsp;&nbsp;{{ field.label }}</strong>
+                <h8 style="color: red">&nbsp;{{ error }}</h8>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}   <!-- 넌필드 오류를 출력한다. -->
+        <div class="alert alert-danger" style="background: white; border-color: white">
+            <img src="/static/img/error.png" style="width:20px; "><strong style="color: red">&nbsp;{{ error }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}

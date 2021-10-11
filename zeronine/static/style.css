@@ -1,0 +1,24 @@
+/* paging */
+
+.paging {
+    justify-content: center;
+    display: flex;
+    list-style: none;
+}
+
+.paging li a {
+    color:#111111;
+    padding : 10px 10px;
+}
+
+.paging li a:hover{
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+.page-item.active .page-link {
+    color: #ffffff;
+    background-color: #637B46;
+    border-color: white;
+}
+/* end paging */

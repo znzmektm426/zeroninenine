@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% block title %} 회원가입 완료 {% endblock %}
+{% block content %}
+  <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+  <style>
+
+    button {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      padding: 10px 30px;
+      border: 1px solid #ccc;
+      background: white;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: crimson;
+      color: white;
+      cursor: pointer;
+    }
+
+/* 회원가입을 환영합니다 문구 */
+    .well1{
+      width: 500px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.3rem;
+      margin-bottom: 32px;
+      color:darkgrey;
+    }
+
+    ion-icon {
+      font-size: 5rem;
+      margin: 2.4rem auto;
+        margin-bottom: 10px;
+      color: #c80a1e;
+    }
+
+/* 회원가입이 완료되었습니다 문구 */
+    .well1 h1{
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+/* 홈으로, 로그인 */
+    .well2{
+      width: 500px;
+      margin: 0 auto;
+      padding:2rem 0;
+      text-align: center;
+    }
+
+    .well2 a{
+      width: 200px;
+      padding: 10px 80px;
+      margin: auto 10px;
+      border: 1px solid #000;
+      font-size: 1rem;
+      color: #000;
+      transition: .5s;
+    }
+
+    .well2 a:hover{
+      background: #000;
+      color: #fff;
+    }
+
+
+  </style>
+
+<body>
+
+  <article class="wellcome">
+    <div class="well1">
+      <ion-icon name="checkmark-sharp"></ion-icon>
+      <h1>회원가입이 완료 되었습니다.</h1>
+      <b>{{new_member.username}}</b>님, 가입을 환영합니다.
+    </div>
+    <div class="well2">
+      <a href="/">홈으로</a>
+      <a href="{% url 'zeronine:login' %}">로그인</a>
+    </div>
+  </article>
+
+
+</body>
+
+
+{% endblock %}
