@@ -23,11 +23,11 @@ class OptionForm(forms.Form):
 
 class ValueForm(forms.Form):
     value_name = forms.CharField(error_messages={'required': "옵션값을 입력하세요."}, max_length=32, label="옵션명")
-    second_value = forms.CharField(error_messages={'required': "옵션값을 입력하세요."}, max_length=32, label="옵션명")
-    third_value = forms.CharField(error_messages={'required': "옵션값을 입력하세요."}, max_length=32, label="옵션명")
+    second_value = forms.CharField(error_messages={'required': "두번째 옵션값을 입력하세요."}, max_length=32, label="second_value", required=False)
+    third_value = forms.CharField(error_messages={'required': "세번째 옵션값을 입력하세요."}, max_length=32, label="third_value", required=False)
     option_price = forms.IntegerField(error_messages={'required': "옵션명을 입력하세요."}, label="옵션추가비용")
-    second_option_price = forms.IntegerField(error_messages={'required': "옵션명을 입력하세요."}, label="옵션추가비용")
-    third_option_price = forms.IntegerField(error_messages={'required': "옵션명을 입력하세요."}, label="옵션추가비용")
+    second_option_price = forms.IntegerField(error_messages={'required': "옵션명을 입력하세요."}, label="second_option_price", required=False)
+    third_option_price = forms.IntegerField(error_messages={'required': "옵션명을 입력하세요."}, label="third_option_price", required=False)
 
 class DesignatedForm(forms.Form):
     price = forms.IntegerField(error_messages={'required': "옵션명을 입력하세요."}, label="가격")

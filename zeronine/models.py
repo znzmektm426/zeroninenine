@@ -71,7 +71,7 @@ class Product(models.Model):
         else:
             return False
 
-
+# 게시글
 class Post(models.Model):
     post_code = models.AutoField(primary_key=True)
     username = models.ForeignKey(Member, on_delete=models.CASCADE, db_column='username')
@@ -139,10 +139,10 @@ class Option(models.Model):
 # 옵션값(옵션값코드, 옵션값명, 옵션코드(fk), 상품코드(fk))
 class Value(models.Model):
     value_code = models.AutoField(primary_key=True)
-    option_code = models.ForeignKey(Option, on_delete=models.CASCADE, db_column='option_code')
-    product_code = models.ForeignKey(Product, on_delete=models.CASCADE, db_column='product_code')
-    name = models.CharField(max_length=32)
-    extra_cost = models.IntegerField()
+    option_code = models.ForeignKey(Option, on_delete=models.CASCADE, db_column='option_code', null=True, blank=True)
+    product_code = models.ForeignKey(Product, on_delete=models.CASCADE, db_column='product_code', null=True, blank=True)
+    name = models.CharField(max_length=32, null=True, blank=True)
+    extra_cost = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -202,4 +202,3 @@ class JoinDetail(models.Model):
 
     class Meta:
         ordering = ['joindetail_code']
-

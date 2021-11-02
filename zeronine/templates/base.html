@@ -11,7 +11,7 @@
 
 .footer_logo {
     font-family: 'Questrial', sans-serif;
-    font-size: 50px;
+    font-size: 30px;
 }
 
 @media screen and (min-width: 601px) {
@@ -67,11 +67,43 @@
   }
 }
 
+@media screen and (min-width: 601px) { /*줄이기 전*/
+  .navbar-expand-lg {
+      margin-left: 46px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navbar-expand-lg {
+      display: none;
+  }
+}
+
+@media screen and (min-width: 601px) { /*줄이기 전*/
+  .menu {
+      color: black;
+      font-weight: normal;
+      font-size: 15px;
+      opacity: 30%;
+      margin-top: 5px;
+      letter-spacing: -10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu {
+    display: none;
+  }
+}
+
+
 .search {
   display: flex;
   align-items: center;
   transition: all 0.3s ease 0.5s;
   background: #fff;
+  margin-left: -10px;
+  margin-top: -3px;
 }
 .search .icon {
   width: 16px;
@@ -79,7 +111,7 @@
   height: 16px;
   margin: 16px;
   position: relative;
-  transform: rotate(90deg) translate(-10%, -10%);
+  /*transform: rotate(90deg) translate(-10%, -10%);*/
   transition: all 0.3s ease 0.6s;
 }
 .search .icon:before {
@@ -274,22 +306,12 @@
   box-sizing: inherit;
 }
 
-.dribbble {
-  position: fixed;
-  display: block;
-  right: 20px;
-  bottom: 20px;
-  opacity: 0.5;
-  transition: all 0.4s ease;
-}
-.dribbble:hover {
-  opacity: 1;
-}
 .dribbble img {
   display: block;
   height: 36px;
 }
 </style>
+
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
@@ -318,7 +340,7 @@
         </div>
         {% else %}
          <div style="width: 100%; height: 40px; background-color: #283c16; text-align: center">
-             <a href="{% url 'zeronine:logout' %}" style="text-decoration:none; justify-content:center; color: white; text-align: center; line-height: 35px;"><b>{{user.username}}</b>님, 환영합니다.</a>
+             <a href="{% url 'zeronine:logout' %}" style="text-decoration:none; justify-content:center; color: white; text-align: center; line-height: 35px;"><b style="color: #f7ebbd">{{user.username}}</b>님, 환영합니다. [로그아웃]</a>
         </div>
         {% endif %}
 
@@ -332,17 +354,26 @@
     <nav class="navbar navbar-expand-lg">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-    <ul class="navbar-nav mr-auto" style="margin: auto; margin-top: -30px;">
+    <ul class="navbar-nav mr-auto" style="margin: auto; margin-top: -25px; word-spacing: -5px;">
 
         <li class="nav-item">
-          <a class="nav-link" href="/" class="nav-link">전체상품</a>
+          <a class="nav-link" href="/" class="nav-link"><b>전체상품</b></a>
         </li>
+
+    <span class="menu">|</span>
 
         {% for c in categories %}
+        &nbsp;&nbsp;&nbsp;&nbsp;
         <li class="nav-item">
-            <a class="nav-link"  href="{{c.get_absolute_url}}" class="nav-link {% if current_category.slug == c.slug %} active {% endif %}" >{{c.name}}</a></a>
+            <a class="nav-link" href="{{c.get_absolute_url}}" {% if current_category.slug == c.slug %} active {% endif %}>{{c.name}}</a></a>
         </li>
         {% endfor %}
+        &nbsp;&nbsp;&nbsp;
+        <span class="menu" style="margin-right: -1px;">|</span>
+
+    <li class="nav-item" style="color: #637B46;"><a href="{% url 'zeronine:product_upload' %}" class="nav-link" style="color: darkgreen; font-weight: normal; margin-right: -5px;">제안하기</a></li>
+
+   <span class="menu" >|</span>
 
         <li class="nav-item"><a href="{% url 'zeronine:post' %}" class="nav-link">자유게시판</a></li>
             {% csrf_token %}
@@ -352,7 +383,7 @@
             <!--로그인 후 검색기능-->
             <form action="{% url 'zeronine:product_search' %}" autocomplete="on" method="get">
             {% csrf_token %}
-            <div class="search">
+            <div class="search" style="word-spacing: 0px">
                 <div class="icon" >
                     <span>
                         <svg viewBox="0 0 40 40">
@@ -365,13 +396,13 @@
                 </div>
             </div>
               </form>
-        <li class="nav-item"><a href="{% url 'zeronine:mypage_list' %}" class="nav-link"><img src="/static/img/mypage2.png" style="width: 20px;"></a></li>
+        <li class="nav-item"><a href="{% url 'zeronine:mypage_list' %}" class="nav-link"><img src="/static/img/mypage5.png" style="width: 25px;"></a></li>
             {% else %}
-        <li class="nav-item">
+        <li class="nav-item" style="margin-left: -13px; margin-top: -8px">
             <!--로그인 전 검색기능-->
             <form action="{% url 'zeronine:product_search' %}" autocomplete="on" method="get">
             {% csrf_token %}
-            <div class="search">
+            <div class="search" style="word-spacing: 0px">
                 <div class="icon">
                     <span>
                         <svg viewBox="0 0 40 40">
@@ -384,12 +415,13 @@
                 </div>
             </div>
               </form>
-        <li class="nav-item"><a href="{% url 'zeronine:login' %}" class="nav-link" style="color: black;"><img src="/static/img/mypage2.png" style="width: 20px;"></a></li>
+        <li class="nav-item"><a href="{% url 'zeronine:login' %}" class="nav-link" style="color: black;">로그인</a></li>
             {% endif %}
       </li>
     </ul>
   </div>
 </nav>
+
 <script>
     $(document).ready(function() {
 
@@ -425,14 +457,14 @@
     });
 
 });
-
 </script>
+
         {% block content %}
         {% endblock %}
 
 </head>
      <footer class="footer" style=" width: 100%; height: 280px; padding: 15px; text-align: left; background-color: #F2F2F2; margin-top: 100px;">
-         <p class="footer_logo" style="margin-top: 40px;">ZERONINE</p>
+         <p class="footer_logo" style="margin-top: 40px; font-size: 40px;">ZERONINE</p>
          <p class="footer_p">ZERONINE ⓒ 2021 ALL RIGHTS RESERVED.</p>
          <p class="footer_p" style="color: #6E6E6E;">제로나인 | 주소: 서울특별시 성동구 살곶이길 200 한양여자대학교 <br>
              메일: zeronine0900@gmail.com | CALL: 010-6352-4046</p>

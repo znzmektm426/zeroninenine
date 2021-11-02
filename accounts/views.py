@@ -1,12 +1,6 @@
-from django.contrib.auth.views import LoginView
 from django.shortcuts import render
-
-# Create your views here.
 from accounts.forms import RegisterForm
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
-
 from zeronine.models import *
-
 
 def register(request):
     current_category = None

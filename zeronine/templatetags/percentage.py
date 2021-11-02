@@ -2,7 +2,6 @@ from django import template
 
 register = template.Library()
 
-
 @register.filter(name='percentage')
 def percentage(product):
     total = product.get_total()

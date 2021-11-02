@@ -31,6 +31,8 @@
 
 </style>
 
+     <hr style="width: 70%; margin-bottom: 70px;">
+
 <div class="container my-4">
     <h3 style="margin-top:40px; margin-bottom: 60px; text-align: center"><b>공동구매 상품 등록</b></h3>
     <div class="row mt-5">
@@ -83,9 +85,7 @@
         </button>
       </div>
 
-
         <br>
-
 
           <div class="form-row">
             <div class="form-group col-md-9" style="margin-left: 65px;">
@@ -97,18 +97,18 @@
           <div class="form-row">
             <div class="form-group col-md-4" style="margin-left: 65px;">
               <label for="value_name" class="col-form-label"><b>옵션값</b></label>
-               <input type="text" class="form-control" name="value_name" id="value_name" value="{{ form.value_name.value|default_if_none:'' }}" placeholder="옵션값명을 입력하세요.">
+               <input type="text" class="form-control" name="value_name" id="value_name" value="{{ form.value_name.value }}" placeholder="옵션값명을 입력하세요.">
             </div>
             <div class="form-group col-md-5">
               <label for="option_price" class="col-form-label"><b>옵션추가가격</b></label>
-               <input type="text" class="form-control" name="option_price" id="option_price" value="{{ form.option_price.value|default_if_none:'' }}" placeholder="옵션 추가 가격을 입력하세요.">
+               <input type="text" class="form-control" name="option_price" id="option_price" value="{{ form.option_price.value }}" placeholder="옵션 추가 가격을 입력하세요.">
             </div>
           </div>
 
            <div class="form-row">
             <div class="form-group col-md-4" style="margin-left: 65px;">
               <label for="second_value" class="col-form-label"><b>옵션값2</b></label>
-               <input type="text" class="form-control" name="second_value" id="second_value" value="{{ form.second_value.value|default_if_none:'' }}" placeholder="옵션값명을 입력하세요.">
+               <input type="text" class="form-control" name="second_value" id="second_value" value="{{ form.second_value.value|default_if_none:''}}" placeholder="옵션값명을 입력하세요.">
             </div>
             <div class="form-group col-md-5">
               <label for="second_option_price" class="col-form-label"><b>옵션추가가격</b></label>
@@ -211,7 +211,7 @@ function setThumbnail(event) {
             <label for="btnAtt" class="col-sm-2 col-form-label"><b>상세이미지</b></label>
             <div class="col-sm-10">
              <input type='file' class="form-control" name="image" id='btnAtt' multiple='multiple' value="{{ form.image.value|default_if_none:'' }}"/>
-             <div class='att_zone' id='att_zone' data-placeholder='사진을 첨부 하려면 파일 선택 버튼을 클릭하거나 파일을 드래그 앤 드롭 하세요.'></div>
+             <div class='att_zone' id='att_zone' data-placeholder='사진을 첨부 하려면 파일 선택 버튼을 클릭하세요.'></div>
              </div>
         </div>
 

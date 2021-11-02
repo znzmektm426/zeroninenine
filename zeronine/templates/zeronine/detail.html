@@ -121,7 +121,9 @@ div.container {
                          {% for value in value_object %}
                               {% if value.option_code.option_code == option.option_code %}
                                   {% if value.product_code == product %}
-                                      <option data-price="{{value.extra_cost}}" id="valueSelect" value="{{value.value_code}}">{{value.name|default_if_none:"없음없음없음"}} (+{{value.extra_cost}}원)</option>
+                                      {% if value.name != '' %}
+                                            <option data-price="{{value.extra_cost}}" id="valueSelect" value="{{value.value_code}}">{{value.name}} (+{{value.extra_cost}}원)</option>
+                                      {% endif %}
                                   {% endif %}
                               {% endif %}
                          {% endfor %}
@@ -360,17 +362,17 @@ $().ready(function() {
 </script>
             <div class="cart_total_price">
                 <h2 style="font-size: 25px;"><p style="font-size: 19px; margin-top: 35px; margin-bottom: -25px;"><b>총 가격</b></p>
-                    <strong class="item_price" style="margin-left: 220px; font-size: 23px; margin-bottom: 20px;">0</strong><span style="font-size: 23px;">원</span></p></h2>
+                    <strong class="item_price" style="margin-left: 220px; font-size: 23px; margin-bottom: 20px;">0</strong><span style="font-size: 23px; text-align: left">원</span></h2>
             </div>
 
                 {% csrf_token %}
                 {% if not user.is_authenticated %}
                 <a onclick="alert('로그인 후 참여가 가능합니다.');" style="cursor:pointer;">
-                    <button type="submit" action="{% url 'zeronine:join_create' id=product.product_code %}" style="background:#637B46; border-color:#637B46; border-radius: 0px; text-align: center; width: 150px; height:45px;" class="btn btn-primary"><b>참여하기</b></button>
+                    <button type="submit" action="{% url 'zeronine:join_create' id=product.product_code %}" style="background:#637B46; border-color:#637B46; border-radius: 0px; text-align: center; width: 150px; height:45px; margin-left: 160px;" class="btn btn-primary"><b>참여하기</b></button>
                 </a>
                 {% else %}
                 <div style="margin-top: 40px;">
-                <button type="button" action="{% url 'zeronine:join_create' id=product.product_code %}" style="background: #637B46; border-color: #637B46; border-radius: 0px; text-align: center; width: 150px; height:45px;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><b>참여하기</b></button>
+                <button type="button" action="{% url 'zeronine:join_create' id=product.product_code %}" style="background: #637B46; border-color: #637B46; border-radius: 0px; text-align: center; width: 150px; height:45px; margin-left: 160px;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><b>참여하기</b></button>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -404,12 +406,12 @@ $().ready(function() {
                 {% if not user.is_authenticated %}
                 <div style="margin-top: 40px; margin-right: 180px;">
                 <a onclick="alert('로그인 후 찜하기가 가능합니다.');" style="cursor:pointer;">
-                    <button type="submit" style="background:white; color:#4B610B; border-color: #637B46; width: 150px; height:45px; border-radius: 0px; text-align: center" class="btn btn-primary"><b>찜하기</b></button></a>
+                    <button type="submit" style="background:white; color:#4B610B; border-color: #637B46; width: 150px; height:45px; border-radius: 0px; text-align: center; margin-left: -320px;" class="btn btn-primary"><b>찜하기</b></button></a>
 
                   {% else %}
                 <div style="margin-top: 40px;">
                 <a onclick="alert('{{ product.name }} 상품을 찜했습니다.');" style="cursor:pointer;">
-                    <button type="submit" style="background:white; color:#4B610B; border-color: #637B46; width: 150px; height:45px; border-radius: 0px; text-align: center" class="btn btn-primary"><b>찜하기</b></button></a>
+                    <button type="submit" style="background:white; color:#4B610B; border-color: #637B46; width: 150px; height:45px; border-radius: 0px; text-align: center; margin-left: -160px;" class="btn btn-primary"><b>찜하기</b></button></a>
                   {% endif %}
                 </div>
                 </div>

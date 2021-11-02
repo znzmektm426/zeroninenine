@@ -104,14 +104,48 @@ div.zeronine {
 }
 
 @media screen and (min-width: 601px) {
+  .total_pp {
+    float: left;
+    margin-right: 30px;
+    font-size: 17px;
+    margin-top: 3px;
+  }
+}
+
+@media (max-width: 600px) {
+  .total_pp {
+    float: right;
+    margin-right: 48px;
+    font-size: 13px;
+    margin-top: 8px;
+  }
+}
+
+
+
+@media screen and (min-width: 601px) {
 .product-title {
     font-size: 19px;
   }
 }
 
 @media screen and (max-width: 600px) {
+.category_name {
+    margin-left: 13px;
+    font-size: 15.5px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+.category_name {
+    margin-left: 75px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 600px) {
 .product-title {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 
@@ -222,6 +256,12 @@ div.p_bar {
   transform: translate(-50%, -50%);
 }
 
+.carousel-control-next,
+.carousel-control-prev,
+.carousel-indicators {
+    filter: invert(40%);
+}
+
 .layer3 { display: none; }
 .layer4 { display: none; }
 .layer5 { display: none; }
@@ -235,22 +275,26 @@ category_product { display: none; }
  <div class="container">
     <div style="text-align: center; margin-top: 40px; margin-bottom: 30px;">
         <img src="/static/img/onlyhywu.jpg" alt="main_img" style="width:80%;">
+         <hr style="width: 90%; margin-top:40px; margin-bottom: 40px;">
     </div>
  </div>
 
 {% elif current_category.name == '패션잡화' %}
  <div class="container" style="margin-top: 30px;">
+ <hr style="width: 90%; margin-bottom: 60px;">
  </div>
 {% elif current_category.name == '생활용품' %}
  <div class="container" style="margin-top: 30px;">
+ <hr style="width: 90%; margin-bottom: 60px;">
  </div>
 {% elif current_category.name == '식품' %}
  <div class="container" style="margin-top: 30px;">
+ <hr style="width: 90%; margin-bottom: 60px;">
  </div>
 
 {% else %}
 <meta name="viewport" content="width=device-width, initial-scale=1">
-        <div id="myCarousel1" class="carousel slide text-center" data-ride="carousel" style="margin-top: 10px;">
+        <div id="myCarousel1" class="carousel slide text-center" data-ride="carousel" style="margin-top: -10px;">
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel2" data-slide-to="1"></li>
@@ -273,7 +317,7 @@ category_product { display: none; }
                 <span class="sr-only">Previous</span>
             </a>
             <a class="carousel-control-next" href="#myCarousel1" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="carousel-control-next-icon" aria-hidden="true" ></span>
                 <span class="sr-only">Next</span>
             </a>
         </div>
@@ -315,9 +359,9 @@ category_product { display: none; }
 {% endif %}
 
     <div class="container">
-    <div class="col">
+    <div class="col" style="margin-bottom: 10px;">
             {% if current_category %}
-            <b>{{current_category.name}}</b>
+            <b class="category_name">{{current_category.name}}</b>
         </div>
             {% else %}
 
@@ -584,22 +628,22 @@ category_product { display: none; }
                     <a href="{{product.get_absolute_url}}"><img class="product-image" style="width: 70%" src="{{product.image.url}}" alt="상품 이미지"></a>
                     <div class="product-body">
                         <br>
-                        <a href="{{product.get_absolute_url}}" style="text-decoration: none; color: #111111"><p class="product-title" style="font-size: 19px;"><b>{{product.name}}</b></p></a>
+                        <a href="{{product.get_absolute_url}}" style="text-decoration: none; color: #111111"><p class="product-title"><b>{{product.name}}</b></p></a>
                     {% for designated in designated_object %}
                         {% if designated.product_code.product_code == product.product_code %}
                             <p class="product-price">{{ designated.price | floatformat:'0' | intcomma }}원</p>
                         {% endif %}
                     {% endfor %}
-                       <div class="progress" style="height: 5px; width: 60%; margin: 0 auto; margin-top: 25px">
+                       <div class="progress" style="height: 5px; width: 55%; margin: 0 auto; margin-top: 25px">
                               <div class="progress-bar progress-bar-animated bg-success" role="progressbar"
                               aria-valuenow="40" aria-valuemin="0" aria-valuemax="50" style="width: {{ product | percentage }}">
                               </div>
                             </div>
                         <div class="p_bar">
-                            <div class="progress-box">
+                            <div class="progress-box" style="margin-left: 22px;">
                             {% load humanize %}
                             <b><p class="percent">{{ product | percentage }}&nbsp;&nbsp;</p></b>
-                            <p class="total_p">{{ product.get_total | floatformat:'0' | intcomma }}원</p>
+                            <p class="total_pp">{{ product.get_total | floatformat:'0' | intcomma }}원</p>
                             <p class="target">목표금액&nbsp;{{ product.target_price | floatformat:'0' | intcomma }}원</p>
                             </div>
                             <br>
