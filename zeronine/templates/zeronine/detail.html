@@ -184,7 +184,7 @@ table a {color:#333; text-decoration:none;}
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
 
 
- <div class="container">
+<div class="container">
 <div class="zeronine">
     <div class="row">
         <div class="col-4">
@@ -235,8 +235,8 @@ table a {color:#333; text-decoration:none;}
                         {% else %}
 
 
-                         <select type="text" class="form-control" id="optionSelect">
-                              <option value="none">옵션을 선택하세요.</option>
+                       <select type="text" class="form-control" id="optionSelect">
+                       <option value="none">옵션을 선택하세요.</option>
                        {% for option in option_object %}
                          {% if option.option_code.option_code == value.option_code %}
                              {% if option.product_code == product %}
@@ -678,7 +678,7 @@ $().ready(function() {
       </div>
 
       <div class="modal-footer">
-        <button type="submit" action="{% url 'zeronine:join_create' id=product.product_code %}" style="background:grey; border-color: white" class="btn btn-primary"><b>확인</b></button>
+        <button action="{% url 'zeronine:join_create' id=product.product_code %}" style="background:grey; border-color: white" class="btn btn-primary"><b>확인</b></button>
       </div>
     </div>
   </div>
@@ -741,7 +741,7 @@ var IMP = window.IMP; // 생략가능
 
       <div class="modal-body" style="text-align: center">
           <img src="/static/img/heart.png" style="width: 11%; margin-top: 20px; margin-bottom: -15px;">
-          <h4 style="font-size: 20px; margin-top: 35px;"><b>{{product.name}}<br>상품에 찜이 완료되었습니다.</b></h4>
+          <h4 style="font-size: 20px; margin-top: 35px;"><b>{{product.name}}</b> 상품을 찜했습니다.</h4>
           <p style="font-size: 16px; margin-top:5px;">찜한 상품은 <b>마이페이지 > 찜목록</b>에서 모아보실 수 있습니다.</p>
       </div>
 
