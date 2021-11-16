@@ -69,7 +69,7 @@ def join_create(request, id):
                     join_detail.address = form.cleaned_data['address'] + form.cleaned_data['address2']
                     join_detail.save()
 
-                return render(request, 'zeronine/test.html', {'current_category': current_category,
+                return render(request, 'mypage/test.html', {'current_category': current_category,
                                                               'products': products,
                                                               'categories': categories,
                                                               'designated': designated})
