@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ed20cc78-e70e-4f98-9230-5362b98e26fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zeronine/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/zeronine/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zeronine/templates/zeronine/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/zeronine/templates/zeronine/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/join/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/join/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +73,7 @@
       <workItem from="1636728458792" duration="10382000" />
       <workItem from="1636812569944" duration="12237000" />
       <workItem from="1636986390658" duration="17690000" />
-      <workItem from="1637071921947" duration="3433000" />
+      <workItem from="1637071921947" duration="4039000" />
     </task>
     <servers />
   </component>
