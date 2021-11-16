@@ -355,6 +355,7 @@ $().ready(function() {
                });
 
                var total_amount_money = $('.cart_total_price').children().find('.item_price').text(amount_total.toLocaleString());
+               var total_total_price = $('.cart_total_price').children().find('.total_price').text(total_price.toLocaleString());
 
            }
 
@@ -626,7 +627,6 @@ $().ready(function() {
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
                 document.getElementById('sample4_postcode').value = data.zonecode;
                 document.getElementById("sample4_roadAddress").value = roadAddr;
-                document.getElementById("sample4_jibunAddress").value = data.jibunAddress;
 
                 // 참고항목 문자열이 있을 경우 해당 필드에 넣는다.
                 if(roadAddr !== ''){

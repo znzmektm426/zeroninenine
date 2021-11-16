@@ -196,9 +196,9 @@ class JoinDetail(models.Model):
     designated_code = models.ForeignKey(Designated, on_delete=models.CASCADE, null=True, blank=True, db_column='designated_code')
     quantity = models.IntegerField(null=True, blank=True)
     price = models.IntegerField(null=True, blank=True)
-    name = models.CharField(max_length=64)
-    phone = models.CharField(max_length=64)
-    address = models.CharField(max_length=300)
+    name = models.CharField(max_length=64, db_column='name')
+    phone = models.CharField(max_length=64, db_column='phone')
+    address = models.CharField(max_length=300, db_column='address')
 
     def __str__(self):
         return str(self.joindetail_code)
