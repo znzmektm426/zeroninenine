@@ -142,7 +142,7 @@ class Value(models.Model):
     option_code = models.ForeignKey(Option, on_delete=models.CASCADE, db_column='option_code', null=True, blank=True)
     product_code = models.ForeignKey(Product, on_delete=models.CASCADE, db_column='product_code', null=True, blank=True)
     name = models.CharField(max_length=32, null=True, blank=True)
-    extra_cost = models.IntegerField(null=True, blank=True)
+    extra_cost = models.CharField(max_length=32, null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -196,6 +196,9 @@ class JoinDetail(models.Model):
     designated_code = models.ForeignKey(Designated, on_delete=models.CASCADE, null=True, blank=True, db_column='designated_code')
     quantity = models.IntegerField(null=True, blank=True)
     price = models.IntegerField(null=True, blank=True)
+    name = models.CharField(max_length=64)
+    phone = models.CharField(max_length=64)
+    address = models.CharField(max_length=300)
 
     def __str__(self):
         return str(self.joindetail_code)

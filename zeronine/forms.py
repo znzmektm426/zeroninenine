@@ -8,4 +8,5 @@ class AddProductForm(forms.Form):
 
 class DetailForm(forms.Form):
     select_option = forms.ModelChoiceField(error_messages={'required': "옵션을 선택하세요."}, label="옵션", queryset=Value.objects.all())
+    select_option2 = forms.ModelChoiceField(error_messages={'required': "옵션을 선택하세요."}, label="옵션", queryset=Value.objects.all())
     designated_code = forms.CharField()

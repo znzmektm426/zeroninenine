@@ -370,7 +370,7 @@ table a {
          <form method="POST" action="{% url 'zeronine:mypage_delete' pk=product.product_code %}">
              {% csrf_token %}
              <div class="form-group" style="outline:none;">
-                  <td class="name"><button type="submit" onclick="return confirm('{{product.name}} 상품을 삭제하시겠습니까?')"; class="btn btn primary" style="border-color: white; background-color: #B40404; color:white; font-size: 13px;">삭제</button></td></a>
+                  <td class="name"><button type="submit" onclick="return confirm('정말 삭제하시겠습니까? \n삭제 후에는 복구가 불가능합니다.')"; class="btn btn primary" style="border-color: white; background-color: #B40404; color:white; font-size: 13px;">삭제</button></td></a>
              </div>
          </form>
       </tr>

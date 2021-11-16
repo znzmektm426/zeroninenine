@@ -52,6 +52,9 @@ def join_create(request, id):
                         join_detail.value_code = get_object_or_404(Value, pk=value_code2)
                         join_detail.quantity = quantity
                         join_detail.price = price2
+                        join_detail.name = form.cleaned_data['name']
+                        join_detail.phone = form.cleaned_data['phone']
+                        join_detail.address = form.cleaned_data['address'] + form.cleaned_data['address2']
                         join_detail.save()
 
                 else:
@@ -61,9 +64,12 @@ def join_create(request, id):
                     join_detail.quantity = request.POST.get('quantity')
                     join_detail.price = request.POST.get('price2')
                     join_detail.value_code = None
+                    join_detail.name = form.cleaned_data['name']
+                    join_detail.phone = form.cleaned_data['phone']
+                    join_detail.address = form.cleaned_data['address'] + form.cleaned_data['address2']
                     join_detail.save()
 
-                return render(request, 'zeronine/list.html', {'current_category': current_category,
+                return render(request, 'mypage/test.html', {'current_category': current_category,
                                                               'products': products,
                                                               'categories': categories,
                                                               'designated': designated})

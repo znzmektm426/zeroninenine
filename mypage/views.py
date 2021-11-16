@@ -70,6 +70,26 @@ def password_edit_view(request):
 
     return render(request, 'mypage/mypage_pwchange.html', {'password_change_form': password_change_form, 'member':member, 'current_category': current_category, 'categories': categories})
 
+def test(request):
+    current_category = None
+    categories = Category.objects.all()
+    member = Member.objects.all()
+    join_objects = Join.objects.all()
+    join_detail_objects = JoinDetail.objects.all()
+    products = Product.objects.all()
+    designated_object = Designated.objects.filter(rep_price='True')
+    element_object = Element.objects.all()
+    value_object = Value.objects.all()
+
+    return render(request, 'mypage/test.html', {'member':member,
+                                                           'join_objects':join_objects,
+                                                           'join_detail_objects': join_detail_objects,
+                                                           'current_category': current_category,
+                                                           'categories': categories,
+                                                           'designated_object': designated_object,
+                                                           'element_object': element_object,
+                                                           'value_object': value_object,
+                                                           'products': products})
 
 def mypage_joinlist(request):
     current_category = None

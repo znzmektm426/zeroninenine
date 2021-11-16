@@ -4,7 +4,6 @@
 {% block content %}
 
 <style>
-
 div.zeronine {
   margin: 0 auto;
 }
@@ -50,6 +49,127 @@ div.container {
   }
 }
 
+table {border-collapse:collapse; width:100%;}
+
+table a {color:#333; text-decoration:none;}
+ .table-wrap table.board {
+    font-family:'Noto Sans KR';
+    text-align: center; }
+
+.table-wrap table {
+  position: relative;
+  line-height: 1.4;
+  table-layout: auto;
+}
+
+  .table-wrap table::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .table-wrap table thead th {
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    background-color: #f9f9f9;
+    padding: 20px;
+    color: #222;
+    font-size: .9rem;
+    font-weight: 400;
+  }
+
+    .table-wrap table thead th:first-child {
+      border-left: 0;
+    }
+
+    .table-wrap table thead th:last-child {
+      border-right: 0;
+    }
+
+  .table-wrap table tbody th {
+    border: 1px solid #ddd;
+    background-color: #fcfcfc;
+    padding: 20px;
+    font-size: .8rem;
+    font-weight: 400;
+    color: #222;
+  }
+
+    .table-wrap table tbody th:first-child {
+      border-left: 0;
+    }
+
+    .table-wrap table tbody th:last-child {
+      border-right: 0;
+    }
+
+    .table-wrap table tbody th .list.dash > li {
+      padding-left: 15px;
+    }
+
+      .table-wrap table tbody th .list.dash > li::before {
+        left: 0;
+      }
+
+  .table-wrap table tbody td {
+    border: 1px solid #ddd;
+    padding: 20px;
+    font-size: .8rem;
+    font-weight: 400;
+    background-color: #fff;
+  }
+
+    .table-wrap table tbody td:first-child {
+      border-left: 0;
+    }
+
+    .table-wrap table tbody td:last-child {
+      border-right: 0;
+    }
+
+@media (max-width: 767px) {
+    .table-wrap .board colgroup,
+    .table-wrap .board thead {
+        display: none;
+    }
+
+    .table-wrap .board tbody tr {
+        border-bottom: 1px solid #dcdbdb;
+        padding: 15px;
+        display: block;
+        overflow: hidden;
+    }
+
+    .table-wrap .board tbody tr td {
+        display: none;
+        padding: 0;
+        border: 0;
+    }
+
+    .table-wrap .board tbody tr td.subject > a {
+        font-size: .9rem;
+    }
+
+    .table-wrap .board tbody tr {
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 5px;
+        text-align: left;
+        float: left;
+        display: inline-block;
+    }
+
+    .table-wrap .board tbody tr {
+        display: inline-block;
+        float: left;
+        margin-left: 10px;
+    }
+}
+
 .cart_table .cart_list li>div.opt_info .price_btn input {font-size: 0; margin-left: -1px; cursor: pointer; color: #ccc; width: 30px; height: 30px; border: 0; outline: 0; display: inline-block;text-align: center; vertical-align: top;background-size: cover !important;}
 .cart_table .cart_list li>div.opt_info .price_btn input.minus_btn{background: url(https://tictoc-web.s3.ap-northeast-2.amazonaws.com/web/img/icon/btn_minus.svg) no-repeat center;}
 .cart_table .cart_list li>div.opt_info .price_btn input.plus_btn{background: url(https://tictoc-web.s3.ap-northeast-2.amazonaws.com/web/img/icon/btn_plus.svg) no-repeat center;}
@@ -59,6 +179,10 @@ div.container {
 
  {% load static %}
     <link rel="stylesheet" href="{% static 'main.css' %}">
+    <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
+<!-- 아래 제이쿼리는 1.0이상이면 원하는 버전을 사용하셔도 무방합니다. -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+
 
  <div class="container">
 <div class="zeronine">
@@ -110,12 +234,15 @@ div.container {
                         </select>
                         {% else %}
 
+
+                         <select type="text" class="form-control" id="optionSelect">
+                              <option value="none">옵션을 선택하세요.</option>
                        {% for option in option_object %}
                          {% if option.option_code.option_code == value.option_code %}
                              {% if option.product_code == product %}
-                         <select type="text" class="form-control" id="optionSelect">
-                              <option value="none">옵션을 선택하세요.</option>
+                                 {% if option.name != '' %}
                                  <optgroup label="{{option.name}}">
+                                 {% endif %}
                               {% endif %}
 
                          {% for value in value_object %}
@@ -139,7 +266,7 @@ div.container {
             </div>
 
 <script>
-// optionSelect
+// optionSelect (옵션있는 상품)
 $().ready(function() {
    $("#optionSelect").change(function() {
        var checkValue = $("#optionSelect").val();
@@ -253,7 +380,7 @@ $().ready(function() {
     });
 });
 
-// optionselect2
+// optionselect2 (옵션없는 상품)
 $().ready(function() {
    $("#optionSelect2").change(function() {
        var checkValue = $("#optionSelect").val();
@@ -290,6 +417,7 @@ $().ready(function() {
            ;
 
            $("#selectOptionList").append(whtml)
+
        }
 
        $(document).ready(function () {
@@ -360,9 +488,10 @@ $().ready(function() {
     });
 });
 </script>
+
             <div class="cart_total_price">
                 <h2 style="font-size: 25px;"><p style="font-size: 19px; margin-top: 35px; margin-bottom: -25px;"><b>총 가격</b></p>
-                    <strong class="item_price" style="margin-left: 220px; font-size: 23px; margin-bottom: 20px;">0</strong><span style="font-size: 23px; text-align: left">원</span></h2>
+                    <strong id="item_price" class="item_price" style="margin-left: 220px; font-size: 23px; margin-bottom: 20px;">0</strong><span style="font-size: 23px; text-align: left">원</span></h2>
             </div>
 
                 {% csrf_token %}
@@ -372,7 +501,7 @@ $().ready(function() {
                 </a>
                 {% else %}
                 <div style="margin-top: 40px;">
-                <button type="button" action="{% url 'zeronine:join_create' id=product.product_code %}" style="background: #637B46; border-color: #637B46; border-radius: 0px; text-align: center; width: 150px; height:45px; margin-left: 160px;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><b>참여하기</b></button>
+                    <button type="button" action="{% url 'zeronine:join_create' id=product.product_code %}" style="background: #637B46; border-color: #637B46; border-radius: 0px; text-align: center; width: 150px; height:45px; margin-left: 160px;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><b>참여하기</b></button>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -385,10 +514,167 @@ $().ready(function() {
       </div>
 
       <div class="modal-body" style="text-align: center">
-          <img src="/static/img/success.png" style="width: 100px; margin: 0 auto; margin-top: 10px;">
-          <h4 style="margin-top: 10px; margin-bottom: 15px; "><b>{{product.name}} 상품에<br>참여가 완료되었습니다!</b></h4>
-          <p style="font-size: 18px; margin-top: 18px; ">공동구매 채팅방 링크는 <a href="{{ product.kakao_link }}">{{ product.kakao_link }}</a> 입니다.</p>
-          <p style="font-size: 17px; margin-top: -13px;">채팅방 링크는 <b>마이페이지 > 참여내역</b>에서 다시 확인하실 수 있습니다.</p>
+
+      <h4 style="margin-top:20px; margin-bottom: 15px;"><b>상품 결제</b></h4><br>
+    <div class="container">
+        <div class="row">
+        <div class="col-12">
+            <p style="font-size:18px; tmargin-top:-5px; margin-bottom:10px; text-align: left">상품 정보</p>
+        </div>
+        </div>
+     <div class="table-wrap">
+    <table class="board all-open" style="margin-bottom: 10px;">
+
+    <colgroup>
+      <col style="width:20%; height: 10%">
+        <col style="width:40%; height: 10%">
+    </colgroup>
+
+    <thead>
+      <tr>
+        <th scope="col">상품이미지</th>
+        <th scope="col">상품명</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+
+        <td><img src="{{product.image.url}}" style="width:100px;"></td>
+        <td style="font-size: 17px;">{{product.name}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+ </div>
+
+           <div class="cart_total_price" style="text-align: right; margin-right: 35px; margin-top:20px; margin-bottom: 18px;">
+                <p style="font-size: 19px; margin-right: 100px;"><b>총 결제 금액</b></p>
+                <div style="margin-top: -53px;"><h2><strong class="item_price" style="font-size: 19px;">0</strong><span style="font-size: 19px; color: black;">원</span></h2></div>
+
+        <div class="row">
+        <div class="col-12">
+            <p style="font-size:18px; margin-top:0px; margin-bottom:2px; margin-left:20px; text-align: left">배송지 정보</p>
+        </div>
+        </div>
+
+            <hr width="97%" style="margin-top:8px; margin-left:20px; text-align: center; border: solid 0.5px; opacity: 10%;">
+            <br>
+
+        <div class="form-group row" style="margin-left:15px">
+            <label for="name" class="col-sm-2 col-form-label"><b>참여자명</b></label>
+            <div class="col-sm-5">
+            <input type="text" class="form-control" name="name" id="name"
+                   value="{{ form.name.value|default_if_none:'' }}" placeholder="참여자 이름">
+            </div>
+        </div>
+
+        <div class="form-group row" style="margin-left:15px">
+            <label for="phone" class="col-sm-2 col-form-label"><b>전화번호</b></label>
+            <div class="col-sm-5">
+            <input type="text" class="form-control" name="phone" id="phone"
+                   value="{{ form.phone.value|default_if_none:'' }}" placeholder="전화번호">
+            </div>
+        </div>
+
+        <div class="form-group row" style="margin-left:15px">
+            <label for="address" class="col-sm-2 col-form-label"><b>배송지</b></label>
+            <div class="col-sm-5">
+            <input type="text" class="form-control" name="address" id="sample4_postcode"
+                   value="{{ form.address.value|default_if_none:'' }}" placeholder="우편번호">
+            </div>
+
+            <input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 검색" style="margin-left:-7px; background:grey; color:white; border: none; border-radius: 3px; font-size: 14px;"><br>
+
+            <div class="col-sm-5">
+            <input type="text" class="form-control" name="address" id="sample4_roadAddress"
+                   value="{{ form.phone.value|default_if_none:'' }}" placeholder="도로명 주소" style="margin-left: 122px; margin-top: 15px;">
+            </div>
+
+            <div class="col-sm-5">
+            <input type="text" class="form-control" name="address2" id="sample4_detailAddress"
+                   value="{{ form.address2.value|default_if_none:'' }}" placeholder="상세주소" style="margin-left: 100px; margin-top: 15px;"></div>
+        </div>
+
+
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+    //본 예제에서는 도로명 주소 표기 방식에 대한 법령에 따라, 내려오는 데이터를 조합하여 올바른 주소를 구성하는 방법을 설명합니다.
+    function sample4_execDaumPostcode() {
+        new daum.Postcode({
+            oncomplete: function(data) {
+                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                // 도로명 주소의 노출 규칙에 따라 주소를 표시한다.
+                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                var roadAddr = data.roadAddress; // 도로명 주소 변수
+                var extraRoadAddr = ''; // 참고 항목 변수
+
+                // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+                // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+                if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                    extraRoadAddr += data.bname;
+                }
+                // 건물명이 있고, 공동주택일 경우 추가한다.
+                if(data.buildingName !== '' && data.apartment === 'Y'){
+                   extraRoadAddr += (extraRoadAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                }
+                // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+                if(extraRoadAddr !== ''){
+                    extraRoadAddr = ' (' + extraRoadAddr + ')';
+                }
+
+                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                document.getElementById('sample4_postcode').value = data.zonecode;
+                document.getElementById("sample4_roadAddress").value = roadAddr;
+                document.getElementById("sample4_jibunAddress").value = data.jibunAddress;
+
+                // 참고항목 문자열이 있을 경우 해당 필드에 넣는다.
+                if(roadAddr !== ''){
+                    document.getElementById("sample4_extraAddress").value = extraRoadAddr;
+                } else {
+                    document.getElementById("sample4_extraAddress").value = '';
+                }
+            }
+        }).open();
+    }
+</script>
+        <div class="row">
+        <div class="col-12">
+            <p style="font-size:18px; margin-top:10px; margin-bottom:2px; margin-left:20px; text-align: left">결제 정보</p>
+            <hr width="97%" style="margin-top:8px; margin-left:20px; text-align: center; border: solid 0.5px; opacity: 10%;">
+            <br>
+        </div>
+        </div>
+            </div>
+            <p style="line-height: 1.6em; margin-top: 15px; font-size: 15px;">
+               <b>유의사항 체크 후, 결제하기 버튼을 눌러 결제를 진행해주세요.<br>
+                결제 완료 후, 확인 버튼을 눌러야 정상적인 참여가 가능합니다.<br>
+                위 절차를 모두 진행하면, 마이페이지의 참여 내역에서 확인할 수 있습니다.</b>
+            </p>
+          <hr style="width: 7%; background: lightgrey; opacity: 50%;">
+          <p style="color: gray; font-size: 13px;">공동구매 상품 참여를 위해 최소한의 범위 내에서 위와 같이 개인정보를 수집, 이용합니다.<br>
+              수집 및 이용에 동의하지 않으실 수 있으며 동의하지 않으실 경우, 구매가 제한될 수 있습니다.<br>
+              내용에 동의하시면 확인 버튼을 눌러 참여를 진행해주세요.
+          </p>
+        <div>
+        <label style="margin-bottom: 30px;">
+            <input type="checkbox" name="ck" onClick="checkDisable(this.form)" style="width: 10px; height:10px;">
+            <span style="font-size: 14px;">유의사항 동의</span>
+        </label>
+        </div>
+        <button id="check_module" type="button" name="bt" disabled="true" style="margin-top:-15px; margin-bottom:30px; background: #637B46; color:white; border-color: #637B46; border-radius: 0px; text-align: center; width: 120px; height:45px;"  class="btn btn-primary"><b>결제하기</b></button>
+
+
+    <script type="text/javascript">
+        function checkDisable(form) {
+            if (form.ck.checked == true) {
+                form.bt.disabled = false;
+            } else {
+                form.bt.disabled = true;
+            }
+        }
+    </script>
       </div>
 
       <div class="modal-footer">
@@ -400,6 +686,36 @@ $().ready(function() {
                 {% endif %}
                 </div>
          </form>
+<script>
+$("#check_module").click(function () {
+var price = parseInt($("#item_price").text().replace(/,/g , ''));
+var IMP = window.IMP; // 생략가능
+      IMP.init('imp72615144');
+      IMP.request_pay({
+          pg : 'kcp',
+          pay_method : 'card',
+          merchant_uid : 'merchant_' + new Date().getTime(),
+          name : '{{product.name}}' , //결제창에서 보여질 이름
+          amount : price, //실제 결제되는 가격
+          buyer_email:$('input[name="email"]').val(),
+          buyer_name : '{{user.username}}',
+      }, function(rsp) {
+         console.log(rsp);
+          if ( rsp.success ) {
+             var msg = '결제가 완료되었습니다.';
+              msg += '고유ID : ' + rsp.imp_uid;
+              msg += '상점 거래ID : ' + rsp.merchant_uid;
+              msg += '결제 금액 : ' + rsp.paid_amount;
+              msg += '카드 승인번호 : ' + rsp.apply_num;
+          } else {
+              var msg = '결제에 실패하였습니다.';
+               msg += ' : ' + rsp.error_msg;
+          }
+          alert(msg);
+
+      });
+   });
+</script>
 
         <form method="POST" action="{% url 'zeronine:add_zzim' id=product.product_code%}" style="margin-top: -85px; margin-left: 160px;">
                 {% csrf_token %}
@@ -410,8 +726,32 @@ $().ready(function() {
 
                   {% else %}
                 <div style="margin-top: 40px;">
-                <a onclick="alert('{{ product.name }} 상품을 찜했습니다.');" style="cursor:pointer;">
-                    <button type="submit" style="background:white; color:#4B610B; border-color: #637B46; width: 150px; height:45px; border-radius: 0px; text-align: center; margin-left: -160px;" class="btn btn-primary"><b>찜하기</b></button></a>
+{#                <a onclick="alert('{{ product.name }} 상품을 찜했습니다.');" style="cursor:pointer;">#}
+                <button type="button" action="{% url 'zeronine:add_zzim' id=product.product_code%}" style="background:white; color:#4B610B; border-color: #637B46; width: 150px; height:45px; border-radius: 0px; text-align: center; margin-left: -160px;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalToggle"><b>찜하기</b></button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body" style="text-align: center">
+          <img src="/static/img/heart.png" style="width: 11%; margin-top: 20px; margin-bottom: -15px;">
+          <h4 style="font-size: 20px; margin-top: 35px;"><b>{{product.name}}<br>상품에 찜이 완료되었습니다.</b></h4>
+          <p style="font-size: 16px; margin-top:5px;">찜한 상품은 <b>마이페이지 > 찜목록</b>에서 모아보실 수 있습니다.</p>
+      </div>
+
+
+      <div class="modal-footer">
+        <button type="submit" action="{% url 'zeronine:add_zzim' id=product.product_code%}" style="background:grey; border-color: white" class="btn btn-primary"><b>확인</b></button>
+      </div>
+    </div>
+  </div>
+</div>
                   {% endif %}
                 </div>
                 </div>

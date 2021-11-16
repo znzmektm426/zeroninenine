@@ -109,6 +109,9 @@ class JoinDetailAdmin(admin.ModelAdmin):
         'designated_code',
         'quantity',
         'price',
+        'name',
+        'phone',
+        'address',
     )
 
 admin.site.register(Member)

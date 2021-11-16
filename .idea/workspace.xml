@@ -1,60 +1,542 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4e891bf-f1a1-4ec8-af9b-6a3397ce2df1" name="Default Changelist" comment="">
+    <list default="true" id="ed20cc78-e70e-4f98-9230-5362b98e26fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/media/photos/20211109/DFSDFASDFSA.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211109/FSDFSFSD.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211109/hera2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/1202283_2_500.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/65656565.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/DFSDFASDFSA.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/KakaoTalk_20210908_012212759.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/KakaoTalk_20210908_012212759_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/asdasdasd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/cvxcv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/database1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/database1_4RXrSOk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/hakjam.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/hakjam2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/hakjam2_727nrHK.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/hakjam2_7KJPMAF.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/hakjam2_7vuxX3f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/hakjam2_GtwTuY4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/hakjam2_XDhUXaM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/hakjam2_Zn5Sd12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/hakjam2_bFrxPf8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/hakjam2_bebhktp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/hakjam2_w6BemUV.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/hakjam2_y9UJm7S.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/hakjam_4iB6PLf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/hakjam_Cd2XRUg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/hakjam_MCl2NVf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/hakjam_hDwtVIq.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/hakjam_mp4nVJJ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/hakjam_rAtRYBr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/hakjam_zEMwIAt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/img6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/img8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/다이어리.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/다이어리.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/다이어리2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/다이어리2_N7M5QQA.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/다이어리2_ycfxAWd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/다이어리_GG8ke34.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/다이어리_GMWRSeQ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/다이어리_tMLy9Kn.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/야채샐러드1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/야채샐러드2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/자수키링.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211113/잠옷2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/KakaoTalk_20210908_012212759.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/KakaoTalk_20210908_012212759_SYX2ZTA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/KakaoTalk_20210908_012212759_tpaRBBx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/hera2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/hera2_ugOzSDx.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img05.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img05_2W6GewV.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img05_3c2xOPr.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img22_408sH39.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img22_6yWePeW.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img22_GxCvVAE.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img22_HEqLxSN.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img22_Z3IWdEP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img22_hHMuPaV.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img22_mUtgFEC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img22_ufgPE4j.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img22_wcjm6R3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img2_Q1Bcf5e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img3_wByaW5k.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img5_RCthVVL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img5_gnVxh4f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img5_yegcwHp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img6.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img7.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img7_P9cl7mP.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img7_PsXdZMS.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img7_go7v2Fk.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img7_rSnAIZM.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img8_4ZD6Ef1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img8_HTLW9P5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img8_IMUVGVi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img8_VF1BuVs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img8_lSWKSqi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img8_sBPrmPF.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/img8_z9rHB3h.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/다이어리.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/다이어리.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/다이어리2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/다이어리2_Q6UjqkN.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/다이어리2_R3z4NmX.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/다이어리_Juo0kLf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/다이어리_Ut1eBme.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/다이어리_b3cnvx4.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/다이어리_f3AugF1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/다이어리_frENptm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/다이어리_kRNRcQC.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/다이어리_sYktAJc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/다이어리_vVwwtyb.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/다이어리_wsxi7h6.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/다이어리_x3K4P0U.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/다이어리_xhhqoWo.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/샐러드.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/잠옷2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211114/잠옷2_Utc8Uqk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/img22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/img22_9NKdoN0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/img22_YkwjS2s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/img22_gljz731.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/img7.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/img7_20TKP5Y.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/img7_ER6DBul.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/img7_J1z0pZs.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/img7_RDkokh9.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/img8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/img8_6NXYxsJ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/img8_BjPPvSe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/img8_STLE5YZ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/img8_TTcJI64.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/img8_byYzAcU.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/다이어리.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/다이어리.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/다이어리2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/다이어리2_gXIbYxG.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/다이어리2_zCQ6TTY.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/다이어리_GxMoO4I.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/다이어리_nUY6vX5.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/다이어리_yIegFqq.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/샐러드.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/샐러드_4AEEIc3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/샐러드_4hQWJbM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/샐러드_8U2mzXU.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/샐러드_IuPsRih.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/샐러드_VAaHf8m.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/샐러드_XjAhreH.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/샐러드_hMLQmFZ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/샐러드_hbrNr3k.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/샐러드_iVCxj46.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/샐러드_kDNLXl4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/샐러드_safSfw6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211115/샐러드_yPpBcDh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/KakaoTalk_20210908_012212759.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/KakaoTalk_20210908_012212759_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/KakaoTalk_20210908_012212759_D68U4N4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/KakaoTalk_20210908_012212759_tEbpEwI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/hywu2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/img22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/img22_9OawT6x.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/img22_CcwYs7k.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/img22_DCl2gsA.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/img22_cDO0ZIr.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/img22_fnOaKVk.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/img22_gdKHc6d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/img22_gmpG18l.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/img22_j7XEPcM.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/img22_tavq0W3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/img22_yXg6hYI.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/img22_zQjH78g.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/img6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/img7.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/img8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/img8_fGghYlR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_16fSstN.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_2eSfet1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_6220wkB.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_6luOSdZ.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_7WMP0Fq.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_86zhtyd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_8upLIdv.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_AHot6As.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_FgvurbI.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_JS6d5AH.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_OkArMZo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_U6LN0Rl.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_U7uHWPJ.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_UPmfeZW.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_Uh00WIN.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_X3WiH9s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_YYIy3r4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_Z7Dtf2W.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_ay8XaJm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_b50aGKD.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_c0GWrPU.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_cldWN6T.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_eV87u3z.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_enkPr6s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_eyX6C2B.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_moUOnrO.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_s3yLJ1t.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_szrxSqt.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_xMukoIb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_yAhzfRI.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_ywSFChJ.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리2_zyPFVJC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리_7is4hqq.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리_DnIN02i.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리_MoK7YBJ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리_OWaJ9Nm.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리_WESNLuz.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리_b8Xjyx6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리_fapYRdS.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리_jl7sWIg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리_k0xsdFG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리_o0UIwYv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리_oq1GeQ9.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리_sWlwnfN.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/다이어리_uzpr3Ij.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드_1xkkm4z.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드_2WiZxfH.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드_3M85JWy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드_3wPNrIb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드_AT71lXs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드_BbXqo2h.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드_CpBycs8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드_ItZV5Ul.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드_PEnkkMT.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드_RWeQ4HQ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드_V4sT7NI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드_YycCM1K.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드_ZW47XC6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드_i6k9IZZ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드_klj2P4v.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드_npbzYFP.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드_sLZ20oG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드_uLFXd5e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드_uzvFOc1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드_xFJ11x2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/샐러드_yOIBUOB.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/야채샐러드.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/야채샐러드1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/야채샐러드1_R2rY9zG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/야채샐러드1_REQZbo7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/야채샐러드1_g9qLbtZ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/야채샐러드1_nqJl8FV.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/야채샐러드1_qRnkJZp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/야채샐러드_D0G9VIM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/야채샐러드_FoEi2oW.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/야채샐러드_eczvbrX.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/야채샐러드_o31VqPr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/자수키링2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/photos/20211116/잠옷1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/09/1.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/10/hakjam.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/10/img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/10/다이어리2_QTPtFtk.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/DFSDFASDFSA.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/DFSDFASDFSA_MCaQ6dw.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/DFSDFASDFSA_uhV77D2.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/DFSDFASDFSA_vrx3t9L.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/KakaoTalk_20210908_012212759.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/KakaoTalk_20210908_012212759_6Bp5cAr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/database1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/database1_DZa99Ds.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/database1_E85PeXQ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/database1_EbGe95Y.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/database1_fJeLCRS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/database1_iZdUWwW.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/hakjam.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/hakjam2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/hakjam2_7zhnF1M.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/hakjam_2BHYcQd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/hakjam_RqDnz5B.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/img22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/img22_4GXgDW5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/img5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/img7.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/img7_2k0L3l1.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/img7_LiNkWBZ.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/img7_Lzz7FGs.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/img7_eqaGa2E.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/img8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/img8_X53Ak8H.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/main_img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/다이어리.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/다이어리_qfmSJ2z.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/13/야채샐러드.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/DFSDFASDFSA.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/DFSDFASDFSA_BbFzmo5.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/DFSDFASDFSA_klcgGEs.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/FSDFSFSD.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/FSDFSFSD_N1JHTmc.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/KakaoTalk_20210908_012212759.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/KakaoTalk_20210908_012212759_TeuOhTe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/hywu2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/hywu2_RUji4kC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/hywu2_VURCCzb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/hywu2_cflRVhw.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/hywu2_wj4EVpa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img3_3owPFk1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img3_7sYDwcJ.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img3_q79Vcvn.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img3_sanXh88.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img3_uEnem0B.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img4_FKmOwrK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7_1fbnBfI.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7_2BWDfuB.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7_4JjiDDe.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7_6AXvgTs.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7_8ziOK4j.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7_AHHeOfP.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7_SfbPDRP.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7_UCgwXAm.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7_VMqnZ5g.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7_WywrR9n.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7_eWD5wPS.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7_gvvxoz8.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7_iuAzt7K.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7_m4R7Cnf.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7_oUrTJ4M.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7_sRDmItj.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7_tLizZs6.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7_uPg04IK.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7_vvJu7Rq.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7_x5zPmlL.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img7_xd0AZ7q.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img8_7B25Ru6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img8_D7skxx3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img8_Ef1XhPr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img8_GmdpDLl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img8_PzCVcop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img8_bQGXLL1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img8_g2Vx5pZ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img8_io7XD4e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img8_o0mchio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/img8_uALmTNb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/다이어리.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/다이어리.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/다이어리_PBfCxoL.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/다이어리_n2DzziA.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/다이어리_sm7hzIa.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/14/다이어리_uHPy01Y.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/KakaoTalk_20210908_012212759.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/hywu2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/img22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/img22_5ddRmNn.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/img22_JzY2fCh.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/img22_ghHKo0n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/img7.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/img7_2Z63l7t.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/img7_7HAUfDZ.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/img7_855ldzE.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/img7_9B1lGkN.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/img7_CugLMYU.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/img7_Qvb9Ktz.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/img7_T0T2TdF.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/img7_YBmQaMK.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/img7_cooUJJD.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/img7_eDxjl81.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/img7_jfud99W.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/img7_oOubhhW.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/img7_sxZTmln.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/img8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/img8_rbnqHwk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/다이어리.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/다이어리_15zcH03.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/다이어리_32eNgVn.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/다이어리_L82i2q3.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/다이어리_WyAsDXo.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/다이어리_cxQM4fh.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/다이어리_e7kfE4T.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/다이어리_gxuA38n.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/다이어리_jvKkkG8.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/15/다이어리_llTV3I2.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/KakaoTalk_20210908_012212759.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/KakaoTalk_20210908_012212759_DKjGdmA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/KakaoTalk_20210908_012212759_H7sLJsA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/KakaoTalk_20210908_012212759_L2jMLbb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/KakaoTalk_20210908_012212759_cBPQRg1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/KakaoTalk_20210908_012212759_md4xJjW.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/hywu2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/hywu2_F6BNAbx.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img22_3qkhDbw.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img22_DlxclMn.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img22_HZLQgZH.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img22_OYVcCuP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img22_xDzrNjH.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_1iBwury.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_4QTFazA.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_5wshK8Y.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_7zzfR8o.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_9HDt0Y8.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_AA2j6Zu.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_BMYCvNW.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_DLjxceD.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_ErChCXO.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_F6gdtzC.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_Fnaw6mu.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_IGautbP.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_LCi7Dl6.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_OoYlDev.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_P5YGD7D.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_PMkRuuL.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_VRcbtJU.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_XoOlrmg.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_YKE2NRH.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_bQjcc2y.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_eWxR82L.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_hIbHkDQ.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_js7KpYL.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_ljy63NA.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_pg1Oktp.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_pkzD9nQ.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_rGVVhQU.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_uLBXGSA.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img7_yQ81RA8.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img8_hT91lmV.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/img8_wMn7BbZ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리2_CljEBFw.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리2_K8E2fVT.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리2_op6fo5w.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리2_ubttUVn.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_3n909BY.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_4mUEiZB.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_5tUi8Xy.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_7RtDE3y.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_9IqKRkW.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_FGJdRYO.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_Gleb4dy.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_H7m8BOE.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_IVM5koE.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_JGqPkPn.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_Jg4faTB.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_Jk80Nuv.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_KUAN280.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_NnWYAeJ.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_SjUupQA.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_SxpGcEt.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_W2YWUxR.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_XXVJJAq.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_ZYnslSd.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_ZnKTWBB.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_aI55rt6.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_aSbXX3V.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_b2lbBW4.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_bXOV1sd.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_cRClbqJ.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_ewOWYQ9.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_fHu2tj1.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_hGrz9qJ.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_jPQKriS.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_jUGTabh.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_n9QxRNH.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_nmSLlCB.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_pnQcEVY.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_qjacnGL.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_r2YG63K.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_sgdewk5.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_teWnX2Q.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_ufzEXQY.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_vJwkiBH.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_vMnjZlW.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_w4shUmY.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/다이어리_zKtoFcH.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/샐러드.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/야채샐러드.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/products/2021/11/16/자수키링.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mypage/templates/mypage/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zeronine/migrations/0003_auto_20211109_1815.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zeronine/migrations/0004_auto_20211116_0124.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zeronine/static/img/heart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/zeronine_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/zeronine_project(2).iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/join/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/join/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/join/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/join/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mypage/templates/mypage/mypage_uploadlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/mypage/templates/mypage/mypage_uploadlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mypage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mypage/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mypage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mypage/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/templates/product/product_upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/product/templates/product/product_upload.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zeronine/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/zeronine/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zeronine/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/zeronine/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zeronine/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/zeronine/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zeronine/templates/zeronine/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/zeronine/templates/zeronine/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zzim/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/zzim/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JupyterTrust" id="fada066a-3dba-440e-9903-932022ea843e" />
-  <component name="ProjectId" id="1zwftaOrlbE22Oix895P1sDKZym" />
+  <component name="ProjectId" id="20mVKqoprkh0uWLhBj6c9BU4y4d" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../zeronine_project(2)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\zeronine_project\zeronine\static\img" />
+      <recent name="C:\zeronine_project(2)\zeronine\static\img" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="zeronine_project" type="Python.DjangoServer" factoryName="Django server">
-      <module name="zeronine_project" />
+    <configuration name="zeronine_project(2)" type="Python.DjangoServer" factoryName="Django server">
+      <module name="zeronine_project(2)" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="config.settings" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="D:\anaconda3\envs\vnv_zn\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -74,18 +556,17 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a4e891bf-f1a1-4ec8-af9b-6a3397ce2df1" name="Default Changelist" comment="" />
-      <created>1635064285906</created>
+      <changelist id="ed20cc78-e70e-4f98-9230-5362b98e26fa" name="Default Changelist" comment="" />
+      <created>1636649691086</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1635064285906</updated>
-      <workItem from="1635064288083" duration="14506000" />
-      <workItem from="1635604906159" duration="684000" />
-      <workItem from="1635613935830" duration="1433000" />
-      <workItem from="1635661221554" duration="4045000" />
-      <workItem from="1635777358111" duration="1256000" />
-      <workItem from="1635832467971" duration="19258000" />
-      <workItem from="1635859602170" duration="1536000" />
+      <updated>1636649691086</updated>
+      <workItem from="1636649692847" duration="216000" />
+      <workItem from="1636650041157" duration="6444000" />
+      <workItem from="1636728458792" duration="10382000" />
+      <workItem from="1636812569944" duration="12237000" />
+      <workItem from="1636986390658" duration="17690000" />
+      <workItem from="1637071921947" duration="225000" />
     </task>
     <servers />
   </component>
@@ -103,11 +584,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="463" y="193" key="#Notifications" timestamp="1635064300187">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="463" y="193" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1635064300187" />
   </component>
 </project>

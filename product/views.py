@@ -43,42 +43,45 @@ def product_upload(request):
 
         if form.is_valid():
             option = Option()
-            option.name = form.cleaned_data['option_name']
+            option.name = request.POST.get('option_name')
             option.product_code = product
             option.save()
 
-    if request.method == "POST":
-        form = ValueForm(request.POST)
-
-        if form.is_valid():
-            value = Value()
-            value.name = form.cleaned_data['value_name']
-            value.option_code = option
-            value.product_code = product
-            value.extra_cost = form.cleaned_data['option_price']
-            value.save()
 
     if request.method == "POST":
         form = ValueForm(request.POST)
 
         if form.is_valid():
-            value = Value()
-            value.name = form.cleaned_data['second_value']
-            value.option_code = option
-            value.product_code = product
-            value.extra_cost = form.cleaned_data['second_option_price']
-            value.save()
+            for value_name, option_price in zip(request.POST.getlist('value_name'), request.POST.getlist('option_price')):
+                value = Value()
+                value.name = value_name
+                value.option_code = option
+                value.product_code = product
+                value.extra_cost = option_price
+                value.save()
+
+
+    if request.method == "POST":
+        form = OptionForm(request.POST)
+
+        if form.is_valid():
+            option = Option()
+            option.name = request.POST.get('second_option_name')
+            option.product_code = product
+            option.save()
+
 
     if request.method == "POST":
         form = ValueForm(request.POST)
 
         if form.is_valid():
-            value = Value()
-            value.name = form.cleaned_data['third_value']
-            value.option_code = option
-            value.product_code = product
-            value.extra_cost = form.cleaned_data['third_option_price']
-            value.save()
+            for value_name2, option_price2 in zip(request.POST.getlist('value_name2'), request.POST.getlist('option_price2')):
+                value = Value()
+                value.name = value_name2
+                value.option_code = option
+                value.product_code = product
+                value.extra_cost = option_price2
+                value.save()
 
     if request.method == "POST":
         form = DesignatedForm(request.POST)
