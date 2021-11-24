@@ -371,11 +371,11 @@
         &nbsp;&nbsp;&nbsp;
         <span class="menu" style="margin-right: -1px;">|</span>
 
-    <li class="nav-item" style="color: #637B46;"><a href="{% url 'zeronine:product_upload' %}" class="nav-link" style="color: darkgreen; font-weight: normal; margin-right: -5px;">제안하기</a></li>
+        <li class="nav-item"><a href="{% url 'zeronine:post' %}" class="nav-link">자유게시판</a></li>
 
    <span class="menu" >|</span>
+    <li class="nav-item" style="color: #637B46;"><a href="{% url 'zeronine:product_upload' %}" class="nav-link" style="color: darkgreen; font-weight: normal; margin-right: -5px;">제안하기</a></li>
 
-        <li class="nav-item"><a href="{% url 'zeronine:post' %}" class="nav-link">자유게시판</a></li>
             {% csrf_token %}
         <li class="nav-item">
             {% if user.is_authenticated %}
