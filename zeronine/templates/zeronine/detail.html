@@ -229,11 +229,11 @@ table a {color:#333; text-decoration:none;}
 
                         {% if not product.option_exists %}
                         <select type="text" class="form-control" id="optionSelect2">
-                              <option value="none">옵션을 선택하세요.</option>
+                             <option value="none">옵션을 선택하세요.</option>
                              <option>옵션없음</option>
                         </select>
-                        {% else %}
 
+                        {% else %}
 
                        <select type="text" class="form-control" id="optionSelect">
                        <option value="none">옵션을 선택하세요.</option>
@@ -498,11 +498,11 @@ $().ready(function() {
                 {% csrf_token %}
                 {% if not user.is_authenticated %}
                 <a onclick="alert('로그인 후 참여가 가능합니다.');" style="cursor:pointer;">
-                    <button type="submit" action="{% url 'zeronine:join_create' id=product.product_code %}" style="background:#637B46; border-color:#637B46; border-radius: 0px; text-align: center; width: 150px; height:45px; margin-left: 160px;" class="btn btn-primary"><b>참여하기</b></button>
+                    <button type="submit" action="{% url 'zeronine:join_create' id=product.product_code %}" style="background:#637B46; border-color:#637B46; border-radius: 0px; text-align: center; width: 140px; height:45px; margin-left: 155px; margin-top: 40px;" class="btn btn-primary"><b>참여하기</b></button>
                 </a>
                 {% else %}
                 <div style="margin-top: 40px;">
-                    <button type="button" action="{% url 'zeronine:join_create' id=product.product_code %}" style="background: #637B46; border-color: #637B46; border-radius: 0px; text-align: center; width: 150px; height:45px; margin-left: 160px;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><b>참여하기</b></button>
+                    <button type="button" action="{% url 'zeronine:join_create' id=product.product_code %}" style="background: #637B46; border-color: #637B46; border-radius: 0px; text-align: center; width: 140px; height:45px; margin-left: 155px;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><b>참여하기</b></button>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -722,12 +722,12 @@ var IMP = window.IMP; // 생략가능
                 {% if not user.is_authenticated %}
                 <div style="margin-top: 40px; margin-right: 180px;">
                 <a onclick="alert('로그인 후 찜하기가 가능합니다.');" style="cursor:pointer;">
-                    <button type="submit" style="background:white; color:#4B610B; border-color: #637B46; width: 150px; height:45px; border-radius: 0px; text-align: center; margin-left: -320px;" class="btn btn-primary"><b>찜하기</b></button></a>
+                    <button type="submit" style="background:white; color:#4B610B; border-color: #637B46; width: 140px; height:45px; border-radius: 0px; text-align: center; margin-left: -320px;" class="btn btn-primary"><b>찜하기</b></button></a>
 
                   {% else %}
                 <div style="margin-top: 40px;">
 {#                <a onclick="alert('{{ product.name }} 상품을 찜했습니다.');" style="cursor:pointer;">#}
-                <button type="button" action="{% url 'zeronine:add_zzim' id=product.product_code%}" style="background:white; color:#4B610B; border-color: #637B46; width: 150px; height:45px; border-radius: 0px; text-align: center; margin-left: -160px;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalToggle"><b>찜하기</b></button>
+                <button type="button" action="{% url 'zeronine:add_zzim' id=product.product_code%}" style="background:white; color:#4B610B; border-color: #637B46; width: 140px; height:45px; border-radius: 0px; text-align: center; margin-left: -160px;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalToggle"><b>찜하기</b></button>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
