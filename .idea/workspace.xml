@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed20cc78-e70e-4f98-9230-5362b98e26fa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zeronine/templates/zeronine/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/zeronine/templates/zeronine/detail.html" afterDir="false" />
-    </list>
+    <list default="true" id="ed20cc78-e70e-4f98-9230-5362b98e26fa" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +72,7 @@
       <workItem from="1636986390658" duration="17690000" />
       <workItem from="1637071921947" duration="7986000" />
       <workItem from="1637480869445" duration="2731000" />
-      <workItem from="1637765299381" duration="2994000" />
+      <workItem from="1637765299381" duration="3491000" />
     </task>
     <servers />
   </component>
