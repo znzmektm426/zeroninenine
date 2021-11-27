@@ -14,72 +14,98 @@
     font-size: 30px;
 }
 
-@media screen and (min-width: 601px) {
-  .footer {
-        height: 280px;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .footer {
-       height: 200px;
-  }
-}
 
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 1025px) {
   .footer_logo {
         font-size: 50px;
         margin-left: 230px;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   .footer_logo {
       font-size: 30px;
       margin-left: 25px;
   }
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 1025px) {
   .footer_p {
         font-size: 15px;
         margin-left: 230px;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   .footer_p {
       font-size: 11px;
        margin-left: 25px;
   }
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 1025px) {
   .navbar-brand {
       width: 170px;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   .navbar-brand {
       width: 120px;
   }
 }
 
-@media screen and (min-width: 601px) { /*줄이기 전*/
+@media screen and (min-width: 1025px) { /*줄이기 전*/
   .navbar-expand-lg {
       margin-left: 46px;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1024px) {
   .navbar-expand-lg {
       display: none;
   }
 }
 
-@media screen and (min-width: 601px) { /*줄이기 전*/
+@media screen and (min-width: 1025px) { /*줄이기 전*/
+  .footer {
+      width: 100%;
+      height: 280px;
+      padding: 15px;
+      text-align: left;
+      background-color: #F2F2F2;
+      margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+      width: 100%;
+      height: 280px;
+      padding: 15px;
+      text-align: left;
+      background-color: #F2F2F2;
+      margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: 1025px) { /*줄이기 전*/
+  .footer_logo {
+      margin-top: 40px;
+      font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer_logo {
+      margin-top: 40px;
+      font-size: 32px;
+  }
+}
+
+
+@media screen and (min-width: 1025px) { /*줄이기 전*/
   .menu {
       color: black;
       font-weight: normal;
@@ -90,12 +116,54 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   .menu {
     display: none;
   }
 }
 
+
+@media screen and (min-width: 1025px) { /*줄이기 전*/
+  .notice {
+      text-decoration:none;
+      justify-content:center;
+      color: white;
+      text-align: center;
+      line-height: 35px;"
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .notice {
+      text-decoration:none;
+      justify-content:center;
+      color: white;
+      text-align: center;
+      line-height: 35px;
+      font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 1025px) { /*줄이기 전*/
+  .notice2 {
+      text-decoration:none;
+      justify-content:center;
+      color: white;
+      text-align: center;
+      line-height: 35px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .notice2 {
+      text-decoration:none;
+      justify-content:center;
+      color: white;
+      text-align: center;
+      line-height: 35px;
+      font-size: 13px;
+  }
+}
 
 .search {
   display: flex;
@@ -335,12 +403,12 @@
     <link rel="stylesheet" href="{% static 'main.css' %}">
 
         {% if not user.is_authenticated %}
-        <div class="notice" style="width: 100%; height: 40px; background-color: #283c16; text-align: center">
-            <a href="{% url 'zeronine:ai_check' %}" style="text-decoration:none; justify-content:center; color: white; text-align: center; line-height: 35px;">지금 가입하고 저렴하게 구입하세요!&nbsp;&nbsp;&nbsp;&nbsp;➜</a>
+        <div style="width: 100%; height: 40px; background-color: #283c16; text-align: center">
+            <a class="notice" href="{% url 'zeronine:ai_check' %}" style="text-decoration:none; justify-content:center; color: white; text-align: center; line-height: 35px;">지금 가입하고 저렴하게 구입하세요!&nbsp;&nbsp;&nbsp;&nbsp;➜</a>
         </div>
         {% else %}
          <div style="width: 100%; height: 40px; background-color: #283c16; text-align: center">
-             <a href="{% url 'zeronine:logout' %}" style="text-decoration:none; justify-content:center; color: white; text-align: center; line-height: 35px;"><b style="color: #f7ebbd">{{user.username}}</b>님, 환영합니다. [로그아웃]</a>
+             <a class="notice2" href="{% url 'zeronine:logout' %}" style="text-decoration:none; justify-content:center; color: white; text-align: center; line-height: 35px;"><b style="color: #f7ebbd">{{user.username}}</b>님, 환영합니다. [로그아웃]</a>
         </div>
         {% endif %}
 
@@ -463,9 +531,9 @@
         {% endblock %}
 
 </head>
-     <footer class="footer" style=" width: 100%; height: 280px; padding: 15px; text-align: left; background-color: #F2F2F2; margin-top: 100px;">
-         <p class="footer_logo" style="margin-top: 40px; font-size: 40px;">ZERONINE</p>
-         <p class="footer_p">ZERONINE ⓒ 2021 ALL RIGHTS RESERVED.</p>
+     <footer class="footer" style="text-align: left; ">
+         <p class="footer_logo" style="margin-bottom: -1px;">ZERONINE</p>
+         <p class="footer_p" >ZERONINE ⓒ 2021 ALL RIGHTS RESERVED.</p>
          <p class="footer_p" style="color: #6E6E6E;">제로나인 | 주소: 서울특별시 성동구 살곶이길 200 한양여자대학교 <br>
              메일: zeronine0900@gmail.com | CALL: 010-6352-4046</p>
      </footer>
