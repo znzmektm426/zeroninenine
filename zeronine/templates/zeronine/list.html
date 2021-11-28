@@ -171,7 +171,7 @@ div.zeronine {
 @media (max-width: 1024px) {
   .total_pp {
     float: right;
-    font-size: 12px;
+    font-size: 11px;
     margin-top: 8px;
     margin-right: 5px;
 
@@ -191,6 +191,60 @@ div.zeronine {
   }
 }
 
+
+@media screen and (min-width: 1025px) {
+  .percentt {
+    font-size: 21px;
+    float: left;
+    color: #1AA059;
+  }
+}
+
+@media (max-width: 1024px) {
+  .percentt {
+    color: #1AA059;
+    float:left;
+    margin-left: 15px;
+    margin-top: 7px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .total_pp {
+    float: left;
+    margin-right: 30px;
+    font-size: 17px;
+    margin-top: 3px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .total_pp {
+    float: right;
+    font-size: 11px;
+    margin-top: 8px;
+    margin-right: 35px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+.targett {
+    font-size: 13px;
+    font-weight:bold;
+    margin-top: 6px;
+    color:darkgrey;
+    margin-right: 30px;
+    float: right;
+
+  }
+}
+
+@media screen and (max-width: 1024px) {
+.targett {
+      display: none;
+  }
+}
 
 @media screen and (min-width: 1025px) {
 .product-title {
@@ -740,9 +794,9 @@ category_product { display: none; }
                         <div class="p_bar">
                             <div class="progress-box" style="margin-left: 22px;">
                             {% load humanize %}
-                            <b><p class="percent">{{ product | percentage }}&nbsp;&nbsp;</p></b>
+                            <b><p class="percentt">{{ product | percentage }}&nbsp;&nbsp;</p></b>
                             <p class="total_pp">{{ product.get_total | floatformat:'0' | intcomma }}원</p>
-                            <p class="target">목표금액&nbsp;{{ product.target_price | floatformat:'0' | intcomma }}원</p>
+                            <p class="targett">목표금액&nbsp;{{ product.target_price | floatformat:'0' | intcomma }}원</p>
                             </div>
                             <br>
                         </div>
