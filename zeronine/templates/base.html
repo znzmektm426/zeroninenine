@@ -442,7 +442,14 @@
         <li class="nav-item"><a href="{% url 'zeronine:post' %}" class="nav-link">자유게시판</a></li>
 
    <span class="menu" >|</span>
-    <li class="nav-item" style="color: #637B46;"><a href="{% url 'zeronine:product_upload' %}" class="nav-link" style="color: darkgreen; font-weight: normal; margin-right: -5px;">제안하기</a></li>
+    {% if not user.is_authenticated %}
+    <a onclick="alert('로그인 후 상품 등록이 가능합니다.');" style="cursor:pointer;">
+    <li class="nav-item" style="color: #637B46; color: darkgreen; margin-top: 3px; font-size: 17px;">제안하기</li>
+        </a>
+
+    {% else %}
+         <li class="nav-item" style="color: #637B46;"><a href="{% url 'zeronine:product_upload' %}" class="nav-link" style="color: darkgreen; font-size: 17px;">제안하기</a></li>
+    {% endif %}
 
             {% csrf_token %}
         <li class="nav-item">
