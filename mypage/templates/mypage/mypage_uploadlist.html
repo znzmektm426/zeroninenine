@@ -93,7 +93,7 @@ table a {
         border: 0;
     }
 
-    .table-wrap .board tbody tr td.subject {
+    .table-wrap .board tbody tr td.subject2 {
         display: block;
         font-weight: 700;
         color: #333;
@@ -123,31 +123,19 @@ table a {
         margin-left: 10px;
     }
 
-    .table-wrap .board tbody tr td.date, .table-wrap .board tbody tr td.hit, .table-wrap .board tbody tr td.file, .table-wrap .board tbody tr td.mission, .table-wrap .board tbody tr td.call {
+    .table-wrap .board tbody tr td.date, .table-wrap .board tbody tr td.hit, .table-wrap .board tbody tr td.deletebtn, .table-wrap .board tbody tr td.image, .table-wrap .board tbody tr td.link2, .table-wrap .board tbody tr td.joinlist {
         display: block;
         float: left;
         text-align: left;
         margin-right: 16px;
+        margin-top: 1px;
+        word-spacing: 7px;
     }
 
-    .table-wrap .board tbody tr td.mission {
-        height: 20px;
-        width: 70%;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
 
-    .table-wrap .board tbody tr td.floor {
-        display: flex;
+    .table-wrap .board tbody tr td.deletebtn {
         float: left;
-        margin-right: 16px;
-        background: #eee;
-        width: 65px;
-        height: 65px;
-        border-radius: 50%;
-        align-items: center;
-        justify-content: center;
+        width: 7%;
     }
 
     .table-wrap .board tbody tr td.date::before {
@@ -156,6 +144,22 @@ table a {
 
     .table-wrap .board tbody tr td.hit::before {
         content: "목표금액 : ";
+    }
+
+    .table-wrap .board tbody tr td.image::before {
+        content: "";
+    }
+
+    .table-wrap .board tbody tr td.link2::before {
+        content: "채팅방 링크 : ";
+    }
+
+    .table-wrap .board tbody tr td.joinlist::before {
+        content: "참여현황 : ";
+    }
+
+    .table-wrap .board tbody tr td.deletebtn::before {
+        content: "";
     }
 }
 
@@ -290,14 +294,14 @@ table a {
            {% for designated in designated_object %}
            {% if designated.product_code.product_code == product.product_code %}
         <td class="num"> {{product.product_code}} </td>
-        <td class="name"><a href="{{product.get_absolute_url}}"><img style="width: 90px" height= 90px" src="{{product.image.url}}" alt="상품 이미지"></a></td>
-        <td class="subject"> <a href="#" class="ellipsis"> </a><a href="#" title="{{product.name}}"> {{product.name}} </a></td>
-        <td class="date">{{designated.price}}</td>
-        <td class="hit">{{product.target_price}}</td>
-        <td class="date"><a href="{{ product.kakao_link }}">링크열기</a></td>
+        <td class="image"><a href="{{product.get_absolute_url}}"><img style="width: 90px" height= 90px" src="{{product.image.url}}" alt="상품 이미지"></a></td>
+        <td class="subject2"> <a href="#" class="ellipsis"> </a><a href="#" title="{{product.name}}"> {{product.name}} </a></td>
+        <td class="date">{{designated.price}}원</td>
+        <td class="hit">{{product.target_price}}원</td>
+        <td class="link2"><a href="{{ product.kakao_link }}">링크열기</a></td>
         <td class="name">{{product.created_at|date:"Y-m-d"}}</td>
 
-        <td class="hit">
+        <td class="joinlist">
             <button type="button" class="btn btn primary" data-toggle="modal" data-target="#{{product.product_code}}" style="border-color: #637B46; background-color: white; font-size: 13px;">명단보기</button>
              {% for join in join_object %}
         </td>
@@ -370,7 +374,7 @@ table a {
          <form method="POST" action="{% url 'zeronine:mypage_delete' pk=product.product_code %}">
              {% csrf_token %}
              <div class="form-group" style="outline:none;">
-                  <td class="name"><button type="submit" onclick="return confirm('정말 삭제하시겠습니까? \n삭제 후에는 복구가 불가능합니다.')"; class="btn btn primary" style="border-color: white; background-color: #B40404; color:white; font-size: 13px;">삭제</button></td></a>
+                  <td class="deletebtn"><button type="submit" onclick="return confirm('정말 삭제하시겠습니까? \n삭제 후에는 복구가 불가능합니다.')"; class="btn btn primary" style="border-color: white; background-color: #B40404; color:white; font-size: 13px;">삭제</button></td></a>
              </div>
          </form>
       </tr>

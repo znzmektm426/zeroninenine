@@ -81,7 +81,7 @@ table a {color:#333; text-decoration:none;}
         border: 0;
     }
 
-    .table-wrap .board tbody tr td.subject {
+    .table-wrap .board tbody tr td.subject2 {
         display: block;
         font-weight: 700;
         color: #333;
@@ -111,31 +111,14 @@ table a {color:#333; text-decoration:none;}
         margin-left: 10px;
     }
 
-    .table-wrap .board tbody tr td.date, .table-wrap .board tbody tr td.hit, .table-wrap .board tbody tr td.file, .table-wrap .board tbody tr td.mission, .table-wrap .board tbody tr td.call {
+    .table-wrap .board tbody tr td.date, .table-wrap .board tbody tr td.hit, .table-wrap .board tbody tr td.option, .table-wrap .board tbody tr td.name, .table-wrap .board tbody tr td.link2, .table-wrap .board tbody tr td.image {
         display: block;
         float: left;
         text-align: left;
         margin-right: 16px;
-    }
-
-    .table-wrap .board tbody tr td.mission {
-        height: 20px;
-        width: 70%;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
-
-    .table-wrap .board tbody tr td.floor {
-        display: flex;
-        float: left;
-        margin-right: 16px;
-        background: #eee;
-        width: 65px;
-        height: 65px;
-        border-radius: 50%;
-        align-items: center;
-        justify-content: center;
+        margin-top: 1px;
+        word-spacing: 12px;
+        line-height: 15px;
     }
 
     .table-wrap .board tbody tr td.date::before {
@@ -143,7 +126,24 @@ table a {color:#333; text-decoration:none;}
     }
 
     .table-wrap .board tbody tr td.hit::before {
-        content: "목표금액 : ";
+        content: "수량 : ";
+    }
+
+    .table-wrap .board tbody tr td.option::before {
+        content: "옵션 : ";
+    }
+
+    .table-wrap .board tbody tr td.image::before {
+        content: "";
+    }
+
+
+    .table-wrap .board tbody tr td.name::before {
+        content: "참여일자 : ";
+    }
+
+    .table-wrap .board tbody tr td.link2::before {
+        content: "채팅방 링크 : ";
     }
 }
 </style>
@@ -183,13 +183,13 @@ table a {color:#333; text-decoration:none;}
           {% if user == join.username %}
 
         <td class="num">{{join.join_code}}</td>
-        <td class="name"><a href="{{product.get_absolute_url}}"><img style="width: 90px" height= 90px" src="{{product.image.url}}" alt="상품 이미지"></a></a></td>
-        <td class="subject">{{join.product_code}}<a href="#" class="ellipsis"> </a><a href="#" title="{{product.name}}"></a>  </td>
-        <td class="hit">{{join_detail.quantity}}</td>
-        <td class="date">{{join_detail.price}}</td>
-        <td class="date">{{join_detail.value_code}}</td>
+        <td class="image"><a href="{{product.get_absolute_url}}"><img style="width: 90px" height= 90px" src="{{product.image.url}}" alt="상품 이미지"></a></td>
+        <td class="subject2">{{join.product_code}}<a href="#" class="ellipsis"> </a><a href="#" title="{{product.name}}"></a>  </td>
+        <td class="hit">{{join_detail.quantity}}개</td>
+        <td class="date">{{join_detail.price}}원</td>
+        <td class="option">{{join_detail.value_code}}</td>
         <td class="name">{{join.part_date|date:"Y-m-d"}}</td>
-        <td class="name"><a href="{{ product.kakao_link }}">링크열기</a></td>
+        <td class="link2"><a href="{{ product.kakao_link }}">링크열기</a></td>
       </tr>
 
       {% endif %}

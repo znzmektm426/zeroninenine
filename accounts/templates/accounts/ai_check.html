@@ -8,6 +8,105 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
 
+    html, body {
+    width:100%;
+    overflow-x:hidden;
+}
+
+    @media screen and (max-width: 1025px) {
+    .zn_logo {
+        max-width: 150px;
+        margin-right: 150px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .titlehr {
+        max-width: 330px;
+        margin-right: 150px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .aicheck {
+        max-width: 380px;
+        font-size: 11px;
+    }
+}
+
+    @media screen and (max-width: 1025px) {
+    .image-upload-wrap {
+        max-width: 300px;
+        margin-right: 170px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .file-upload-content {
+        max-width: 300px;
+        margin-right: 170px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .auth {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .done {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .remove-image {
+        max-width: 300px;
+        margin-right: 100px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .sa-icon sa-error animate {
+        max-width: 30px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .prvbtn {
+        max-width: 300px;
+    }
+}
+
+    @media screen and (max-width: 1025px) {
+    .nextbtn {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .title {
+        max-width: 380px;
+        font-size: 11px;
+        margin-bottom: -10px;
+    }
+}
+
+    @media screen and (max-width: 1025px) {
+    .titlep {
+        max-width: 380px;
+        font-size: 11px;
+        margin-top: 20px;
+    }
+}
+
+.titlep {
+        margin-top: 10px;
+        margin-bottom: -30px;
+}
+
     * {
       margin: 0;
       padding: 0;
@@ -30,7 +129,7 @@
       margin-bottom: 0.7rem;
     }
 
-    h4 {
+    .auth {
       font-size: 1.4rem;
       font-weight: 500;
       color: #333;
@@ -134,7 +233,6 @@
       color: #666;
       font-weight: 300;
     }
-
 
     /*탭 메뉴*/
     label {
@@ -263,6 +361,7 @@
       width: 170px;
       margin-top: -60px;
       margin-bottom: 15px;
+      text-align: center;
   }
 }
 
@@ -271,6 +370,7 @@
       width: 170px;
       margin-top: -60px;
       margin-bottom: 15px;
+      text-align: center;
   }
 }
 
@@ -643,12 +743,14 @@ hr{
         <a class="navbar-brand" href="/" style="text-align: center; text-decoration: none;"><img class="zn_logo" src="/static/img/zeronine_logo_image.png"></a>
         </div>
     </nav>
-                <hr width="90%" style="margin-top:-30px; margin-left:28px; text-align: center">
+                <hr class="titlehr" width="90%" style="margin-top:-30px; margin-left:28px; text-align: center">
                 <br>
+    <div class="title">
     <h2>AI 학생증 인증</h2>
-    <p style="font-size: 15px; margin-top: 20px;">제로나인은 한양여대 학생들을 위한 공동구매 사이트로,<br>본교 학생임을 인증하여야 회원가입 진행이 가능합니다.</p>
+    <p class="titlep">제로나인은 한양여대 학생들을 위한 공동구매 사이트로,<br>본교 학생임을 인증하여야 회원가입 진행이 가능합니다.</p>
+    </div>
 
-    <div>
+    <div class="aicheck">
       <input id="tab1" type="radio" name="tabs" checked>
       <!--디폴트 메뉴-->
       <label><img src="/static/img/user.png"><br>STEP 1<br>유의사항 확인</label>
@@ -669,7 +771,7 @@ hr{
               <img src="/static/img/aicheck.png" width="90%" style="float: left; margin-top: -5px;">
           </div>
 
-             <label for="tab3" style="background: #eeeeee; height: 70px; width:430px; margin-right: 45px">다음으로</label>
+             <label class="nextbtn" for="tab3" style="background: #eeeeee; height: 70px; width:430px; margin-right: 45px">다음으로</label>
 
       </section>
       <section id="content2">
@@ -686,7 +788,7 @@ hr{
     <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
     <div class="drag-text">
         <img src="/static/img/hywlogo.png" style="outline:none; width:80px; height: 70px; margin-top: 65px; margin-bottom: -45px;">
-        <h4><b>본교 학생임을 확인하기 위한<br>학생증 이미지를 첨부하세요.</b></h4>
+        <h4 class="auth"><b>본교 학생임을 확인하기 위한<br>학생증 이미지를 첨부하세요.</b></h4>
     </div>
   </div>
   <div class="file-upload-content">
@@ -718,8 +820,9 @@ hr{
 </div>
 
     <div class="image-title-wrap"><br>
-      <button type="button" onclick="removeUpload()" class="remove-image" style="display: none">삭제</button>
+      <button type="button" onclick="removeUpload()" class="remove-image" style="display: none;">삭제</button>
     </div>
+
 <div id="webcam-container"></div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
@@ -802,7 +905,7 @@ $('.image-upload-wrap').bind('dragover', function () {
                 $('.load').hide();
                 $('.success-animation').show();
                 $('.check_mark').hide();
-                resultMessege = "<br><br><b style='color:#585858'>학생증 인증이 완료되었습니다. <br> 5초 뒤, 인증완료 페이지로 이동합니다.</b>"
+                resultMessege = "<br><br><b style='color:#585858; font-size: 16px;'>학생증 인증이 완료되었습니다. <br> 5초 뒤, 인증완료 페이지로 이동합니다.</b>"
                 setTimeout(function() {
                 document.getElementById('tab4').click()
                 }, 5000);
@@ -823,14 +926,14 @@ $('.image-upload-wrap').bind('dragover', function () {
         }
     }
 </script>
-            <div style="justify-content: center; text-align: center">
-             <label for="tab1" style="background: #eeeeee; height: 70px; width:430px; justify-content: center; text-align: center">이전으로</label>
+            <div class="prvbtn" style="justify-content: center; text-align: center">
+             <label class="prvbtn" for="tab1" style="background: #eeeeee; height: 70px; width:430px; justify-content: center; text-align: center">이전으로</label>
             </div>
         </section>
 
       <section id="content4">
         <img src="/static/img/checked.png" width="80%">
-        <h5 style="margin-top: 20px;">한양여자대학교 학생증 인증이 완료되었습니다.</h5>
+        <h5 class="done" style="margin-top: 20px;">한양여자대학교 학생증 인증이 완료되었습니다.</h5>
         <p>아래 버튼을 눌러 회원가입을 진행해주세요.</p>
           <a href="{% url 'zeronine:register' %}"><button type="button">가입하러 가기</button></a>
       </section>

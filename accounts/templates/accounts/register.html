@@ -12,6 +12,11 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+html, body{
+    width:100%;
+    overflow-x:hidden;
+}
+
 body {
       font-family: 'Noto Sans KR', sans-serif;
       font-size: 0.9rem;
@@ -114,8 +119,7 @@ hr{
   color: #fff;
   margin-top: 5px;
   height: 60px;
-  width: 500px
-
+  width: 450px
   }
 
   .bbb button:hover {
@@ -124,36 +128,50 @@ hr{
     color: white;
     }
 
-@media screen and (min-width: 1025px) {
-  .join {
-      clear: both;
+@media screen and (max-width: 1025px) {
+  .registerbtn {
       padding: 50px 0;
       margin: 0 auto;
       text-align: center;
+      max-width: 330px;
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
+  .join {
+      padding: 50px 0;
+      margin: 0 auto;
+      text-align: center;
+      max-width: 330px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .register {
+      font-size: 10px;
+  }
+}
+
   .join {
       padding: 5rem 0 6.5rem 0;
-      width: 500px;
+      width: 450px;
       margin: 0 auto;
       text-align: center;
   }
-}
+
 
 .join h3 {
   text-align: center;
 
 }
 
-.join form input {
+.join input {
   margin: 0 auto;
   border: 1px solid #ccc;
   color: #4f6185;
   margin-bottom: 10px;
   height: 51px;
-  width: 500px;
+  width: 100%;
 }
 
 @media screen and (min-width: 1025px) {
@@ -205,11 +223,13 @@ hr{
         <a class="navbar-brand" href="/" style="text-align: center; text-decoration: none;"><img class="zn_logo" src="/static/img/zeronine_logo_image.png"></a>
         </div>
     </nav>
-                <hr width="90%" style="margin-top:-30px; margin-left:28px; text-align: center">
-                <br>
+        <hr width="90%" style="margin-top:-30px; margin-left:28px; text-align: center">
+        <br>
+
         <p style="margin-top: -30px;">{% include "accounts/form_errors.html" %}</p>
-    <h2 style="justify-content: center; text-align: center; margin-top: 40px; margin-bottom: 50px;"><b>회원가입</b><br>
-        <p style="font-size: 15px; margin-top: 20px; margin-bottom: -20px;">제로나인 회원가입을 환영합니다.<br>회원으로 가입하시면 다양한 혜택과 서비스를 이용하실 수 있습니다.</p></h2>
+
+        <h2 style="justify-content: center; text-align: center; margin-top: 40px; margin-bottom: 50px;"><b>회원가입</b><br>
+        <p class="register" style="font-size: 15px; margin-top: 20px; margin-bottom: -20px;">제로나인 회원가입을 환영합니다.<br>회원으로 가입하시면 다양한 혜택과 서비스를 이용하실 수 있습니다.</p></h2>
 
          <form method="post" class="register-form">
         {% csrf_token %}
@@ -237,7 +257,7 @@ hr{
        <input type="text" class="form-control" name="email" id="email" value="{{ form.email.value|default_if_none:'' }}" placeholder="이메일을 입력하세요.">
       </div>
              <div class="bbb" style="text-align: center">
-              <button type="submit">가입하기</button><br>
+              <button class="registerbtn" type="submit">가입하기</button><br>
              </div>
 
              <div style="text-align: center; margin-top: 15px;">
