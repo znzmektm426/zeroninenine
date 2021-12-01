@@ -473,7 +473,7 @@
               </form>
         <li class="nav-item"><a href="{% url 'zeronine:mypage_list' %}" class="nav-link"><img src="/static/img/mypage5.png" style="width: 25px;"></a></li>
             {% else %}
-        <li class="nav-item" style="margin-left: -13px; margin-top: -8px">
+        <li class="nav-item" style="margin-left: 20px; margin-top: -8px">
             <!--로그인 전 검색기능-->
             <form action="{% url 'zeronine:product_search' %}" autocomplete="on" method="get">
             {% csrf_token %}
@@ -489,7 +489,7 @@
                     <input type="text" placeholder="상품을 입력하세요..." name="q" value="{{q}}">
                 </div>
             </div>
-              </form>
+            </form></li>
         <li class="nav-item"><a href="{% url 'zeronine:login' %}" class="nav-link" style="color: black;">로그인</a></li>
             {% endif %}
       </li>

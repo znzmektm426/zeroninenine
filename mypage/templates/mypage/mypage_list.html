@@ -7,6 +7,12 @@
 </header>
 
 <style>
+
+html, body{
+    width:100%;
+    overflow-x:hidden;
+}
+
 vr {
     display: block;
     width: 2px;
@@ -44,6 +50,15 @@ vr {
     margin-bottom: 8px;
 }
 
+  @media screen and (max-width: 1025px) {
+  .cardcontainer {
+      clear: right;
+      max-width: 370px;
+      margin-right: 90px;
+      margin-bottom: 20px;
+  }
+}
+
 @media screen and (max-width: 600px) {
 vr {
     display: none;
@@ -62,6 +77,13 @@ vr {
     margin-top: -50px;
     transform: translate(-18%, 10%);
     }
+}
+
+  @media screen and (max-width: 1025px) {
+  .content2 input {
+      max-width: 295px;
+
+  }
 }
 
 @media screen and (max-width:600px) {
@@ -94,7 +116,7 @@ vr {
      {% csrf_token %}
 
     <div class="mypage" style="margin-left: 70px;">
-        <h3 style="margin-top:70px; color: #6E6E6E"><b><p style="color: #637B46; display: inline; clear:none;">{{ user.username }}</p>님의 마이페이지</b></h3>
+        <h4 style="margin-top:70px; color: #6E6E6E"><b><p style="color: #637B46; display: inline; clear:none;">{{ user.username }}</p>님의 마이페이지</b></h4>
         <h5 style="margin-top:40px; margin-bottom: 30px; color: #848484; clear: none;">내 정보</h5>
     </div>
 

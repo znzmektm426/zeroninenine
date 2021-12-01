@@ -10,6 +10,12 @@
  align-items: flex-start;
  justify-content: left;
  flex-flow: row wrap;
+ margin-left: 50px;
+ margin-top: 23px;
+}
+
+.myzzim {
+   width: 200px; margin-top:50px; margin-bottom:20px; margin-left:69px; font-size: 23px;
 }
 
  .card-narrow {
@@ -62,15 +68,29 @@
   transition-duration: 0.8s;
 }
 
+  @media screen and (max-width: 1025px) {
+  .paragraph--type--card-narrow-row {
+      margin-top: -15px;
+      margin-left: 3px;
+  }
+}
+
+  @media screen and (max-width: 1025px) {
+  .myzzim {
+      margin-top: 5px;
+      margin-left: 23px;
+  }
+}
+
 </style>
 
 <link rel="stylesheet" href="{% static 'style.css' %}">
 
  <div class="container" style="margin-bottom: 20px;">
 
-<h3 style="margin-top:50px; margin-bottom:20px; margin-left:69px; font-size: 23px;"><b>내가 찜한 상품</b></h3>
+<h3 class="myzzim"><b>내가 찜한 상품</b></h3>
 
-<div class="paragraph--type--card-narrow-row" style="margin-left: 50px; margin-top: 23px;">
+<div class="paragraph--type--card-narrow-row">
 
        {% for zzim in zzim %}
                {% if user == zzim.username %}

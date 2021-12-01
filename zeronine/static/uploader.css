@@ -11,6 +11,16 @@ body {
   border-radius: 10px;
 }
 
+@media screen and (max-width: 1024px) {
+    .file-upload {
+        background-color: #ffffff;
+        width: 350px;
+        margin: 0 auto;
+        margin-left: -20px;
+        border-radius: 10px;
+    }
+}
+
 .file-upload-btn {
   width: 100%;
   margin: 0;
@@ -54,6 +64,16 @@ body {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1024px) {
+.file-upload-input {
+        background-color: #ffffff;
+        width: 350px;
+        margin: 0 auto;
+        margin-left: -20px;
+        border-radius: 10px;
+    }
+}
+
 .image-upload-wrap {
   margin-top: 20px;
   border: 2px dashed darkgray;
@@ -62,6 +82,8 @@ body {
   object-fit: contain;
   border-radius: 10px;
 }
+
+
 
 .image-dropping,
 .image-upload-wrap:hover {
@@ -104,6 +126,24 @@ body {
   -o-animation:      fade-in 0.7s;
 }
 
+@media screen and (max-width: 1024px) {
+.file-upload-image {
+  max-height: 360px;
+  max-width: 300px;
+  margin: auto;
+  margin-top: 20px;
+  border: 2px dashed darkgray;
+  position: relative;
+  object-fit: cover;
+  border-radius: 10px;
+  animation: fade-in 0.7s;
+  -webkit-animation: fade-in 0.7s;
+  -moz-animation:    fade-in 0.7s;
+  -o-animation:      fade-in 0.7s;
+    }
+}
+
+
 @keyframes fade-in{
   0%{
     opacity:0;
@@ -128,6 +168,25 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+.remove-image {
+    width: 425px;
+    height: 60px;
+    margin: 0;
+    margin-left: -14px;
+    color: #fff;
+    background: black;
+    border: none;
+    padding: 10px;
+    border-radius: 0px;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    }
 }
 
 .remove-image:hover {

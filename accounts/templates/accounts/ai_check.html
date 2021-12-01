@@ -34,20 +34,6 @@
     }
 }
 
-    @media screen and (max-width: 1025px) {
-    .image-upload-wrap {
-        max-width: 300px;
-        margin-right: 170px;
-    }
-}
-
-@media screen and (max-width: 1025px) {
-    .file-upload-content {
-        max-width: 300px;
-        margin-right: 170px;
-        font-size: 13px;
-    }
-}
 
 @media screen and (max-width: 1025px) {
     .auth {
@@ -62,13 +48,6 @@
 }
 
 @media screen and (max-width: 1025px) {
-    .remove-image {
-        max-width: 300px;
-        margin-right: 100px;
-    }
-}
-
-@media screen and (max-width: 1025px) {
     .sa-icon sa-error animate {
         max-width: 30px;
     }
@@ -76,12 +55,21 @@
 
 @media screen and (max-width: 1025px) {
     .prvbtn {
-        max-width: 300px;
+        max-width: 310px;
+        font-size: 13px;
     }
 }
 
     @media screen and (max-width: 1025px) {
     .nextbtn {
+        max-width: 310px;
+        font-size: 13px;
+    }
+}
+
+
+@media screen and (max-width: 1025px) {
+    .file-upload-content {
         max-width: 300px;
     }
 }
@@ -97,7 +85,7 @@
     @media screen and (max-width: 1025px) {
     .titlep {
         max-width: 380px;
-        font-size: 11px;
+        font-size: 11.5px;
         margin-top: 20px;
     }
 }
@@ -456,6 +444,13 @@ hr{
   }
 }
 
+@media screen and (max-width: 1025px) {
+    .remove-image {
+        max-width: 300px;
+        margin-right: 100px;
+    }
+}
+
 .file-upload-image {
   max-height: 290px;
   max-width: 400px;
@@ -481,7 +476,7 @@ hr{
     opacity:1;
   }
 }
-.success-animation { margin-top:80px;}
+.success-animation { margin-top:60px;}
 
 .checkmark {
     width: 90px;
@@ -495,6 +490,7 @@ hr{
     animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
    margin: 0 auto;
 }
+
 .checkmark__circle {
     stroke-dasharray: 166;
     stroke-dashoffset: 166;
@@ -532,6 +528,18 @@ hr{
   margin-bottom:-50px;
   margin-top: 60px;
 }
+
+@media screen and (max-width: 1025px) {
+    .check_mark {
+      width: 70px;
+      height: 130px;
+      margin: 0 auto;
+      margin-left: 110px;
+      margin-bottom:-50px;
+      margin-top: 60px;
+    }
+}
+
 
 .sa-icon {
   width: 80px;
@@ -724,6 +732,48 @@ hr{
     transform: rotate(359deg);
   }
 }
+
+@media screen and (min-width: 1025px) {
+  .auth {
+    margin-top: 65px;
+    font-size: 16px;
+    color: grey;
+    font-weight: lighter;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .auth {
+    margin-top: 65px;
+    font-size: 15px;
+    color: grey;
+    font-weight: lighter;
+
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .example {
+    width:100%;
+      margin-left: -2px;
+
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .ai {
+      margin-left: 30px;
+      float:left
+
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .ai {
+      float:left
+
+  }
+}
 </style>
 
 <head>
@@ -768,7 +818,7 @@ hr{
               <p style="text-align: left;">- 정면에서 촬영한 사진이 아니거나 학생증 일부가 가려진 사진, <br>&nbsp;&nbsp;&nbsp;너무 밝거나 어두운 사진 등을 첨부할 경우 인증이 어려울 수 있습니다. </p>
               <br>
               <p style="text-align: left; margin-top: -10px;"><b>- 올바른 학생증 사진 (예시)</b></p>
-              <img src="/static/img/aicheck.png" width="90%" style="float: left; margin-top: -5px;">
+              <img class="example" src="/static/img/aicheck.png" width="90%" style="float: left; margin-top: -5px;">
           </div>
 
              <label class="nextbtn" for="tab3" style="background: #eeeeee; height: 70px; width:430px; margin-right: 45px">다음으로</label>
@@ -781,14 +831,14 @@ hr{
      {% load static %}
     <link rel="stylesheet" href="{% static 'uploader.css' %}">
         <section id="content3">
-            <h4 style="float: left;"><b>AI 학생증 인증</b></h4><br><br>
+            <h4 class="ai"><b>AI 학생증 인증</b></h4><br><br>
 <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <div class="container file-upload">
   <div class="image-upload-wrap">
     <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
     <div class="drag-text">
         <img src="/static/img/hywlogo.png" style="outline:none; width:80px; height: 70px; margin-top: 65px; margin-bottom: -45px;">
-        <h4 class="auth"><b>본교 학생임을 확인하기 위한<br>학생증 이미지를 첨부하세요.</b></h4>
+        <p class="auth"><b>본교 학생임을 확인하기 위한<br>학생증 이미지를 첨부하세요.</b></p>
     </div>
   </div>
   <div class="file-upload-content">

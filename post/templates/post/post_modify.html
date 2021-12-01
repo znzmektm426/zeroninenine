@@ -2,9 +2,41 @@
 
 {% block content %}
 
+<style>
+@media screen and (min-width: 600px) {
+    .modify textarea[name="textare"] {
+        margin-left: 55px;
+        margin-top: -25px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .modify textarea[name="textare"] {
+        margin-left: 55px;
+        margin-top: -25px;
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .modify input[name="title"] {
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .modify input[name="title"] {
+        width: 120px;
+        margin-left: 8px;
+    }
+}
+</style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <div class="card container my-3 justify-content-center" style="border: white">
         <h3 style="margin-top:20px; margin-bottom: 30px;"><b>게시글 수정</b></h3>
    <form method="POST">
+         <article class="modify">
      {% csrf_token %}
       <div class="card-header">
          <strong>제목 : &nbsp;</strong>
@@ -16,11 +48,11 @@
                 <span>작성자 : <b>{{ post.username }}</b></span>
             </div><hr>
           <div><strong>내용: &nbsp;</strong></div>
-           <textarea style="margin-left: 55px; margin-top: -25px;" cols=45 rows=10 name="content">{{ post.content }}</textarea>
+           <textarea name="textare" cols=45 rows=10>{{ post.content }}</textarea>
      <br>
      <br>
       </div>
-        <input class="btn btn-dark" type="submit" style="background-color: #637B46; border: white; float: right" value="수정"></form>
+             <input class="btn btn-dark" type="submit" style="background-color: #637B46; border: white; float: right" value="수정"></article></form>
         <div><a href="{% url 'zeronine:post' %}"><button style="background: #848484; border: white; float: right; margin-top:-36px; margin-right: 65px;" class="btn btn-danger">이전</button></a></div>
   </form>
 </div>

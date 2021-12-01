@@ -75,6 +75,64 @@ div.zeronine {
 }
 
 @media screen and (min-width: 601px) {
+  .daybox2 {
+      width: 80px;
+      height: 80px;
+      background-color: #637B46;
+      position: absolute;
+      margin-left: 120px;
+      margin-top: -450px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .daybox2 {
+      width: 80px;
+      height: 80px;
+      background-color: #637B46;
+      float:left;
+      margin-left:20px;
+      margin-top:-308px;
+      position: relative;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .optionhr {
+      width:92%;
+      margin-right:100px;
+      margin-top:10px;
+      margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .optionhr {
+      width:92%;
+      margin-right:130px;
+      margin-top:10px;
+      margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .optionhr2 {
+      width: 290px;
+      margin-right:50px;
+      margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .optionhr2 {
+      width: 290px;
+      margin-right:80px;
+      margin-bottom: 30px;
+  }
+}
+
+
+@media screen and (min-width: 601px) {
   .with {
       margin-top:30px;
       margin-bottom: 10px;
@@ -100,6 +158,29 @@ div.zeronine {
     text-align: center;
     margin-left: -275px;
     margin-top: -120px;
+  }
+}
+
+
+@media screen and (min-width: 601px) {
+  .del_li_btn {
+      float: right;
+      margin-right: 40px;
+  }
+}
+
+@media screen and (max-width: 601px) {
+  .del_li_btn {
+      float: right;
+      margin-right: 90px;
+  }
+}
+
+
+@media screen and (max-width: 601px) {
+  .del_li_btn[name=del_li_btn2] {
+      float: right;
+      margin-right: 30px;
   }
 }
 
@@ -439,7 +520,7 @@ table a {color:#333; text-decoration:none;}
               <img class="productimg" src="{{product.image.url}}">
                  <div class="daybox"><h2 style="font-size:18px; text-align:center; color: white; line-height: 78px;"><b>D-{{ delta_result }}</b></h2></div>
                       {% if delta_result < 0 %}
-                      <div class="daybox" style="width: 80px; height: 80px; background-color: #637B46; position: absolute; margin-left: 120px; margin-top: -450px;"><p style="font-size:16px; text-align:center; color: white; line-height: 78px;"><b>모집종료</b></p></div>
+                      <div class="daybox2"><p style="font-size:16px; text-align:center; color: white; line-height: 78px;"><b>모집종료</b></p></div>
                       {% endif %}
             </div>
         </div>
@@ -527,10 +608,10 @@ $().ready(function() {
        if (checkValue != "no") {
            var whtml =
                "            <div class=\"cart_table\">\n" +
-               "            <hr style='width: 290px; margin-right:50px; margin-bottom: 30px;'>" +
+               "            <hr class=\"optionhr2\">" +
                "            <p style='font-size: 17px;'>" + product + "</p>" +
                "                <p style='font-size: 13px; margin-top: -10px; class=\"check\" margin-bottom: 20px;'>" + checkText + "</p>" +
-               "             <span class=\"del_li_btn\" style='float: right; margin-right: 30px;'><img src=\"https://tictoc-web.s3.ap-northeast-2.amazonaws.com/web/img/icon/btn_del_circle.svg\" style='width: 80%;'></span>\n" +
+               "             <span class=\"del_li_btn\"><img src=\"https://tictoc-web.s3.ap-northeast-2.amazonaws.com/web/img/icon/btn_del_circle.svg\" style='width: 80%;'></span>\n" +
                "            <ul class=\"cart_list\">\n" +
                "                <li style='list-style:none; margin-left: -38px;'>\n" +
                "                    <div class=\"opt_info\">\n" +
@@ -638,9 +719,9 @@ $().ready(function() {
        if (checkValue != "no") {
            var whtml =
                "            <div class=\"cart_table\">\n" +
-               "            <hr style='width:92%; margin-right:100px; margin-top:10px; margin-bottom: 30px;'>" +
+               "            <hr class=\"optionhr\">" +
                "            <p style='font-size: 17px;'>" + product + "</p>" +
-               "             <span class=\"del_li_btn\" style='float: right; margin-right: 30px;'><img src=\"https://tictoc-web.s3.ap-northeast-2.amazonaws.com/web/img/icon/btn_del_circle.svg\" style='width: 80%;'></span>\n" +
+               "             <span class=\"del_li_btn\" name=\"del_li_btn2\"><img src=\"https://tictoc-web.s3.ap-northeast-2.amazonaws.com/web/img/icon/btn_del_circle.svg\" style='width: 80%;'></span>\n" +
                "            <ul class=\"cart_list\">\n" +
                "                <li style='list-style:none; margin-left: -38px;'>\n" +
                "                    <div class=\"opt_info\">\n" +
