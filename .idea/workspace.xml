@@ -3,22 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ed20cc78-e70e-4f98-9230-5362b98e26fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/accounts/ai_check.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/accounts/ai_check.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/accounts/register_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/accounts/register_done.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mypage/templates/mypage/mypage_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/mypage/templates/mypage/mypage_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mypage/templates/mypage/mypage_zzimlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/mypage/templates/mypage/mypage_zzimlist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mypage/templates/mypage/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/mypage/templates/mypage/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/templates/post/post_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/post/templates/post/post_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/templates/post/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/post/templates/post/post_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/templates/post/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/post/templates/post/post_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/templates/post/post_modify.html" beforeDir="false" afterPath="$PROJECT_DIR$/post/templates/post/post_modify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/templates/post/post_write.html" beforeDir="false" afterPath="$PROJECT_DIR$/post/templates/post/post_write.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/templates/post/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/post/templates/post/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/templates/product/product_search.html" beforeDir="false" afterPath="$PROJECT_DIR$/product/templates/product/product_search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product/templates/product/product_upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/product/templates/product/product_upload.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zeronine/static/uploader.css" beforeDir="false" afterPath="$PROJECT_DIR$/zeronine/static/uploader.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zeronine/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/zeronine/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zeronine/templates/zeronine/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/zeronine/templates/zeronine/detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +88,7 @@
       <workItem from="1638124730824" duration="824000" />
       <workItem from="1638128173750" duration="3935000" />
       <workItem from="1638281106003" duration="21495000" />
-      <workItem from="1638364775651" duration="27507000" />
+      <workItem from="1638364775651" duration="28805000" />
     </task>
     <servers />
   </component>
