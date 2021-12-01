@@ -1,8 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+
+html,
+body{
+width:100%;
+overflow-x:hidden;
+}
+
+
 #att_zone {
   min-height: 150px;
   padding: 10px;
@@ -111,6 +119,25 @@
     border: 0;
 }
 
+@media screen and (min-width: 601px) {
+  .productupload button[name="productoptbtn"] {
+      background:#F2F2F2;
+      color:#585858;
+      border-color:#D8D8D8;
+      margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .productupload button[name="productoptbtn"] {
+      background:#F2F2F2;
+      color:#585858;
+      border-color: #D8D8D8;
+      margin-top: 10px;
+      margin-left: 15px;
+  }
+}
+
 </style>
 
 <div class="container my-4">
@@ -122,6 +149,7 @@
       {% if field.errors %}
             <span style="color: #637B46;">{{ field.errors }}</span>
       {% endif %}
+        <article class="productupload">
         <div class="form-group row">
             <label for="name" class="col-sm-2 col-form-label"><b>상품명</b></label>
             <div class="col-sm-10">
@@ -142,7 +170,7 @@
         <div class="form-group row" style="margin-right: -100px; margin-bottom: 27px">
             <label for="option_name" class="col-sm-2 col-form-label"><b>옵션</b></label>
         <!-- Button trigger modal -->
-        <button type="button" style="background:#F2F2F2; color:#585858; border-color: #D8D8D8; margin-top: 10px;" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" >
+        <button type="button" name="productoptbtn" style="background:#F2F2F2; color:#585858; border-color: #D8D8D8; margin-top: 10px;"class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" >
           상품 옵션 지정하기
         </button>
             </div>
@@ -520,6 +548,7 @@ function setThumbnail(event) {
         <button type="submit" action="{% url 'zeronine:product_upload' %}" class="btn btn-primary" style="float: right; background: #637B46; border: white">등록하기</button>
         </a>
         </div>
+        </article>
         </form>
 
     </div>

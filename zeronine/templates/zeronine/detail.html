@@ -2,40 +2,188 @@
 
 {% block title %} 상품 상세보기 {% endblock %}
 {% block content %}
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+
+html,
+body{
+width:100%;
+overflow-x:hidden;
+}
+
 div.zeronine {
   margin: 0 auto;
 }
 
-div.container {
-  margin: 0 auto;
+
+@media screen and (min-width: 601px) {
+  div.container {
+    margin: 0 auto;
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .with {
+      margin-top:30px;
+      margin-bottom: 10px;
+      width: 22%
+  }
 }
 
 @media screen and (min-width: 601px) {
-  div.zeronine {
-
+  .productimg {
+      margin-left:100px;
+      width:450px;
+      margin-top: 90px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  div.zeronine {
-  transform: translate(-15%, -5%);
+  .productimg {
+      width:325%;
+      text-align: center;
+      margin-top: 20px;
+      margin-left: 20px;
+      position: relative;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .daybox {
+      width: 80px;
+      height: 80px;
+      background-color: #637B46;
+      position: absolute;
+      float:left;
+      margin-left: 120px;
+      margin-top: -450px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .daybox {
+      width: 80px;
+      height: 80px;
+      background-color: #637B46;
+      float:left;
+      margin-left:20px;
+      margin-top:-308px;
+      position: relative;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .daybox2 {
+      width: 80px;
+      height: 80px;
+      background-color: #637B46;
+      position: absolute;
+      margin-left: 120px;
+      margin-top: -450px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .daybox2 {
+      width: 80px;
+      height: 80px;
+      background-color: #637B46;
+      float:left;
+      margin-left:20px;
+      margin-top:-308px;
+      position: relative;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .optionhr {
+      width:92%;
+      margin-right:100px;
+      margin-top:10px;
+      margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .optionhr {
+      width:92%;
+      margin-right:130px;
+      margin-top:10px;
+      margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .optionhr2 {
+      width: 290px;
+      margin-right:50px;
+      margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .optionhr2 {
+      width: 290px;
+      margin-right:80px;
+      margin-bottom: 30px;
   }
 }
 
 
 @media screen and (min-width: 601px) {
+  .with {
+      margin-top:30px;
+      margin-bottom: 10px;
+      width: 12%
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .with2 {
+    margin-bottom:80px;
+      font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .with2 {
+    margin-bottom:80px;
+  }
+}
+
+@media screen and (max-width: 601px) {
   div.zeronine3 {
     text-align: center;
+    margin-left: -275px;
+    margin-top: -120px;
   }
 }
 
-@media screen and (max-width: 600px) {
-  div.zeronine3 {
-  transform: translate(-21%, -40%);
+
+@media screen and (min-width: 601px) {
+  .del_li_btn {
+      float: right;
+      margin-right: 40px;
   }
 }
+
+@media screen and (max-width: 601px) {
+  .del_li_btn {
+      float: right;
+      margin-right: 90px;
+  }
+}
+
+
+@media screen and (max-width: 601px) {
+  .del_li_btn[name=del_li_btn2] {
+      float: right;
+      margin-right: 30px;
+  }
+}
+
 
 @media screen and (min-width: 601px) {
   div.col-sm-6 {
@@ -131,44 +279,224 @@ table a {color:#333; text-decoration:none;}
       border-right: 0;
     }
 
-@media (max-width: 767px) {
-    .table-wrap .board colgroup,
-    .table-wrap .board thead {
-        display: none;
-    }
+@media (max-width: 600px) {
+table {border-collapse:collapse; width:100%;}
 
-    .table-wrap .board tbody tr {
-        border-bottom: 1px solid #dcdbdb;
-        padding: 15px;
-        display: block;
-        overflow: hidden;
-    }
+table a {color:#333; text-decoration:none;}
+ .table-wrap table.board {
+    font-family:'Noto Sans KR';
+    text-align: center; }
 
-    .table-wrap .board tbody tr td {
-        display: none;
-        padding: 0;
-        border: 0;
-    }
-
-    .table-wrap .board tbody tr td.subject > a {
-        font-size: .9rem;
-    }
-
-    .table-wrap .board tbody tr {
-        font-weight: 700;
-        color: #333;
-        margin-bottom: 5px;
-        text-align: left;
-        float: left;
-        display: inline-block;
-    }
-
-    .table-wrap .board tbody tr {
-        display: inline-block;
-        float: left;
-        margin-left: 10px;
-    }
+.table-wrap table {
+  position: relative;
+  line-height: 1.4;
+  table-layout: auto;
 }
+
+  .table-wrap table::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .table-wrap table thead th {
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    background-color: #f9f9f9;
+    padding: 20px;
+    color: #222;
+    font-size: .9rem;
+    font-weight: 400;
+  }
+
+    .table-wrap table thead th:first-child {
+      border-left: 0;
+    }
+
+    .table-wrap table thead th:last-child {
+      border-right: 0;
+    }
+
+  .table-wrap table tbody th {
+    border: 1px solid #ddd;
+    background-color: #fcfcfc;
+    padding: 20px;
+    font-size: .8rem;
+    font-weight: 400;
+    color: #222;
+  }
+
+    .table-wrap table tbody th:first-child {
+      border-left: 0;
+    }
+
+    .table-wrap table tbody th:last-child {
+      border-right: 0;
+    }
+
+    .table-wrap table tbody th .list.dash > li {
+      padding-left: 15px;
+    }
+
+      .table-wrap table tbody th .list.dash > li::before {
+        left: 0;
+      }
+
+  .table-wrap table tbody td {
+    border: 1px solid #ddd;
+    padding: 20px;
+    font-size: .8rem;
+    font-weight: 400;
+    background-color: #fff;
+  }
+
+    .table-wrap table tbody td:first-child {
+      border-left: 0;
+    }
+
+    .table-wrap table tbody td:last-child {
+      border-right: 0;
+    }
+
+    .joinadress label {
+        margin-right: 200px;
+        width: 500px;
+        text-align: left;
+        margin-top: -10px;
+    }
+
+    .joinadress input[name="name"] {
+        width: 140px;
+        margin-bottom: 5px;
+    }
+
+    .joinadress input[name="phone"] {
+        width: 140px;
+        margin-bottom: 5px;
+    }
+
+    .joinadress input[name="address"] {
+        width: 140px;
+        margin-bottom: 5px;
+    }
+
+    .joinadress input[name="address2"] {
+        width: 140px;
+        margin-top: -15px;
+    }
+
+    .joinadress input[name="address3"] {
+        width: 140px;
+        margin-left: 150px;
+        margin-top: -38px;
+        margin-bottom: 20px;
+    }
+
+
+    .joinadress input[type="button"] {
+        width: 100px;
+        height:38px;
+        border-radius: 3px;
+        margin-left: 165px;
+        margin-top: -38px;
+        font-size: 14.5px;
+    }
+
+    @media screen and (max-width: 600px) {
+        .pc {
+            float: left;
+            background:grey;
+            color:white;
+            border: none;
+            border-radius: 3px;
+            font-size: 14px;
+            width: 100px;
+            height: 35px;
+        }
+    }
+
+}
+
+    @media screen and (min-width: 601px) {
+        .pc {
+            margin-left:-7px;
+            background:grey;
+            color:white;
+            border: none;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (min-width: 601px) {
+        .joinadress input[name="address2"] {
+            margin-left: 122px;
+            margin-top: 15px;
+        }
+    }
+
+    @media screen and (min-width: 601px) {
+        .joinadress input[name="address3"] {
+            margin-left: 100px;
+            margin-top: 15px;
+        }
+    }
+
+    @media screen and (min-width: 601px) {
+        .joinmodal {
+            line-height: 1.6em;
+            margin-top: 15px;
+            font-size: 15px;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .joinmodal {
+            line-height: 1.6em;
+            margin-top: -30px;
+            font-size: 12px;
+        }
+    }
+
+    @media screen and (min-width: 601px) {
+        .joinmodal2 {
+            color: gray;
+            font-size: 13px;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .joinmodal2 {
+            color: gray;
+            font-size: 12px;
+        }
+    }
+
+    @media screen and (min-width: 601px) {
+        .addressinfo {
+            font-size:18px;
+            margin-top:0px;
+            margin-bottom:2px;
+            margin-left:20px;
+            text-align: left;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .addressinfo {
+            font-size:18px;
+            margin-top:40px;
+            margin-bottom:2px;
+            margin-left:20px;
+            text-align: left;
+        }
+    }
+
+
 
 .cart_table .cart_list li>div.opt_info .price_btn input {font-size: 0; margin-left: -1px; cursor: pointer; color: #ccc; width: 30px; height: 30px; border: 0; outline: 0; display: inline-block;text-align: center; vertical-align: top;background-size: cover !important;}
 .cart_table .cart_list li>div.opt_info .price_btn input.minus_btn{background: url(https://tictoc-web.s3.ap-northeast-2.amazonaws.com/web/img/icon/btn_minus.svg) no-repeat center;}
@@ -189,10 +517,10 @@ table a {color:#333; text-decoration:none;}
     <div class="row">
         <div class="col-4">
             <div class="img">
-              <img src="{{product.image.url}}" style="margin-left:100px; width:450px; margin-top: 90px;">
-                 <div style="width: 80px; height: 80px; background-color: #637B46; position: absolute; float:left; margin-left: 120px; margin-top: -450px;"><h2 style="font-size:18px; text-align:center; color: white; line-height: 78px;"><b>D-{{ delta_result }}</b></h2></div>
+              <img class="productimg" src="{{product.image.url}}">
+                 <div class="daybox"><h2 style="font-size:18px; text-align:center; color: white; line-height: 78px;"><b>D-{{ delta_result }}</b></h2></div>
                       {% if delta_result < 0 %}
-                      <div style="width: 80px; height: 80px; background-color: #637B46; position: absolute; margin-left: 120px; margin-top: -450px;"><p style="font-size:16px; text-align:center; color: white; line-height: 78px;"><b>모집종료</b></p></div>
+                      <div class="daybox2"><p style="font-size:16px; text-align:center; color: white; line-height: 78px;"><b>모집종료</b></p></div>
                       {% endif %}
             </div>
         </div>
@@ -263,7 +591,7 @@ table a {color:#333; text-decoration:none;}
                     </div>
                  <div id="selectOptionList" style="margin-top:10px; margin-left: 20px; margin-bottom: -10px;">
                  </div>
-            </div>
+        </div>
 
 <script>
 // optionSelect (옵션있는 상품)
@@ -280,10 +608,10 @@ $().ready(function() {
        if (checkValue != "no") {
            var whtml =
                "            <div class=\"cart_table\">\n" +
-               "            <hr style='width: 290px; margin-right:50px; margin-bottom: 30px;'>" +
+               "            <hr class=\"optionhr2\">" +
                "            <p style='font-size: 17px;'>" + product + "</p>" +
                "                <p style='font-size: 13px; margin-top: -10px; class=\"check\" margin-bottom: 20px;'>" + checkText + "</p>" +
-               "             <span class=\"del_li_btn\" style='float: right; margin-right: 30px;'><img src=\"https://tictoc-web.s3.ap-northeast-2.amazonaws.com/web/img/icon/btn_del_circle.svg\" style='width: 80%;'></span>\n" +
+               "             <span class=\"del_li_btn\"><img src=\"https://tictoc-web.s3.ap-northeast-2.amazonaws.com/web/img/icon/btn_del_circle.svg\" style='width: 80%;'></span>\n" +
                "            <ul class=\"cart_list\">\n" +
                "                <li style='list-style:none; margin-left: -38px;'>\n" +
                "                    <div class=\"opt_info\">\n" +
@@ -391,9 +719,9 @@ $().ready(function() {
        if (checkValue != "no") {
            var whtml =
                "            <div class=\"cart_table\">\n" +
-               "            <hr style='width:92%; margin-right:100px; margin-top:10px; margin-bottom: 30px;'>" +
+               "            <hr class=\"optionhr\">" +
                "            <p style='font-size: 17px;'>" + product + "</p>" +
-               "             <span class=\"del_li_btn\" style='float: right; margin-right: 30px;'><img src=\"https://tictoc-web.s3.ap-northeast-2.amazonaws.com/web/img/icon/btn_del_circle.svg\" style='width: 80%;'></span>\n" +
+               "             <span class=\"del_li_btn\" name=\"del_li_btn2\"><img src=\"https://tictoc-web.s3.ap-northeast-2.amazonaws.com/web/img/icon/btn_del_circle.svg\" style='width: 80%;'></span>\n" +
                "            <ul class=\"cart_list\">\n" +
                "                <li style='list-style:none; margin-left: -38px;'>\n" +
                "                    <div class=\"opt_info\">\n" +
@@ -555,13 +883,13 @@ $().ready(function() {
 
         <div class="row">
         <div class="col-12">
-            <p style="font-size:18px; margin-top:0px; margin-bottom:2px; margin-left:20px; text-align: left">배송지 정보</p>
+            <p class="addressinfo">배송지 정보</p>
         </div>
         </div>
 
             <hr width="97%" style="margin-top:8px; margin-left:20px; text-align: center; border: solid 0.5px; opacity: 10%;">
             <br>
-
+    <article class="joinadress">
         <div class="form-group row" style="margin-left:15px">
             <label for="name" class="col-sm-2 col-form-label"><b>참여자명</b></label>
             <div class="col-sm-5">
@@ -585,18 +913,18 @@ $().ready(function() {
                    value="{{ form.address.value|default_if_none:'' }}" placeholder="우편번호">
             </div>
 
-            <input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 검색" style="margin-left:-7px; background:grey; color:white; border: none; border-radius: 3px; font-size: 14px;"><br>
+            <input class="pc" type="button" onclick="sample4_execDaumPostcode()" value="우편번호 검색"><br>
 
             <div class="col-sm-5">
-            <input type="text" class="form-control" name="address" id="sample4_roadAddress"
-                   value="{{ form.phone.value|default_if_none:'' }}" placeholder="도로명 주소" style="margin-left: 122px; margin-top: 15px;">
+            <input type="text" class="form-control" name="address2" id="sample4_roadAddress"
+                   value="{{ form.phone.value|default_if_none:'' }}" placeholder="도로명 주소">
             </div>
 
             <div class="col-sm-5">
-            <input type="text" class="form-control" name="address2" id="sample4_detailAddress"
-                   value="{{ form.address2.value|default_if_none:'' }}" placeholder="상세주소" style="margin-left: 100px; margin-top: 15px;"></div>
+            <input type="text" class="form-control" name="address3" id="sample4_detailAddress"
+                   value="{{ form.address2.value|default_if_none:'' }}" placeholder="상세주소"></div>
         </div>
-
+    </article>
 
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
@@ -647,13 +975,13 @@ $().ready(function() {
         </div>
         </div>
             </div>
-            <p style="line-height: 1.6em; margin-top: 15px; font-size: 15px;">
+            <p class="joinmodal">
                <b>유의사항 체크 후, 결제하기 버튼을 눌러 결제를 진행해주세요.<br>
                 결제 완료 후, 확인 버튼을 눌러야 정상적인 참여가 가능합니다.<br>
                 위 절차를 모두 진행하면, 마이페이지의 참여 내역에서 확인할 수 있습니다.</b>
             </p>
           <hr style="width: 7%; background: lightgrey; opacity: 50%;">
-          <p style="color: gray; font-size: 13px;">공동구매 상품 참여를 위해 최소한의 범위 내에서 위와 같이 개인정보를 수집, 이용합니다.<br>
+          <p class="joinmodal2">공동구매 상품 참여를 위해 최소한의 범위 내에서 위와 같이 개인정보를 수집, 이용합니다.<br>
               수집 및 이용에 동의하지 않으실 수 있으며 동의하지 않으실 경우, 구매가 제한될 수 있습니다.<br>
               내용에 동의하시면 확인 버튼을 눌러 참여를 진행해주세요.
           </p>
@@ -763,18 +1091,18 @@ var IMP = window.IMP; // 생략가능
 
  <div id="detail" class="container" style="width:67%; text-align: center; justify-content: center">
 
-     <img src="/static/img/logo_.png" style="margin-top:30px; margin-bottom: 10px; justify-content: center; width: 12%">
-     <h6 style="margin-bottom:80px; justify-content: center; text-align: center">함께하는 공동구매, <b>제로나인</b></h6>
+     <img class="with" src="/static/img/logo_.png" style="justify-content: center;">
+     <h6 class="with2" style="justify-content: center; text-align: center">함께하는 공동구매, <b>제로나인</b></h6>
 
             <h4 style="justify-content: center; text-align: center; margin-bottom: 40px;"><b>[{{ product.name }}]</b></h4>
-                <h6 style="margin-top:20px; justify-content: center; text-align: center"><b>취지</b></h6>
-                <p style="margin-top:5px; justify-content: center; text-align: center">{{ product.benefit }}</p>
+                <h6 class="hh" style="margin-top:20px; justify-content: center; text-align: center"><b>취지</b></h6>
+                <p class="hh" style="margin-top:5px; justify-content: center; text-align: center">{{ product.benefit }}</p>
 
-                <h6 style="margin-top:30px; justify-content: center; text-align: center"><b>상품 설명</b></h6>
-                <p style="margin-top:5px; justify-content: center; text-align: center;">{{ product.detail }}</p>
+                <h6 class="hh" style="margin-top:30px; justify-content: center; text-align: center"><b>상품 설명</b></h6>
+                <p class="hh" style="margin-top:5px; justify-content: center; text-align: center;">{{ product.detail }}</p>
 
-                 <h6 style="margin-top:30px; justify-content: center; text-align: center;"><b>모집 기간</b></h6>
-                <p style="margin-top:5px; margin-bottom: 50px; justify-content: center; text-align: center">{{ product.start_date }} ~ {{ product.due_date }}</p>
+                 <h6 class="hh" style="margin-top:30px; justify-content: center; text-align: center;"><b>모집 기간</b></h6>
+                <p class="hh" style="margin-top:5px; margin-bottom: 50px; justify-content: center; text-align: center">{{ product.start_date }} ~ {{ product.due_date }}</p>
 
                 </div>
 
